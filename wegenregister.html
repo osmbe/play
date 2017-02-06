@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wegenregister versus OSM</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+	<link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.css" />
+	
+</head>
+<body>
+	<div id="map"></div>
+	<script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
+	<script src='leaflet-fullHash.js'></script>
+	<script>
+
+	    var mbAttr = '<a href="http://www.openstreetmap.org/user/joost%20schouppe/diary/39250">About this map</a>. Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+				'Imagery © <a href="http://mapbox.com">Mapbox</a>. ',
+			mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
+
+	    var grayscale = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr});
+		var osm  = L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'});
+		var wegenregister = L.tileLayer('https://api.mapbox.com/styles/v1/joostschouppe/cir59e54v001jcbnhlmk18qcc/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam9vc3RzY2hvdXBwZSIsImEiOiJjaWh2djF1c2owMmJrdDNtMWV2c2Rld3QwIn0.9zXJJWZ4rOcspyFIdEC3Rw', {attribution: 'Wegenregister © AGIV, tiles provided by <a href="http://mapbox.com">Mapbox</a>' });
+		var wegenregistermapping = L.tileLayer('https://api.mapbox.com/styles/v1/joostschouppe/cir6gwq2p0016cjlyx6e1b1cc/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam9vc3RzY2hvdXBwZSIsImEiOiJjaWh2djF1c2owMmJrdDNtMWV2c2Rld3QwIn0.9zXJJWZ4rOcspyFIdEC3Rw', {attribution: 'Wegenregister © AGIV, tiles provided by <a href="http://mapbox.com">Mapbox</a>' });
+		var missingwegenregister = L.tileLayer('https://api.mapbox.com/styles/v1/joostschouppe/cirqcpmll003hh0ncb2wuv882/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam9vc3RzY2hvdXBwZSIsImEiOiJjaWh2djF1c2owMmJrdDNtMWV2c2Rld3QwIn0.9zXJJWZ4rOcspyFIdEC3Rw', {attribution: 'Wegenregister © AGIV, tiles provided by <a href="http://mapbox.com">Mapbox</a>, analysis by <a href="http://www.openstreetmap.org/user/joost%20schouppe">joost schouppe</a>' });
+		var strava  = L.tileLayer('http://globalheat.strava.com/tiles/both/color2/{z}/{x}/{y}.png', {maxZoom: 22,minZoom: 9, attribution: '© Strava'});
+		var osmroads = L.tileLayer('https://api.mapbox.com/styles/v1/joostschouppe/cir5a9eob0020ccm0gc0xsqd0/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam9vc3RzY2hvdXBwZSIsImEiOiJjaWh2djF1c2owMmJrdDNtMWV2c2Rld3QwIn0.9zXJJWZ4rOcspyFIdEC3Rw', {
+		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		maxZoom: 18});	
+		var luchtfoto  = L.tileLayer('http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=omwrgbmrvl&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}', {attribution: 'Luchtfoto © AGIV' });
+		var osmgpx  = L.tileLayer('https://gps-a.tile.openstreetmap.org/lines/{z}/{x}/{y}.png', {attribution: 'GPX data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
+		var itospeed  = L.tileLayer('http://t2.beta.itoworld.com/124/3de64e357cab22216499a53ce388f239/{z}/{x}/{y}.png', {attribution: 'ITO maps <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
+	
+	
+
+	var allMapLayers = { 'grayscale': grayscale,
+					  'osm': osm, 
+					  'luchtfoto': luchtfoto,
+					  'osmroads': osmroads,
+					  'wegenregister': wegenregister,
+					  'wegenregistermapping': wegenregistermapping,
+					  'missingwegenregister': missingwegenregister,
+					  'strava': strava,
+					  'osmgpx': osmgpx,
+					  'itospeed': itospeed
+					};
+
+	
+		
+			
+		var map = L.map('map', {
+			center: [51, 4],
+			zoom: 12,
+			layers: [grayscale, missingwegenregister]
+		});
+		
+	var hash = new L.Hash(map, allMapLayers);
+	
+		var basemaps = {
+			"Grayscale": grayscale,
+			"Classic OSM": osm,
+			"AGIV Luchtfoto": luchtfoto
+		};
+		
+		var overlays = {
+			"OSM Roads": osmroads,
+			"Wegenregister": wegenregister,
+			"Mappingstyle Wegenregister": wegenregistermapping,
+			"Missing wegenregister": missingwegenregister,
+			"Strava": strava,
+			"OSM gpx": osmgpx,
+			"Speed limits": itospeed
+		};
+
+		L.control.layers(basemaps,overlays).addTo(map);
+	</script>
+</body>
+</html>
