@@ -36,12 +36,14 @@
 		var osmgpx  = L.tileLayer('https://gps-a.tile.openstreetmap.org/lines/{z}/{x}/{y}.png', {attribution: 'GPX data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
 		var itospeed  = L.tileLayer('http://t2.beta.itoworld.com/124/3de64e357cab22216499a53ce388f239/{z}/{x}/{y}.png', {attribution: 'ITO maps <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
 		var mapillary  = L.tileLayer('https://d6a1v2w10ny40.cloudfront.net/v0.1/{z}/{x}/{y}.png', {attribution: '<a href="http://www.mapillary.com/">Mapillary</a>'});
+		var grb  = L.tileLayer('http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=grb_bsk&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}', {attribution: 'Luchtfoto © AGIV' });
 	
 	
 
 	var allMapLayers = {
 					  'osm': osm, 
 					  'luchtfoto': luchtfoto,
+					  'grb': grb,
 					  'osmroads': osmroads,
 					  'wegenregister': wegenregister,
 					  'wegenregistermapping': wegenregistermapping,
@@ -65,7 +67,8 @@
 	
 		var basemaps = {
 			"Classic OSM": osm,
-			"AGIV Luchtfoto": luchtfoto
+			"AGIV Luchtfoto": luchtfoto,
+			"Basiskaart GRB": grb
 		};
 		
 		var overlays = {
