@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Wegenregister versus OSM</title>
+	<title>Historical maps, and OpenStreetMap</title>
 	<meta charset="utf-8" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,8 +35,8 @@
 	var basemap1969 =  L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1100/MapServer/tile/{z}/{y}/{x}', {attribution: '<a href="http://www.ngi.be/">NGI</a>'});
 	var basemap1981 =  L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1220/MapServer/tile/{z}/{y}/{x}', {attribution: '<a href="http://www.ngi.be/">NGI</a>'});
 	var basemap1989 =  L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1300/MapServer/tile/{z}/{y}/{x}', {attribution: '<a href="http://www.ngi.be/">NGI</a>'});
+	var ferraris  = L.tileLayer('http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?request=gettile&service=wmts&version=1.0.0&layer=ferraris&&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}', {attribution: 'Ferraris provided by AGIV' });
 		
-			
 	
 	var allMapLayers = {
 					  'osm': osm, 
@@ -45,6 +45,7 @@
 					  'osmgpx': osmgpx,
 					  'osmroads': osmroads,
 					  'photo1995': photo1995,
+					  'ferraris': ferraris,
 					  'basemap1873': basemap1873,
 					  'basemap1904': basemap1904,
 					  'basemap1939': basemap1939,
@@ -65,6 +66,7 @@
 			"Classic OSM": osm,
 			"AGIV ortho most recent": luchtfoto,
 			"NGI ortho 1995": photo1995,
+			"Ferraris 1777": ferraris,
 			"NGI Basemap 1873": basemap1873,
 			"NGI Basemap 1904": basemap1904,
 			"NGI Basemap 1939": basemap1939,
