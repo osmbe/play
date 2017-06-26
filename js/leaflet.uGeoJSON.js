@@ -6,44 +6,58 @@ L.UGeoJSONLayer = L.GeoJSON.extend({
       usebbox: false,
       endpoint: "-1",
       parameters: {},
-      maxRequests: 5,
+      maxRequests: 3,
       pollTime:0,
       once: false,
+      minzoom: 15,
       after: function(data){}
     },
 
     callback: function(data) {
       if(this.options.light)
       {
-        this.clearLayers();//if needed, we clean the layers
+        // if needed, we clean the layers
+        this.clearLayers();
       }
 
-      //Then we add the new data
+      // Then we add the new data
       this.addData(data);
       this.options.after(data);
     },
 
-  initialize: function (uOptions, options) {
-    L.GeoJSON.prototype.initialize.call(this, undefined, options);
-    L.Util.setOptions(this, uOptions);
+    initialize: function (uOptions, options) {
+        L.GeoJSON.prototype.initialize.call(this, undefined, options);
+        L.Util.setOptions(this, uOptions);
 
     this._layersOld = [];
     this._requests = [];
   },
 
   onMoveEnd: function () {
+    if(this._map.getZoom() < this.options.minzoom) {
+        if (this.options.debug) {
+            console.debug("zoom level too high: skip load");
+        }
+        return false;
+    }
+
     if (this.options.debug) {
       console.debug("load Data");
     }
 
-    while(this._requests.length > this.options.maxRequests) //This allows to stop the oldest requests
+    // This allows to stop the oldest requests
+    while(this._requests.length > this.options.maxRequests) 
     {
       this._requests.shift().abort();
     }
 
     var bounds = this._map.getBounds();
+    var params = '';
 
     if (this.options.method == 'POST') {
+        if (this.options.debug) {
+            console.debug("doing POST work");
+        }
         var postData = new FormData();
 
         for(var k in this.options.parameters)
@@ -69,7 +83,18 @@ L.UGeoJSONLayer = L.GeoJSON.extend({
             postData.append('west', bounds.getWest());
         }
         postData.append('zoom', this._map.getZoom());
-    } 
+    } else {
+        if (this.options.debug) {
+            console.debug("doing GET work");
+        }
+        function encodeQueryData(data) {
+            let ret = [];
+            for (let d in data)
+                ret.push(encodeURIComponent(d) + '=' + encodeURIComponent(data[d]));
+            return ret.join('&');
+        }
+        params = encodeQueryData(this.options.parameters);
+    }
 
     var self = this;
     var request = new XMLHttpRequest();
@@ -78,7 +103,8 @@ L.UGeoJSONLayer = L.GeoJSON.extend({
         request.open("POST", this.options.endpoint +'bbox='+bounds.toBBoxString()+'&bbsrid='+'4326', true);
     }
     if (this.options.method == 'GET') {
-        request.open("GET", this.options.endpoint +'bbox='+bounds.toBBoxString()+'&bbsrid='+'4326', true);
+        //request.open("GET", this.options.endpoint +'bbox='+bounds.toBBoxString()+'&bbsrid='+'4326', true);
+        request.open("GET", this.options.endpoint +'bbox='+bounds.toBBoxString()+'&'+params, true);
     }
 
     request.onload = function() {
@@ -86,7 +112,8 @@ L.UGeoJSONLayer = L.GeoJSON.extend({
       {
         if(self._requests[i] === request)
         {
-          self._requests.splice(i,1); //We remove the request from the list of currently running requests.
+          // We remove the request from the list of currently running requests.
+          self._requests.splice(i,1); 
           break;
         }
       }
@@ -97,8 +124,12 @@ L.UGeoJSONLayer = L.GeoJSON.extend({
     };
 
     this._requests.push(request);
-    //request.send(postData);
-    request.send(null);
+    if (this.options.method == 'POST') {
+        request.send(postData);
+    }
+    if (this.options.method == 'GET') {
+        request.send(null);
+    }
   },
 
   onAdd: function (map) {
