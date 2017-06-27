@@ -16,7 +16,8 @@
 <body>
 	<div id="map"></div>
 	<script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
-	<script src='leaflet-fullHash.js'></script>
+    <script src='js/leaflet.uGeoJSON.js'></script>
+	<script src='js/leaflet-fullHash.js'></script>
 	<script>
 
 		var osmroads = L.tileLayer('https://api.mapbox.com/styles/v1/joostschouppe/cir5a9eob0020ccm0gc0xsqd0/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam9vc3RzY2hvdXBwZSIsImEiOiJjaWh2djF1c2owMmJrdDNtMWV2c2Rld3QwIn0.9zXJJWZ4rOcspyFIdEC3Rw', {
@@ -41,16 +42,18 @@
 		var frickx = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {layers: 'Frickx', format: 'image/png', transparent: true});
 		var abw = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {layers: 'abw', format: 'image/png', transparent: true});
 		var moww = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {layers: 'moww', format: 'image/png', transparent: true});
-		var wegenregister  = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/Wegenregister/wms?', {layers: 'AUTOSWEG,weggesch,wegeen,rot,specsit,verkplein,opafogkr,opafggkr,pllweg,ventweg,inuitp,inuitd,wandfiets,tramweg,dienstweg,aardeweg,veer', format: 'image/png', transparent: true});
+		//var wegenregister  = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/Wegenregister/wms?', {layers: 'AUTOSWEG,weggesch,wegeen,rot,specsit,verkplein,opafogkr,opafggkr,pllweg,ventweg,inuitp,inuitd,wandfiets,tramweg,dienstweg,aardeweg,veer', format: 'image/png', transparent: true});
 		var tragewegenregister= L.tileLayer.wms('https://geoservices.vlaamsbrabant.be/TrageWegen/MapServer/WMSServer?', {layers: '0', format: 'image/png', transparent: true});
 	
-	var allMapLayers = {
+        var nwr_geojson = L.uGeoJSONLayer({ endpoint: "https://data.grbosm.site/wr?", usebbox: true , method: "GET", maxRequests: 3, minzoom: 15, parameters: { bbsrid: '4326'}});
+
+	    var allMapLayers = {
 					  'osm': osm, 
 					  'luchtfoto': luchtfoto,
 					  'strava': strava,
 					  'osmgpx': osmgpx,
 					  'osmroads': osmroads,
-					  'wegenregister': wegenregister,
+					  'wegenregister': nwr_geojson,
 					  'tragewegenregister': tragewegenregister,
 					  'photo1995': photo1995,
 					  'ferraris': ferraris,
@@ -102,7 +105,7 @@
 			"Strava": strava,
 			"OSM gpx": osmgpx,
 			"OSM roads": osmroads,
-			"Wegenregister": wegenregister,
+			"Wegenregister": nwr_geojson,
 			"Trage Wegen Register": tragewegenregister
 		};
 		L.control.layers(basemaps,overlays).addTo(map);
