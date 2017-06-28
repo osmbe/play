@@ -75,7 +75,7 @@
 		var map = L.map('map', {
 			center: [51, 4],
 			zoom: 9,
-			layers: [basemap1873, osmroads],
+			layers: [basemap1873, nwr_geojson],
 			attributionControl: false
 		});
 		
@@ -105,7 +105,8 @@
 			"Strava": strava,
 			"OSM gpx": osmgpx,
 			"OSM roads": osmroads,
-			"Wegenregister": nwr_geojson,
+			"Wegenregister": 
+			,
 			"Trage Wegen Register": tragewegenregister
 		};
 		L.control.layers(basemaps,overlays).addTo(map);
