@@ -2,114 +2,203 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Historical maps and OSM</title>
-	<meta charset="utf-8" />
+    <title>Historical maps and OSM</title>
+    <meta charset="utf-8" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
     </style>
-	<link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.css" />
-	
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+        integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin=""/>
 </head>
 <body>
-	<div id="map"></div>
-	<script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+        integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+        crossorigin=""></script>
     <script src='js/leaflet.uGeoJSON.js'></script>
-	<script src='js/leaflet-fullHash.js'></script>
-	<script>
+    <script src='js/leaflet-fullHash.js'></script>
+    <script>
+        var osmbe = L.tileLayer('https://tile.osm.be/osmbe/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
+            maxZoom: 18
+        });
+        var osmbefr = L.tileLayer('https://tile.osm.be/osmbe-fr/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
+            maxZoom: 18
+        });
+        var osmbenl = L.tileLayer('https://tile.osm.be/osmbe-nl/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
+            maxZoom: 18
+        });
+        var luchtfoto = L.tileLayer('http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=omwrgbmrvl&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}', {
+            attribution: 'Luchtfoto © AGIV'
+        });
+        var grb  = L.tileLayer('http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=grb_bsk&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}', {
+            attribution: 'Luchtfoto © AGIV'
+        });
+        var photo1995 = L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/ortho__default__3857__1995/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '<a href="http://www.ngi.be/">NGI</a>'
+        });
+        var basemap1873 = L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__140/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '<a href="http://www.ngi.be/">NGI</a>'
+        });
+        var basemap1904 = L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__450/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '<a href="http://www.ngi.be/">NGI</a>'
+        });
+        var basemap1939 = L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__800/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '<a href="http://www.ngi.be/">NGI</a>'
+        });
+        var basemap1969 = L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1100/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '<a href="http://www.ngi.be/">NGI</a>'
+        });
+        var basemap1981 = L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1220/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '<a href="http://www.ngi.be/">NGI</a>'
+        });
+        var basemap1989 = L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1300/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '<a href="http://www.ngi.be/">NGI</a>'
+        });
+        var ferraris  = L.tileLayer('http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ferraris&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}', {
+            attribution: 'Luchtfoto © AGIV'
+        });
+        var popp  = L.tileLayer('http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=popp&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}', {
+            attribution: 'Luchtfoto © AGIV'
+        });
+        var vandermaelen  = L.tileLayer('http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=vandermaelen&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}', {
+            attribution: 'Luchtfoto © AGIV'
+        });
+        var masse = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {
+            format: 'image/png',
+            layers: 'Masse',
+            transparent: true
+        });
+        var villaret = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {
+            format: 'image/png',
+            layers: 'Villaret',
+            transparent: true
+        });
+        var frickx = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {
+            format: 'image/png',
+            layers: 'Frickx',
+            transparent: true
+        });
+        var abw = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {
+            format: 'image/png',
+            layers: 'abw',
+            transparent: true
+        });
+        var moww = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {
+            format: 'image/png',
+            layers: 'moww',
+            transparent: true
+        });
 
-		var osmroads = L.tileLayer('https://api.mapbox.com/styles/v1/joostschouppe/cir5a9eob0020ccm0gc0xsqd0/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam9vc3RzY2hvdXBwZSIsImEiOiJjaWh2djF1c2owMmJrdDNtMWV2c2Rld3QwIn0.9zXJJWZ4rOcspyFIdEC3Rw', {
-		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-		maxZoom: 18, minZoom: 11});	
-		var osm  = L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'});
-		var strava  = L.tileLayer('https://heatmap-external-a.strava.com/tiles/ride/bluered/{z}/{x}/{y}.png?px=256', {maxZoom: 22,minZoom: 9, attribution: '© Strava'});
-		var luchtfoto  = L.tileLayer('http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=omwrgbmrvl&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}', {attribution: 'Luchtfoto © AGIV' });
-		var osmgpx  = L.tileLayer('https://gps-a.tile.openstreetmap.org/lines/{z}/{x}/{y}.png', {attribution: 'GPX data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
-		var photo1995 =  L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/ortho__default__3857__1995/MapServer/tile/{z}/{y}/{x}', {attribution: '<a href="http://www.ngi.be/">NGI</a>'});
-		var basemap1873 =  L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__140/MapServer/tile/{z}/{y}/{x}', {attribution: '<a href="http://www.ngi.be/">NGI</a>'});
-		var basemap1904 =  L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__450/MapServer/tile/{z}/{y}/{x}', {attribution: '<a href="http://www.ngi.be/">NGI</a>'});
-		var basemap1939 =  L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__800/MapServer/tile/{z}/{y}/{x}', {attribution: '<a href="http://www.ngi.be/">NGI</a>'});
-		var basemap1969 =  L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1100/MapServer/tile/{z}/{y}/{x}', {attribution: '<a href="http://www.ngi.be/">NGI</a>'});
-		var basemap1981 =  L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1220/MapServer/tile/{z}/{y}/{x}', {attribution: '<a href="http://www.ngi.be/">NGI</a>'});
-		var basemap1989 =  L.tileLayer('http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1300/MapServer/tile/{z}/{y}/{x}', {attribution: '<a href="http://www.ngi.be/">NGI</a>'});
-		var ferraris  = L.tileLayer('http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ferraris&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}', {attribution: 'Luchtfoto © AGIV' });
-		var popp  = L.tileLayer('http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=popp&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}', {attribution: 'Luchtfoto © AGIV' });
-		var vandermaelen  = L.tileLayer('http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=vandermaelen&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}', {attribution: 'Luchtfoto © AGIV' });				
-		var masse = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {layers: 'Masse', format: 'image/png', transparent: true});
-		var villaret = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {layers: 'Villaret', format: 'image/png', transparent: true});
-		var frickx = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {layers: 'Frickx', format: 'image/png', transparent: true});
-		var abw = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {layers: 'abw', format: 'image/png', transparent: true});
-		var moww = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {layers: 'moww', format: 'image/png', transparent: true});
-		//var wegenregister  = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/Wegenregister/wms?', {layers: 'AUTOSWEG,weggesch,wegeen,rot,specsit,verkplein,opafogkr,opafggkr,pllweg,ventweg,inuitp,inuitd,wandfiets,tramweg,dienstweg,aardeweg,veer', format: 'image/png', transparent: true});
-		var tragewegenregister= L.tileLayer.wms('https://geoservices.vlaamsbrabant.be/TrageWegen/MapServer/WMSServer?', {layers: '0', format: 'image/png', transparent: true});
-	
-        var nwr_geojson = L.uGeoJSONLayer({ endpoint: "https://data.grbosm.site/wr?", usebbox: true , method: "GET", maxRequests: 3, minzoom: 15, parameters: { bbsrid: '4326'}});
+        var osmroads = L.tileLayer('https://api.mapbox.com/styles/v1/joostschouppe/cir5a9eob0020ccm0gc0xsqd0/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
+            accessToken: 'pk.eyJ1Ijoiam9vc3RzY2hvdXBwZSIsImEiOiJjaWh2djF1c2owMmJrdDNtMWV2c2Rld3QwIn0.9zXJJWZ4rOcspyFIdEC3Rw',
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+            maxZoom: 18,
+            minZoom: 11
+        });
+        var strava = L.tileLayer('https://heatmap-external-a.strava.com/tiles/ride/bluered/{z}/{x}/{y}.png?px=256', {
+            attribution: '© Strava',
+            maxZoom: 22,
+            minZoom: 9
+        });
+        var osmgpx = L.tileLayer('https://gps-a.tile.openstreetmap.org/lines/{z}/{x}/{y}.png', {
+            attribution: 'GPX data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+        });
+        var tragewegenregister= L.tileLayer.wms('https://geoservices.vlaamsbrabant.be/TrageWegen/MapServer/WMSServer?', {
+            format: 'image/png',
+            layers: '0',
+            transparent: true
+        });
 
-	    var allMapLayers = {
-					  'osm': osm, 
-					  'luchtfoto': luchtfoto,
-					  'strava': strava,
-					  'osmgpx': osmgpx,
-					  'osmroads': osmroads,
-					  'wegenregister': nwr_geojson,
-					  'tragewegenregister': tragewegenregister,
-					  'photo1995': photo1995,
-					  'ferraris': ferraris,
-					  'popp': popp,
-					  'vandermaelen': vandermaelen,
-					  'masse': masse,
-					  'villaret': villaret,
-					  'frickx': frickx,
-					  'abw': abw,
-					  'moww': moww,
-					  'basemap1873': basemap1873,
-					  'basemap1904': basemap1904,
-					  'basemap1939': basemap1939,
-					  'basemap1969': basemap1969,
-					  'basemap1981': basemap1981,
-					  'basemap1989': basemap1989,
-					  };
-					
-		var map = L.map('map', {
-			center: [50.8398, 4.4247],
-			zoom: 11,
-			layers: [basemap1873, osmroads],
-			attributionControl: false
-		});
-		
-	var hash = new L.Hash(map, allMapLayers);
-	
-		var basemaps = {
-			"Classic OSM": osm,
-			"AGIV ortho most recent": luchtfoto,
-			"NGI ortho 1995": photo1995,
-			"Masse, enkel Westhoek (1729)": masse,
-			"Frickx (1745)": frickx,
-			"Villaret (1745)": villaret,
-			"Ferraris (1777)": ferraris,
-			"Atlas der Buurtwegen (1840)": abw,
-			"Vandermaelen (1846-1854)": vandermaelen,
-			"Popp (1842-1854)": popp,
-			"NGI Basemap 1873": basemap1873,
-			"NGI Basemap 1904": basemap1904,
-			"NGI Basemap 1939": basemap1939,
-			"Ministerie Openbare Werken (1950-1970)": moww,
-			"NGI Basemap 1969": basemap1969,
-			"NGI Basemap 1981": basemap1981,
-			"NGI Basemap 1989": basemap1989,
-			};
-		
-		var overlays = {
-			"Strava": strava,
-			"OSM gpx": osmgpx,
-			"OSM roads": osmroads,
-			"Wegenregister": nwr_geojson,
-			"Trage Wegen Register": tragewegenregister
-		};
-		L.control.layers(basemaps,overlays).addTo(map);
-		L.control.attribution({prefix:'<a href="https://github.com/osmbe/play">Source code available</a>.  <a href="https://github.com/osmbe/play/issues">Post Issues or comments here</a> or  <a href="mailto:joost.schouppe@gmail.com">contact the author</a>.'}).addTo(map);
-		</script>
+        var nwr_geojson = L.uGeoJSONLayer({
+            endpoint: "https://data.grbosm.site/wr?",
+            usebbox: true ,
+            method: "GET",
+            maxRequests: 3,
+            minzoom: 15,
+            parameters: {
+                bbsrid: '4326'
+            }
+        });
+
+        var allMapLayers = {
+            'osmbe': osmbe,
+            'osmbefr': osmbefr,
+            'osmbenl': osmbenl,
+            'luchtfoto': luchtfoto,
+            'grb': grb,
+            'strava': strava,
+            'osmgpx': osmgpx,
+            'osmroads': osmroads,
+            'wegenregister': nwr_geojson,
+            'tragewegenregister': tragewegenregister,
+            'photo1995': photo1995,
+            'ferraris': ferraris,
+            'popp': popp,
+            'vandermaelen': vandermaelen,
+            'masse': masse,
+            'villaret': villaret,
+            'frickx': frickx,
+            'abw': abw,
+            'moww': moww,
+            'basemap1873': basemap1873,
+            'basemap1904': basemap1904,
+            'basemap1939': basemap1939,
+            'basemap1969': basemap1969,
+            'basemap1981': basemap1981,
+            'basemap1989': basemap1989,
+        };
+
+        var map = L.map('map', {
+            center: [50.8398, 4.4247],
+            zoom: 11,
+            layers: [basemap1873, osmroads],
+            attributionControl: false
+        });
+
+    var hash = new L.Hash(map, allMapLayers);
+
+        var basemaps = {
+            "OSM Belgium": osmbe,
+            "OSM Belgium (FR)": osmbefr,
+            "OSM Belgium (NL)": osmbenl,
+            "AGIV Luchtfoto": luchtfoto,
+            "Basiskaart GRB": grb
+            "NGI ortho 1995": photo1995,
+            "Masse, enkel Westhoek (1729)": masse,
+            "Frickx (1745)": frickx,
+            "Villaret (1745)": villaret,
+            "Ferraris (1777)": ferraris,
+            "Atlas der Buurtwegen (1840)": abw,
+            "Vandermaelen (1846-1854)": vandermaelen,
+            "Popp (1842-1854)": popp,
+            "NGI Basemap 1873": basemap1873,
+            "NGI Basemap 1904": basemap1904,
+            "NGI Basemap 1939": basemap1939,
+            "Ministerie Openbare Werken (1950-1970)": moww,
+            "NGI Basemap 1969": basemap1969,
+            "NGI Basemap 1981": basemap1981,
+            "NGI Basemap 1989": basemap1989,
+        };
+
+        var overlays = {
+            "Strava": strava,
+            "OSM gpx": osmgpx,
+            "OSM roads": osmroads,
+            "Wegenregister": nwr_geojson,
+            "Trage Wegen Register": tragewegenregister
+        };
+        L.control.layers(basemaps,overlays).addTo(map);
+
+        L.control.attribution({
+            prefix: '<a href="https://github.com/osmbe/play">Source code available</a>. <a href="https://github.com/osmbe/play/issues">Post Issues or comments here</a> or <a href="mailto:joost.schouppe@gmail.com">contact the author</a>.'
+        }).addTo(map);
+    </script>
 </body>
 </html>
