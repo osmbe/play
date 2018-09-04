@@ -95,6 +95,12 @@
             layers: 'moww',
             transparent: true
         });
+        
+        var spwhill = L.tileLayer.wms('https://geoservices.wallonie.be/arcgis/services/RELIEF/WALLONIE_MNT_2013_2014_HILLSHADE/MapServer/WMSServer?', {
+            format: 'image/png',
+            layers: '0',
+            transparent: true
+        });
 
         var osmroads = L.tileLayer('https://api.mapbox.com/styles/v1/joostschouppe/cir5a9eob0020ccm0gc0xsqd0/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
             accessToken: 'pk.eyJ1Ijoiam9vc3RzY2hvdXBwZSIsImEiOiJjaWh2djF1c2owMmJrdDNtMWV2c2Rld3QwIn0.9zXJJWZ4rOcspyFIdEC3Rw',
@@ -133,6 +139,7 @@
             'osmbenl': osmbenl,
             'luchtfoto': luchtfoto,
             'grb': grb,
+            'spwhill':spwhill,
             'strava': strava,
             'osmgpx': osmgpx,
             'osmroads': osmroads,
@@ -170,6 +177,7 @@
             "OSM Belgium (NL)": osmbenl,
             "AGIV Luchtfoto": luchtfoto,
             "Basiskaart GRB": grb,
+            "SPW Hillshade (Wallonia)": spwhill,
             "NGI ortho 1995": photo1995,
             "Masse, enkel Westhoek (1729)": masse,
             "Frickx (1745)": frickx,
