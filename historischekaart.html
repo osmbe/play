@@ -70,6 +70,7 @@
         var vandermaelen  = L.tileLayer('http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=vandermaelen&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}', {
             attribution: 'Luchtfoto © AGIV'
         });
+		
         var masse = L.tileLayer.wms('https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?', {
             format: 'image/png',
             layers: 'Masse',
@@ -101,6 +102,42 @@
             layers: '0',
             transparent: true
         });
+
+        var ferrariswal = L.tileLayer.wms('http://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/FERRARIS/MapServer/WMSServer?', {
+            format: 'image/png',
+            layers: '0',
+            transparent: true
+        });		
+		
+		var vandermaelenwal = L.tileLayer.wms('http://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/VDML/MapServer/WMSServer?', {
+            format: 'image/png',
+            layers: '0',
+            transparent: true
+        });			
+		
+        var soignes1661 = L.tileLayer.wms('http://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/SOIGNES_VANDERSTOCK_1661/MapServer/WMSServer?', {
+            format: 'image/png',
+            layers: '0',
+            transparent: true
+        });			
+
+        var vicinalwal = L.tileLayer.wms('http://geoservices.wallonie.be/arcgis/services/PLAN_REGLEMENT/ATLAS_VV_MODIF/MapServer/WmsServer?', {
+            format: 'image/png',
+            layers: '3,4',
+            transparent: true
+        });		
+		var waroffice = L.tileLayer.wms('http://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/DEPOT_GUERRE_1865_1880/MapServer/WMSServer?', {
+            format: 'image/png',
+            layers: '0',
+            transparent: true
+        });			
+		
+        var walmdtp = L.tileLayer.wms('http://geoservices.wallonie.be/arcgis/services/TOPOGRAPHIE/PLANS_TRAVAUXPUBLICS_1950_1973/MapServer/WMSServer?', {
+            format: 'image/png',
+            layers: '0,1',
+            transparent: true
+        });		
+
 
         var osmroads = L.tileLayer('https://api.mapbox.com/styles/v1/joostschouppe/cir5a9eob0020ccm0gc0xsqd0/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
             accessToken: 'pk.eyJ1Ijoiam9vc3RzY2hvdXBwZSIsImEiOiJjaWh2djF1c2owMmJrdDNtMWV2c2Rld3QwIn0.9zXJJWZ4rOcspyFIdEC3Rw',
@@ -147,13 +184,19 @@
             'tragewegenregister': tragewegenregister,
             'photo1995': photo1995,
             'ferraris': ferraris,
+			'ferrariswal': ferrariswal,
+			'soignes1661':soignes1661,
             'popp': popp,
             'vandermaelen': vandermaelen,
+			'vandermaelenwal':vandermaelenwal,
             'masse': masse,
             'villaret': villaret,
             'frickx': frickx,
             'abw': abw,
+			'vicinalwal':vicinalwal,
+			'waroffice':waroffice,
             'moww': moww,
+			'walmdtp':walmdtp,
             'basemap1873': basemap1873,
             'basemap1904': basemap1904,
             'basemap1939': basemap1939,
@@ -183,13 +226,19 @@
             "Frickx (1745)": frickx,
             "Villaret (1745)": villaret,
             "Ferraris (1777)": ferraris,
+			"Ferraris (1777) - WAL": ferrariswal,
+			"Forêt de Soignes (1661)": soignes1661,
             "Atlas der Buurtwegen (1840)": abw,
+			"Atlas des voiries vicinales (1841)":vicinalwal,
             "Vandermaelen (1846-1854)": vandermaelen,
+			"Vandermaelen (1846-1854) - WAL": vandermaelenwal,
             "Popp (1842-1854)": popp,
+			"Carte du dépôt de la guerre (1865 - 1880)":waroffice,
             "NGI Basemap 1873": basemap1873,
             "NGI Basemap 1904": basemap1904,
             "NGI Basemap 1939": basemap1939,
             "Ministerie Openbare Werken (1950-1970)": moww,
+			"Plans du Ministère des Travaux publics (1950-1973)":walmdtp,
             "NGI Basemap 1969": basemap1969,
             "NGI Basemap 1981": basemap1981,
             "NGI Basemap 1989": basemap1989,
