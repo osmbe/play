@@ -1,6 +1,6 @@
 function getBaselayers() {
   return {
-    "OSM Belgium": L.tileLayer("https://tile.osm.be/osmbe/{z}/{x}/{y}.png", {
+    "OSM.org": L.tileLayer("https://a.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
         '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
       maxZoom: 18
