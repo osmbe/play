@@ -9,8 +9,12 @@
     attributionControl: false
   });
 
+  L.Control.geocoder({
+    position: "topleft"
+  }).addTo(map);
+  
   L.control.layers(baselayers, layers).addTo(map);
-
+  
   L.control
     .attribution({
       prefix:
