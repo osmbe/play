@@ -1,0 +1,59 @@
+{
+  "type": "umap",
+  "uri": "http://umap.openstreetmap.fr/nl/map/collecting-paths_435931#16/50.7423/4.2241",
+  "properties": {
+    "easing": true,
+    "embedControl": true,
+    "fullscreenControl": true,
+    "searchControl": true,
+    "datalayersControl": true,
+    "zoomControl": true,
+    "slideshow": {},
+    "captionBar": false,
+    "limitBounds": {},
+    "tilelayer": {},
+    "licence": "",
+    "description": "",
+    "name": "Collecting paths",
+    "displayPopupFooter": false,
+    "miniMap": false,
+    "moreControl": true,
+    "scaleControl": true,
+    "scrollWheelZoom": true,
+    "zoom": 16
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      4.2217755317688,
+      50.74227393891145
+    ]
+  },
+  "layers": [
+    {
+      "type": "FeatureCollection",
+      "features": [],
+      "_umap_options": {
+        "displayOnLoad": true,
+        "browsable": true,
+        "name": "Paths to vist",
+        "remoteData": {},
+        "color": "Red",
+        "weight": "5",
+        "id": 1212702
+      }
+    },
+    {
+      "type": "FeatureCollection",
+      "features": [],
+      "_umap_options": {
+        "displayOnLoad": true,
+        "browsable": true,
+        "remoteData": {},
+        "name": "Visited paths",
+        "color": "MidnightBlue",
+        "id": 1212703
+      }
+    }
+  ]
+}
