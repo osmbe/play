@@ -1,10 +1,18 @@
 function getBaselayers() {
   return {
-    "OSM.org": L.tileLayer("https://a.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    "OSM.org": L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
-        '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
+        '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
       maxZoom: 18
     }),
+    "OSM Belgium": L.tileLayer(
+      "https://tile.osm.be/osmbe/{z}/{x}/{y}.png",
+      {
+        attribution:
+          '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
+        maxZoom: 18
+      }
+    ),
     "OSM Belgium (FR)": L.tileLayer(
       "https://tile.osm.be/osmbe-fr/{z}/{x}/{y}.png",
       {
@@ -15,6 +23,14 @@ function getBaselayers() {
     ),
     "OSM Belgium (NL)": L.tileLayer(
       "https://tile.osm.be/osmbe-nl/{z}/{x}/{y}.png",
+      {
+        attribution:
+          '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
+        maxZoom: 18
+      }
+    ),
+    "OSM Belgium (Archive - 03/23/2019)": L.tileLayer(
+      "https://tile.osm.be/archive/20190323/{z}/{x}/{y}.png",
       {
         attribution:
           '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
