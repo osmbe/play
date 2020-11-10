@@ -29,7 +29,7 @@ function getBaselayers() {
         maxZoom: 18
       }
     ),
-    "OSM Belgium (Archive - 03/23/2019)": L.tileLayer(
+    "OSM Belgium (Archive - 23/03/2019)": L.tileLayer(
       "https://tile.osm.be/archive/20190323/{z}/{x}/{y}.png",
       {
         attribution:
