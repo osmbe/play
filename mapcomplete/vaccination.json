@@ -1,0 +1,163 @@
+{
+  "id": "vaccination_centres",
+  "title": {
+    "nl": "Vaccinatie centra"
+  },
+  "shortDescription": {
+    "nl": "centra voor covid-19 vaccinaties"
+  },
+  "description": {
+    "nl": "een kaart om de tijdelijke covid-19 vaccinatie centra te mappen.\n\n\nattribution:\nlogo injectienaald: CC BY 4.0 Font Awesome Free 5.2.0 by @fontawesome - https://fontawesome.com"
+  },
+  "language": [
+    "nl"
+  ],
+  "maintainer": "",
+  "icon": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Font_Awesome_5_solid_syringe.svg",
+  "version": "0",
+  "startLat": 51.037861,
+  "startLon": 4.240528,
+  "startZoom": 10,
+  "widenFactor": 0.05,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "vaccination_centres",
+      "name": {
+        "nl": "Vaccinatie centra"
+      },
+      "minzoom": 10,
+      "overpassTags": {
+        "or": [
+          "healthcare=vaccination_centre",
+          "construction:healthcare=vaccination_centre",
+          "was:healthcare=vaccination_centre",
+          "healthcare:speciality=vaccination"
+        ]
+      },
+      "title": {
+        "mappings": [],
+        "render": {
+          "nl": "Vacinatiecentrum"
+        }
+      },
+      "description": {
+        "nl": "een kaart om de tijdelijke covid-19 vaccinatie centra te mappen."
+      },
+      "tagRenderings": [
+        {
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "healthcare=vaccination_centre"
+                ]
+              },
+              "then": {
+                "nl": "Dit vaccinatiecentrum is momenteel in gebruik."
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "construction:healthcare=vaccination_centre"
+                ]
+              },
+              "then": {
+                "nl": "Dit vaccinatiecentrum is momenteel in opbouw."
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "was:healthcare=vaccination_centre"
+                ]
+              },
+              "then": {
+                "nl": "Dit vaccinatiecentrum wordt momenteel niet meer gebruikt."
+              }
+            }
+          ],
+          "question": {
+            "nl": "Is dit vaccinatiecentrum in opbouw, in gebruik of niet meer in gebruik."
+          }
+        },
+        {
+          "render": {
+            "nl": "Hier wordt op {start_date} gestart met vaccineren."
+          },
+          "freeform": {
+            "key": "start_date",
+            "type": "date"
+          },
+          "question": {
+            "nl": "Wanneer wordt hier gestart met vaccineren?"
+          }
+        },
+        {
+          "render": {
+            "nl": "Hier wordt op {end_date} gestopt met vaccineren."
+          },
+          "question": {
+            "nl": "Wanneer wordt hier gestopt met vaccineren?"
+          },
+          "freeform": {
+            "key": "end_date",
+            "type": "date"
+          }
+        },
+        "phone","email","website","opening_hours"
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Font_Awesome_5_solid_syringe.svg"
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [
+        {
+          "tags": [
+            "healthcare=vaccination_centre"
+          ],
+          "title": {
+            "nl": "Vaccinatiecentrum in gebruik"
+          },
+          "description": {
+            "nl": "Voeg een Vaccinatiecentrum toe dat in gebruik is.."
+          }
+        },
+        {
+          "tags": [
+            "construction:healthcare=vaccination_centre"
+          ],
+          "title": {
+            "nl": "Vaccinatiecentrum in opbouw"
+          },
+          "description": {
+            "nl": "Voeg een Vaccinatiecentrum toe dat in opbouw is."
+          }
+        },
+        {
+          "tags": [
+            "was:healthcare=vaccination_centre"
+          ],
+          "title": {
+            "nl": "Vaccinatiecentrum niet meer in gebruik"
+          },
+          "description": {
+            "nl": "Voeg een Vaccinatiecentrum toe dat niet meer gebruikt wordt."
+          }
+        }
+      ],
+      "wayHandling": 1
+    }
+  ],
+  "roamingRenderings": []
+}
