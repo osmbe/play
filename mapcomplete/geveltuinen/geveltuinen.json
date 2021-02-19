@@ -1,0 +1,190 @@
+{
+  "id": "geveltuintjes",
+  "title": {
+    "nl": "Straatgeveltuintjes"
+  },
+  "shortDescription": {
+    "nl": "Straatgeveltuintjes korte beschrijving"
+  },
+  "description": {
+    "nl": "Straatgeveltuintjes lange beschrijving\n"
+  },
+  "language": [
+    "nl"
+  ],
+  "maintainer": "",
+  "icon": "./assets/svg/bug.svg",
+  "version": "0",
+  "startLat": 51.02768,
+  "startLon": 4.480705,
+  "startZoom": 15,
+  "widenFactor": 0.05,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "geveltuintjes",
+      "name": {
+        "nl": "Geveltuintjes"
+      },
+      "minzoom": 15,
+      "overpassTags": {
+        "and": [
+          "leisure=garden",
+          "garden:type=facade_garden"
+        ]
+      },
+      "title": {
+        "render": {
+          "nl": "Geveltuintje"
+        }
+      },
+      "description": {
+        "nl": "beschrijving geveltuintjes"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "nl": "{description}"
+          },
+          "question": {
+            "nl": "Omschrijving van de tuin"
+          },
+          "freeform": {
+            "key": "description",
+            "type": "text"
+          }
+        },
+        {
+          "render": {
+            "nl": "{direction}"
+          },
+          "question": {
+            "nl": "Hoe is de tuin georiënteerd?"
+          },
+          "freeform": {
+            "type": "direction",
+            "key": "direction"
+          }
+        },
+        {
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "direct_sunlight=yes"
+                ]
+              },
+              "then": {
+                "nl": "Het is een volle zon tuintje"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "direct_sunlight=partial"
+                ]
+              },
+              "then": {
+                "nl": "Het is een halfschaduw tuintje"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "direct_sunlight=no"
+                ]
+              },
+              "then": {
+                "nl": "Het is een schaduw tuintje"
+              }
+            }
+          ],
+          "question": {
+            "nl": "Ligt de tuin in zon/half schaduw of schaduw?"
+          },
+          "freeform": {
+            "key": "direct_sunlight"
+          },
+          "render": {
+            "nl": "x"
+          }
+        },
+        {
+          "freeform": {
+            "addExtraTags": [],
+            "key": "rain_barrel"
+          },
+          "render": {
+            "nl": "x"
+          },
+          "question": {
+            "nl": "Is er een regenton voorzien bij het tuintje?"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "rain_barrel=yes"
+                ]
+              },
+              "then": {
+                "nl": "Er is een regenton"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "rain_barrel=no"
+                ]
+              },
+              "then": {
+                "nl": "Er is geen regenton"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "nl": "Aanlegdatum van de tuin: {start_date}"
+          },
+          "question": {
+            "nl": "Wanneer werd de tuin aangelegd?"
+          },
+          "freeform": {
+            "key": "start_date",
+            "type": "date"
+          }
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "./assets/svg/bug.svg"
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [
+        {
+          "tags": [
+            "leisure=garden",
+            "garden:type=facade_garden"
+          ],
+          "title": {
+            "nl": "geveltuintje"
+          },
+          "description": {
+            "nl": "Voeg geveltuintje toe"
+          }
+        }
+      ],
+      "wayHandling": 1
+    }
+  ],
+  "roamingRenderings": []
+}
