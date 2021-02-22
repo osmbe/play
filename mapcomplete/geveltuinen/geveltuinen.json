@@ -26,7 +26,7 @@
       "name": {
         "nl": "Geveltuintjes"
       },
-      "minzoom": 15,
+      "minzoom": 12,
       "overpassTags": {
         "and": [
           "leisure=garden",
@@ -42,21 +42,10 @@
         "nl": "beschrijving geveltuintjes"
       },
       "tagRenderings": [
+        "images",
         {
           "render": {
-            "nl": "{description}"
-          },
-          "question": {
-            "nl": "Omschrijving van de tuin"
-          },
-          "freeform": {
-            "key": "description",
-            "type": "text"
-          }
-        },
-        {
-          "render": {
-            "nl": "{direction}"
+            "nl": "Oriëntatie: {direction} (waarbij 0=N en 90=O)"
           },
           "question": {
             "nl": "Hoe is de tuin georiënteerd?"
@@ -154,6 +143,68 @@
             "key": "start_date",
             "type": "date"
           }
+        },
+        {
+          "render": {
+            "nl": "Meer details: {description}"
+          },
+          "question": {
+            "nl": "Aanvullende omschrijving van de tuin (indien nodig)"
+          },
+          "freeform": {
+            "key": "description",
+            "type": "text"
+          }
+        },
+        {
+          "render": {
+            "nl": "x"
+          },
+          "question": {
+            "nl": "Wat voor planten staan hier?"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "plant=vine"
+                ]
+              },
+              "then": {
+                "nl": "Er staat een klimplant"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "plant=flower"
+                ]
+              },
+              "then": {
+                "nl": "Er staan bloeiende planten"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "plant=shrub"
+                ]
+              },
+              "then": {
+                "nl": "Er staan struiken"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "plant=groundcover"
+                ]
+              },
+              "then": {
+                "nl": "Er staan bodembedekkers"
+              }
+            }
+          ]
         }
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
