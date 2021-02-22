@@ -41,6 +41,18 @@
       "description": {
         "nl": "beschrijving geveltuintjes"
       },
+      "iconOverlays": [
+        {
+          "if": "plant=vine",
+          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/B_slingerplant.svg",
+          "badge": true
+        },
+        {
+          "if": "rain_barel=yes",
+          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/C_regenton.svg",
+          "badge": true
+        }
+      ],
       "tagRenderings": [
         "images",
         {
@@ -165,51 +177,68 @@
           },
           "mappings": [
             {
-              "if": {
-                "and": [
-                  "plant=vine"
-                ]
-              },
+              "if": "plant=vine",
               "then": {
                 "nl": "Er staat een klimplant"
               }
             },
             {
-              "if": {
-                "and": [
-                  "plant=flower"
-                ]
-              },
+              "if": "plant=flower",
               "then": {
                 "nl": "Er staan bloeiende planten"
               }
             },
             {
-              "if": {
-                "and": [
-                  "plant=shrub"
-                ]
-              },
+              "if": "plant=shrub",
               "then": {
                 "nl": "Er staan struiken"
               }
             },
             {
-              "if": {
-                "and": [
-                  "plant=groundcover"
-                ]
-              },
+              "if": "plant=groundcover",
               "then": {
                 "nl": "Er staan bodembedekkers"
               }
             }
-          ]
+          ],
+      "multiAnswer": true
         }
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
-        "render": "./assets/svg/bug.svg"
+        "render": "./assets/svg/bug.svg",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "direct_sunlight=yes"
+              ]
+            },
+            "then": {
+              "nl": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/A_volle_zon.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "direct_sunlight=partial"
+              ]
+            },
+            "then": {
+              "nl": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/A_half_schaduw.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "direct_sunlight=no"
+              ]
+            },
+            "then": {
+              "nl": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/A_schaduw.svg"
+            }
+          }
+        ]
       },
       "width": {
         "render": "8"
