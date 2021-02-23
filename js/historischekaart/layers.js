@@ -1,6 +1,6 @@
 function getLayers() {
   return {
-    "AIV Hillshade (soft, Flanders)": L.tileLayer(
+    "AIV Hillshade (soft, VL)": L.tileLayer(
       "https://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_HILL_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "DHM SVF © AIV",
@@ -8,11 +8,20 @@ function getLayers() {
         transparent: true
       }
     ),
-    "SPW Hillshade (Wallonia)": L.tileLayer.wms(
+    "SPW Hillshade (WAL)": L.tileLayer.wms(
       "https://geoservices.wallonie.be/arcgis/services/RELIEF/WALLONIE_MNT_2013_2014_HILLSHADE/MapServer/WMSServer?",
       {
         format: "image/png",
         layers: "0",
+        transparent: true,
+        opacity: 0.3
+      }
+    ),
+	"Ferraris forest cover (VL)": L.tileLayer.wms(
+      "https://geoservices.informatievlaanderen.be/raadpleegdiensten/INBO/wms?",
+      {
+        format: "image/png",
+        layers: "B1775",
         transparent: true,
         opacity: 0.3
       }
@@ -43,7 +52,7 @@ function getLayers() {
           'GPX data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
       }
     ),
-    "Trage Wegen Register": L.tileLayer.wms(
+    "Trage Wegen Register (VL)": L.tileLayer.wms(
       "https://geoservices.vlaamsbrabant.be/TrageWegen/MapServer/WMSServer?",
       {
         format: "image/png",
@@ -51,7 +60,7 @@ function getLayers() {
         transparent: true
       }
     ),
-    "Wegenregister ": L.uGeoJSONLayer({
+    "Wegenregister (VL)": L.uGeoJSONLayer({
       endpoint: "https://data.grbosm.site/wr?",
       usebbox: true,
       method: "GET",
