@@ -37,19 +37,19 @@ function getBaselayers() {
         maxZoom: 18
       }
     ),
-    "AGIV Luchtfoto": L.tileLayer(
+    "AGIV Luchtfoto (VL)": L.tileLayer(
       "http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=omwrgbmrvl&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Luchtfoto © AIV"
       }
     ),
-    "Basiskaart GRB": L.tileLayer(
+    "Basiskaart GRB (VL)": L.tileLayer(
       "http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=grb_bsk&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "GRB © AIV"
       }
     ),
-    "SPW Hillshade (Wallonia)": L.tileLayer.wms(
+    "SPW Hillshade (WAL)": L.tileLayer.wms(
       "https://geoservices.wallonie.be/arcgis/services/RELIEF/WALLONIE_MNT_2013_2014_HILLSHADE/MapServer/WMSServer?",
       {
         format: "image/png",
@@ -57,13 +57,13 @@ function getBaselayers() {
         transparent: false
       }
     ),
-    "AIV Hillshade (strong, Flanders)": L.tileLayer(
+    "AIV Hillshade (strong, VL)": L.tileLayer(
       "https://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_SVF_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "DHM SVF © AIV"
       }
     ),
-    "AIV Hillshade (soft, Flanders)": L.tileLayer(
+    "AIV Hillshade (soft, VL)": L.tileLayer(
       "https://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_HILL_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "DHM SVF © AIV"
@@ -83,7 +83,7 @@ function getBaselayers() {
         transparent: true
       }
     ),
-    "Frickx (1745)": L.tileLayer.wms(
+    "Frickx (1745, VL)": L.tileLayer.wms(
       "https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?",
       {
         format: "image/png",
@@ -91,7 +91,7 @@ function getBaselayers() {
         transparent: true
       }
     ),
-    "Villaret (1745)": L.tileLayer.wms(
+    "Villaret (1745, VL)": L.tileLayer.wms(
       "https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?",
       {
         format: "image/png",
@@ -99,13 +99,13 @@ function getBaselayers() {
         transparent: true
       }
     ),
-    "Ferraris (1777)": L.tileLayer(
+    "Ferraris (1777, VL)": L.tileLayer(
       "http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ferraris&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Luchtfoto © AGIV"
       }
     ),
-    "Ferraris (1777) - WAL": L.tileLayer.wms(
+    "Ferraris (1777, WAL)": L.tileLayer.wms(
       "http://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/FERRARIS/MapServer/WMSServer?",
       {
         format: "image/png",
@@ -113,7 +113,7 @@ function getBaselayers() {
         transparent: true
       }
     ),
-    "Forêt de Soignes (1661)": L.tileLayer.wms(
+    "Forêt de Soignes (1661, WAL)": L.tileLayer.wms(
       "http://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/SOIGNES_VANDERSTOCK_1661/MapServer/WMSServer?",
       {
         format: "image/png",
@@ -121,7 +121,7 @@ function getBaselayers() {
         transparent: true
       }
     ),
-    "Atlas der Buurtwegen (1840)": L.tileLayer.wms(
+    "Atlas der Buurtwegen (1840, VL)": L.tileLayer.wms(
       "https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?",
       {
         format: "image/png",
@@ -129,7 +129,7 @@ function getBaselayers() {
         transparent: true
       }
     ),
-    "Atlas des voiries vicinales (1841)": L.tileLayer.wms(
+    "Atlas des voiries vicinales (1841, WAL)": L.tileLayer.wms(
       "http://geoservices.wallonie.be/arcgis/services/PLAN_REGLEMENT/ATLAS_VV_MODIF/MapServer/WmsServer?",
       {
         format: "image/png",
@@ -137,13 +137,13 @@ function getBaselayers() {
         transparent: true
       }
     ),
-    "Vandermaelen (1846-1854)": L.tileLayer(
+    "Vandermaelen (1846-1854, VL)": L.tileLayer(
       "http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=vandermaelen&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Luchtfoto © AGIV"
       }
     ),
-    "Vandermaelen (1846-1854) - WAL": L.tileLayer.wms(
+    "Vandermaelen (1846-1854, WAL)": L.tileLayer.wms(
       "http://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/VDML/MapServer/WMSServer?",
       {
         format: "image/png",
@@ -151,13 +151,13 @@ function getBaselayers() {
         transparent: true
       }
     ),
-    "Popp (1842-1854)": L.tileLayer(
+    "Popp (1842-1854, VL)": L.tileLayer(
       "http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=popp&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Luchtfoto © AGIV"
       }
     ),
-    "Carte du dépôt de la guerre (1865 - 1880)": L.tileLayer.wms(
+    "Carte du dépôt de la guerre (1865 - 1880, WAL)": L.tileLayer.wms(
       "http://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/DEPOT_GUERRE_1865_1880/MapServer/WMSServer?",
       {
         format: "image/png",
@@ -183,7 +183,7 @@ function getBaselayers() {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
     ),
-    "Ministerie Openbare Werken (1950-1970)": L.tileLayer.wms(
+    "Ministerie Openbare Werken (1950-1970, VL)": L.tileLayer.wms(
       "https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?",
       {
         format: "image/png",
@@ -191,7 +191,7 @@ function getBaselayers() {
         transparent: true
       }
     ),
-    "Plans du Ministère des Travaux publics (1950-1973)": L.tileLayer.wms(
+    "Plans du Ministère des Travaux publics (1950-1973, WAL)": L.tileLayer.wms(
       "http://geoservices.wallonie.be/arcgis/services/TOPOGRAPHIE/PLANS_TRAVAUXPUBLICS_1950_1973/MapServer/WMSServer?",
       {
         format: "image/png",
