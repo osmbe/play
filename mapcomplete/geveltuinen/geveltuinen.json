@@ -149,11 +149,11 @@
             "nl": "Aanlegdatum van de tuin: {start_date}"
           },
           "question": {
-            "nl": "Wanneer werd de tuin aangelegd?"
+            "nl": "Wanneer werd de tuin aangelegd? (vul gewoon een jaartal in)"
           },
           "freeform": {
             "key": "start_date",
-            "type": "date"
+            "type": "text"
           }
         },
         {
@@ -198,6 +198,12 @@
               "if": "plant=groundcover",
               "then": {
                 "nl": "Er staan bodembedekkers"
+              }
+            },
+            {
+              "if": "edible=yes",
+              "then": {
+                "nl": "Er staan eetbare planten"
               }
             }
           ],
