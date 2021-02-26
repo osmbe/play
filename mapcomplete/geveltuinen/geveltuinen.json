@@ -7,7 +7,7 @@
     "nl": "Straatgeveltuintjes korte beschrijving"
   },
   "description": {
-    "nl": "Straatgeveltuintjes lange beschrijving\n"
+    "nl": "Straatgeveltuintjes lange beschrijving"
   },
   "language": [
     "nl"
@@ -45,6 +45,16 @@
         {
           "if": "plant=vine",
           "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/B_slingerplant.svg",
+          "badge": true
+        },
+        {
+          "if": "plant=groundcover",
+          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/B_bodembedekker.svg",
+          "badge": true
+        },
+        {
+          "if": "edible=true",
+          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/B_eetbaar.svg",
           "badge": true
         },
         {
