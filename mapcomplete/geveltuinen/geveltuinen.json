@@ -7,7 +7,7 @@
     "nl": "Straatgeveltuintjes korte beschrijving"
   },
   "description": {
-    "nl": "Straatgeveltuintjes lange beschrijving\n"
+    "nl": "Straatgeveltuintjes lange beschrijving"
   },
   "language": [
     "nl"
@@ -48,6 +48,16 @@
           "badge": true
         },
         {
+          "if": "plant=groundcover",
+          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/B_bodembedekker.svg",
+          "badge": true
+        },
+        {
+          "if": "edible=true",
+          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/B_eetbaar.svg",
+          "badge": true
+        },
+        {
           "if": "rain_barel=yes",
           "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/C_regenton.svg",
           "badge": true
@@ -65,6 +75,39 @@
           "freeform": {
             "type": "direction",
             "key": "direction"
+          }
+        },
+        {
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "edible=yes"
+                ]
+              },
+              "then": {
+                "nl": "Er staan eetbare planten"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "edible=no"
+                ]
+              },
+              "then": {
+                "nl": "Er staan geen eetbare planten"
+              }
+            }
+          ],
+          "question": {
+            "nl": "Staan er eetbare planten?"
+          },
+          "freeform": {
+            "key": "edible"
+          },
+          "render": {
+            "nl": "x"
           }
         },
         {
@@ -149,11 +192,11 @@
             "nl": "Aanlegdatum van de tuin: {start_date}"
           },
           "question": {
-            "nl": "Wanneer werd de tuin aangelegd?"
+            "nl": "Wanneer werd de tuin aangelegd? (vul gewoon een jaartal in)"
           },
           "freeform": {
             "key": "start_date",
-            "type": "date"
+            "type": "text"
           }
         },
         {
