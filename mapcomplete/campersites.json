@@ -304,7 +304,7 @@
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
-        "render": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/solid/caravan.svg",
+        "render": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/caravan.svg",
         "mappings": [
           {
             "if": {
@@ -313,7 +313,7 @@
               ]
             },
             "then": {
-              "en": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/regular/grin.svg"
+              "en": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/caravan_green.svg"
             }
           }
         ]
@@ -688,7 +688,7 @@
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
-        "render": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/solid/biohazard.svg"
+        "render": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/sanitary_dump_station.svg"
       },
       "width": {
         "render": "8"
