@@ -82,33 +82,6 @@
             {
               "if": {
                 "and": [
-                  "edible=yes"
-                ]
-              },
-              "then": {
-                "nl": "Er staan eetbare planten"
-              }
-            },
-            {
-              "if": {
-                "and": [
-                  "edible=no"
-                ]
-              },
-              "then": {
-                "nl": "Er staan geen eetbare planten"
-              }
-            }
-          ],
-          "question": {
-            "nl": "Staan er eetbare planten?"
-          }
-        },
-        {
-          "mappings": [
-            {
-              "if": {
-                "and": [
                   "direct_sunlight=yes"
                 ]
               },
@@ -220,6 +193,13 @@
               "then": {
                 "nl": "Er staan bodembedekkers"
               }
+            },
+			{
+              "if": "edible=yes",
+              "then": {
+                "nl": "Er staan eetbare planten"
+				},
+			  "ifnot": "edible=no"
             }
           ],
           "multiAnswer": true
