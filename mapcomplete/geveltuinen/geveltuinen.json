@@ -153,16 +153,31 @@
             "type": "text"
           }
         },
-        {
-          "render": {
-            "nl": "Meer details: {description}"
-          },
+		{
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "edible=yes"
+                ]
+              },
+              "then": {
+                "nl": "Er staan eetbare planten"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "edible=no"
+                ]
+              },
+              "then": {
+                "nl": "Er staan geen eetbare planten"
+              }
+            }
+          ],
           "question": {
-            "nl": "Aanvullende omschrijving van de tuin (indien nodig)"
-          },
-          "freeform": {
-            "key": "description",
-            "type": "text"
+            "nl": "Staan er eetbare planten?"
           }
         },
         {
@@ -193,16 +208,21 @@
               "then": {
                 "nl": "Er staan bodembedekkers"
               }
-            },
-			{
-              "if": "edible=yes",
-              "then": {
-                "nl": "Er staan eetbare planten"
-				},
-			  "ifnot": "edible=no"
             }
           ],
           "multiAnswer": true
+        },
+		{
+          "render": {
+            "nl": "Meer details: {description}"
+          },
+          "question": {
+            "nl": "Aanvullende omschrijving van de tuin (indien nodig)"
+          },
+          "freeform": {
+            "key": "description",
+            "type": "text"
+          }
         }
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
