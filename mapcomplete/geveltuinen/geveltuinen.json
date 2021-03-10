@@ -102,12 +102,6 @@
           ],
           "question": {
             "nl": "Staan er eetbare planten?"
-          },
-          "freeform": {
-            "key": "edible"
-          },
-          "render": {
-            "nl": "x"
           }
         },
         {
@@ -146,21 +140,8 @@
           "question": {
             "nl": "Ligt de tuin in zon/half schaduw of schaduw?"
           },
-          "freeform": {
-            "key": "direct_sunlight"
-          },
-          "render": {
-            "nl": "x"
-          }
         },
         {
-          "freeform": {
-            "addExtraTags": [],
-            "key": "rain_barrel"
-          },
-          "render": {
-            "nl": "x"
-          },
           "question": {
             "nl": "Is er een regenton voorzien bij het tuintje?"
           },
@@ -212,9 +193,6 @@
           }
         },
         {
-          "render": {
-            "nl": "x"
-          },
           "question": {
             "nl": "Wat voor planten staan hier?"
           },
@@ -244,7 +222,7 @@
               }
             }
           ],
-      "multiAnswer": true
+          "multiAnswer": true
         }
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
