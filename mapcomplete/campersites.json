@@ -288,8 +288,7 @@
               }
             }
           ]
-        },
-		
+        },	
 		{
           "render": {
             "en": "Official website: {website}"
@@ -301,9 +300,45 @@
           "question": {
             "en": "Does this place have a website?"
           }
-        }
-		
-        {
+        },
+		{
+          "question": {
+            "en": "Does this place offer spots for long term rental?"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "permanent_camping=yes"
+                ]
+              },
+              "then": {
+                "en": "Yes, there are some spots for long term rental, but you can also stay on a daily basis"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "permanent_camping=no"
+                ]
+              },
+              "then": {
+                "en": "No, there are no permanent guests here"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "permanent_camping=only"
+                ]
+              },
+              "then": {
+                "en": "It is only possible to stay here if you have a long term contract(this place will disappear from this map if you choose this)"
+              }
+            }
+          ]
+        },
+       {
           "render": {
             "en": "More details about this place: {description}"
           },
