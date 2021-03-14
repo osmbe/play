@@ -13,7 +13,7 @@
   "language": [
     "en"
   ],
-  "maintainer": "",
+  "maintainer": "joost schouppe",
   "icon": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/caravan.svg",
   "version": "0",
   "startLat": 43.14,
@@ -343,7 +343,7 @@
             "en": "More details about this place: {description}"
           },
           "question": {
-            "en": "Would you like to add a general description of this place? (please keep it objective; opinions go into the reviews)"
+            "en": "Would you like to add a general description of this place? (Do not repeat information previously asked or shown above. Please keep it objective - opinions go into the reviews)"
           },
           "freeform": {
             "key": "description",
@@ -372,47 +372,10 @@
         "render": "8"
       },
       "iconSize": {
-        "render": "40,40,center",
-        "mappings": [
-          {
-            "if": {
-              "and": [
-                "fee=yes"
-              ]
-            },
-            "then": {
-              "en": "This place charges a fee"
-            }
-          },
-          {
-            "if": {
-              "and": [
-                "fee=no"
-              ]
-            },
-            "then": {
-              "en": "You can use this place for free"
-            }
-          }
-        ]
+        "render": "40,40,center"
       },
       "color": {
-        "render": "#00f",
-        "condition": {
-          "and": []
-        },
-        "mappings": [
-          {
-            "if": {
-              "and": [
-                "fee=no"
-              ]
-            },
-            "then": {
-              "en": "for free"
-            }
-          }
-        ]
+        "render": "#00f"
       },
       "presets": [
         {
@@ -423,7 +386,7 @@
             "en": "camper site"
           },
           "description": {
-            "en": "Add a new official camper site. Please zoom in sufficiently for exact placement. Don't copy info from copyrighted content. Your data will be added straight to the global OpenStreetMap database!"
+            "en": "Add a new official camper site. These are designated places to stay overnight with your camper. They might look like a real camping or just look like a parking. They might not be signposted at all, but just be defined in a municipal decision. A regular parking intended for campers where it is not expected to spend the night, is -not- a camper site "
           }
         }
       ],
@@ -617,7 +580,7 @@
         {
           "question": {
             "en": "Who can use this dump station?"
-          }
+          },
           "mappings": [
             {
               "if": {
@@ -648,7 +611,7 @@
               "then": {
                 "en": "Anyone can use this dump station"
               },
-              "hideInAnswer": false
+              "hideInAnswer": true
             },
             {
               "if": {
@@ -658,8 +621,7 @@
               },
               "then": {
                 "en": "Anyone can use this dump station"
-              },
-              "hideInAnswer": true
+              }
             }
           ]
         },
@@ -708,7 +670,7 @@
             "en": "sanitary dump station"
           },
           "description": {
-            "en": "Add a new sanitary dump station. Please zoom in sufficiently for exact placement. Don't copy info from copyrighted content. Your data will be added straight to the global OpenStreetMap database!"
+            "en": "Add a new sanitary dump station. This is a place where camper drivers can dump waste water or chemical toilet waste. Often there's also drinking water and electricity."
           }
         }
       ]
