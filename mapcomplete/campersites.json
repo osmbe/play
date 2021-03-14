@@ -113,33 +113,6 @@
         },		
         {
           "question": {
-            "en": "Does this place have a power supply?"
-          },
-          "mappings": [
-            {
-              "if": {
-                "and": [
-                  "power_supply=yes"
-                ]
-              },
-              "then": {
-                "en": "This place has a power supply"
-              }
-            },
-            {
-              "if": {
-                "and": [
-                  "power_supply=no"
-                ]
-              },
-              "then": {
-                "en": "This place does not have power supply"
-              }
-            }
-          ]
-        },
-        {
-          "question": {
             "en": "Does this place have a sanitary dump station?"
           },
           "mappings": [
@@ -164,17 +137,6 @@
               }
             }
           ]
-        },
-        {
-          "render": {
-            "en": "This place is operated by {operator}"
-          },
-          "question": {
-            "en": "Who operates this place?"
-          },
-          "freeform": {
-            "key": "operator"
-          }
         },
         {
           "render": {
@@ -468,33 +430,6 @@
         },
         {
           "question": {
-            "en": "Does this place have a power supply?"
-          },
-          "mappings": [
-            {
-              "if": {
-                "and": [
-                  "power_supply=yes"
-                ]
-              },
-              "then": {
-                "en": "This place has a power supply"
-              }
-            },
-            {
-              "if": {
-                "and": [
-                  "power_supply=no"
-                ]
-              },
-              "then": {
-                "en": "This place does not have power supply"
-              }
-            }
-          ]
-        },
-        {
-          "question": {
             "en": "Does this place have a water point?"
           },
           "mappings": [
@@ -624,17 +559,6 @@
         },
         {
           "render": {
-            "en": "This place is operated by {operator}"
-          },
-          "question": {
-            "en": "Who operates this place?"
-          },
-          "freeform": {
-            "key": "operator"
-          }
-        },
-        {
-          "render": {
             "en": "This station is part of network {network}"
           },
           "question": {
@@ -673,5 +597,44 @@
       ]
     }
   ],
-  "roamingRenderings": []
+  "roamingRenderings": [
+          {
+          "render": {
+            "en": "This place is operated by {operator}"
+          },
+          "question": {
+            "en": "Who operates this place?"
+          },
+          "freeform": {
+            "key": "operator"
+          }
+        },
+       {
+          "question": {
+            "en": "Does this place have a power supply?"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "power_supply=yes"
+                ]
+              },
+              "then": {
+                "en": "This place has a power supply"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "power_supply=no"
+                ]
+              },
+              "then": {
+                "en": "This place does not have power supply"
+              }
+            }
+          ]
+        }
+		]
 }
