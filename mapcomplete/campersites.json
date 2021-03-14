@@ -209,10 +209,7 @@
                 "en": "There is no internet access"
               }
             }
-          ],
-          "freeform": {
-            "key": "internet_access"
-          }
+          ]
         },
         {
           "render": {
@@ -252,7 +249,6 @@
             ]
           }
         },
-        "reviews",
         {
           "render": {
             "en": "toilets"
@@ -297,7 +293,8 @@
             "key": "description",
             "type": "text"
           }
-        }
+        },
+		"reviews"
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
