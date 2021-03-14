@@ -30,7 +30,8 @@
       "minzoom": 12,
       "overpassTags": {
         "and": [
-          "tourism=caravan_site"
+          "tourism=caravan_site",
+		  "permanent_camping!~only"
         ]
       },
 	  "title": {
@@ -288,6 +289,20 @@
             }
           ]
         },
+		
+		{
+          "render": {
+            "en": "Official website: {website}"
+          },
+          "freeform": {
+            "type": "url",
+            "key": "website"
+          },
+          "question": {
+            "en": "Does this place have a website?"
+          }
+        }
+		
         {
           "render": {
             "en": "More details about this place: {description}"
