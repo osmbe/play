@@ -139,9 +139,6 @@
           ]
         },
         {
-          "render": {
-            "en": "Sanitary dump station"
-          },
           "question": {
             "en": "Does this place have a sanitary dump station?"
           },
@@ -399,9 +396,9 @@
       },
       "minzoom": 12,
       "overpassTags": {
-        "or": [
-          "sanitary_dump_station=yes",
-          "amenity=sanitary_dump_station"
+        "and": [
+          "amenity=sanitary_dump_station",
+		  "vehicle!~no"
         ]
       },
       "title": {
