@@ -497,7 +497,6 @@
           "question": {
             "en": "How much does this place charge?"
           },
-          "mappings": [],
           "freeform": {
             "key": "charge"
           },
@@ -508,20 +507,8 @@
           }
         },
         {
-          "render": {
-            "en": "power supply"
-          },
           "question": {
             "en": "Does this place have a power supply?"
-          },
-          "freeform": {
-            "key": "power_supply",
-            "addExtraTags": [
-              "power_supply=yes"
-            ]
-          },
-          "condition": {
-            "and": []
           },
           "mappings": [
             {
@@ -547,17 +534,8 @@
           ]
         },
         {
-          "render": {
-            "en": "water point"
-          },
           "question": {
             "en": "Does this place have a water point?"
-          },
-          "freeform": {
-            "key": "water_point",
-            "addExtraTags": [
-              "water_point=yes"
-            ]
           },
           "mappings": [
             {
@@ -583,14 +561,8 @@
           ]
         },
         {
-          "render": {
-            "en": "grey water"
-          },
           "question": {
             "en": "Can you dispose of grey water here?"
-          },
-          "freeform": {
-            "key": "sanitary_dump_station:grey_water"
           },
           "mappings": [
             {
@@ -616,14 +588,8 @@
           ]
         },
         {
-          "render": {
-            "en": "chemical toilet"
-          },
           "question": {
             "en": "Can you dispose of chemical toilet waste here?"
-          },
-          "freeform": {
-            "key": "sanitary_dump_station:chemical_toilet"
           },
           "mappings": [
             {
@@ -649,15 +615,9 @@
           ]
         },
         {
-          "render": {
-            "en": "access tag"
-          },
           "question": {
             "en": "Who can use this dump station?"
-          },
-          "freeform": {
-            "key": "access"
-          },
+          }
           "mappings": [
             {
               "if": {
@@ -719,7 +679,7 @@
             "en": "This station is part of network {network}"
           },
           "question": {
-            "en": "What network is this place a part of?"
+            "en": "What network is this place a part of? (skip if none)"
           },
           "freeform": {
             "key": "network"
