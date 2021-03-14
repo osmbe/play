@@ -63,10 +63,7 @@
             "en": "Does this place have a power supply?"
           },
           "freeform": {
-            "key": "power_supply",
-            "addExtraTags": [
-              "power_supply=yes"
-            ]
+            "key": "power_supply"
           },
           "condition": {
             "and": []
@@ -120,11 +117,6 @@
           },
           "freeform": {
             "key": "name"
-          },
-          "condition": {
-            "and": [
-              "name="
-            ]
           }
         },
         {
@@ -133,10 +125,6 @@
           },
           "question": {
             "en": "Does this place have a sanitary dump station?"
-          },
-          "freeform": {
-            "key": "",
-            "addExtraTags": []
           },
           "mappings": [
             {
@@ -185,9 +173,6 @@
           }
         },
         {
-          "render": {
-            "en": "internet access"
-          },
           "question": {
             "en": "Does this place provide internet access?"
           },
@@ -201,6 +186,18 @@
               "then": {
                 "en": "There is internet access"
               }
+            },
+			{
+              "if": {
+                "or": [
+                  "internet_access=wifi",
+				  "internet_access=wlan"
+                ]
+              },
+              "then": {
+                "en": "There is internet access"
+              },
+			  "hideInAnswer": true
             },
             {
               "if": {
