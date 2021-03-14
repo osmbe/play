@@ -33,7 +33,7 @@
           "tourism=caravan_site"
         ]
       },
-      "title": {
+	  "title": {
         "render": {
           "en": "Camper site {name}"
         },
@@ -41,11 +41,11 @@
           {
             "if": {
               "and": [
-                "fee=no"
+                "name="
               ]
             },
             "then": {
-              "en": "Free camper site {name}"
+              "en": "Unnamed camper site"
             }
           }
         ]
@@ -55,18 +55,64 @@
       },
       "tagRenderings": [
         "images",
-        {
+		{
           "render": {
-            "en": "power supply"
+            "en": "This place is called {name}"
           },
           "question": {
-            "en": "Does this place have a power supply?"
+            "en": "What is this place called?"
           },
           "freeform": {
-            "key": "power_supply"
+            "key": "name"
+          }
+        },
+		{
+          "question": {
+            "en": "Does this place charge a fee?"
+          }
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "fee=yes"
+                ]
+              },
+              "then": {
+                "en": "You need to pay for use"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "fee=no"
+                ]
+              },
+              "then": {
+                "en": "Can be used for free"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "en": "This place charges {charge}"
+          },
+          "question": {
+            "en": "How much does this place charge?"
+          },
+          "mappings": [],
+          "freeform": {
+            "key": "charge"
           },
           "condition": {
-            "and": []
+            "and": [
+              "fee=yes"
+            ]
+          }
+        },		
+        {
+          "question": {
+            "en": "Does this place have a power supply?"
           },
           "mappings": [
             {
@@ -90,34 +136,6 @@
               }
             }
           ]
-        },
-        {
-          "render": {
-            "en": "This place charges {charge}"
-          },
-          "question": {
-            "en": "How much does this place charge?"
-          },
-          "mappings": [],
-          "freeform": {
-            "key": "charge"
-          },
-          "condition": {
-            "and": [
-              "fee=yes"
-            ]
-          }
-        },
-        {
-          "render": {
-            "en": "This place is called {name}"
-          },
-          "question": {
-            "en": "What is this place called?"
-          },
-          "freeform": {
-            "key": "name"
-          }
         },
         {
           "render": {
@@ -212,14 +230,8 @@
           ]
         },
         {
-          "render": {
-            "en": "internet access price"
-          },
           "question": {
             "en": "Do you have to pay for the internet access?"
-          },
-          "freeform": {
-            "key": ""
           },
           "mappings": [
             {
@@ -239,7 +251,7 @@
                 ]
               },
               "then": {
-                "en": "You  do not need to pay extra for internet access"
+                "en": "You do not need to pay extra for internet access"
               }
             }
           ],
@@ -250,9 +262,6 @@
           }
         },
         {
-          "render": {
-            "en": "toilets"
-          },
           "question": {
             "en": "Does this place have toilets?"
           },
@@ -277,10 +286,7 @@
                 "en": "This place does not have toilets"
               }
             }
-          ],
-          "freeform": {
-            "key": "toilets"
-          }
+          ]
         },
         {
           "render": {
@@ -400,10 +406,7 @@
               "en": "Dump station"
             }
           }
-        ],
-        "condition": {
-          "and": []
-        }
+        ]
       },
       "description": {
         "en": "Sanitary dump stations"
@@ -411,16 +414,9 @@
       "tagRenderings": [
         "images",
         {
-          "render": {
-            "en": "fee"
-          },
           "question": {
             "en": "Does this place charge a fee?"
-          },
-          "freeform": {
-            "key": "",
-            "addExtraTags": []
-          },
+          }
           "mappings": [
             {
               "if": {
