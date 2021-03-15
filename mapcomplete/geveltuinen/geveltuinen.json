@@ -4,16 +4,16 @@
     "nl": "Straatgeveltuintjes"
   },
   "shortDescription": {
-    "nl": "Straatgeveltuintjes korte beschrijving"
+    "nl": "Deze kaart toont geveltuintjes met foto's en bruikbare info over oriëntatie, zonlicht en planttypes om mensen aan te moedigen zelf een geveltuin aan te leggen."
   },
   "description": {
-    "nl": "Straatgeveltuintjes lange beschrijving"
+    "nl": "Ontharde voortuintjes, groene gevels en bomen ín de stad brengen naast rust ook een mooiere stad, een grotere biodiversiteit, een verkoelend effect en een betere luchtkwaliteit. Klimaan VZW en 'Mechelen Klimaatneutraal' willen met het project Klim(t)aan je Gevel bestaande en nieuwe geveltuintjes in kaart brengen als voorbeeld voor mensen zelf een tuintje willen aanleggen of voor stadwandelaars die houden van de natuur. Meer info over het project op https://klimaan.be/"
   },
   "language": [
     "nl"
   ],
-  "maintainer": "",
-  "icon": "./assets/svg/bug.svg",
+  "maintainer": "joost schouppe",
+  "icon": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/geveltuin.svg",
   "version": "0",
   "startLat": 51.02768,
   "startLon": 4.480705,
@@ -44,24 +44,29 @@
       "iconOverlays": [
         {
           "if": "plant=vine",
-          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/B_slingerplant.svg",
+          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/klimplant.svg",
           "badge": true
         },
         {
           "if": "plant=groundcover",
-          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/B_bodembedekker.svg",
+          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/bodembedekker.svg",
           "badge": true
         },
         {
           "if": "edible=true",
-          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/B_eetbaar.svg",
+          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/eetbaar.svg",
           "badge": true
         },
         {
           "if": "rain_barel=yes",
           "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/C_regenton.svg",
           "badge": true
-        }
+        },
+		{
+          "if": "plant=shrub",
+          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/struik.svg",
+          "badge": true
+        }		
       ],
       "tagRenderings": [
         "images",
@@ -236,7 +241,7 @@
               ]
             },
             "then": {
-              "nl": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/A_volle_zon.svg"
+              "nl": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/zon.svg"
             }
           },
           {
@@ -246,7 +251,7 @@
               ]
             },
             "then": {
-              "nl": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/A_half_schaduw.svg"
+              "nl": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/halfzon.svg"
             }
           },
           {
@@ -256,7 +261,7 @@
               ]
             },
             "then": {
-              "nl": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/A_schaduw.svg"
+              "nl": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/schaduw.svg"
             }
           }
         ]
