@@ -44,7 +44,7 @@
       "iconOverlays": [
         {
           "if": "plant=vine",
-          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/klimplant.svg",
+          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/B_slingerplant.svg",
           "badge": true
         },
         {
@@ -232,7 +232,7 @@
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
-        "render": "./assets/svg/bug.svg",
+        "render": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/geveltuin.svg",
         "mappings": [
           {
             "if": {
@@ -241,7 +241,7 @@
               ]
             },
             "then": {
-              "nl": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/zon.svg"
+              "nl": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/zon.svg"
             }
           },
           {
@@ -251,7 +251,7 @@
               ]
             },
             "then": {
-              "nl": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/halfzon.svg"
+              "nl": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/halfzon.svg"
             }
           },
           {
@@ -261,7 +261,7 @@
               ]
             },
             "then": {
-              "nl": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/schaduw.svg"
+              "nl": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/schaduw.svg"
             }
           }
         ]
