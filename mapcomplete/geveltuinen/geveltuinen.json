@@ -43,7 +43,7 @@
       },
       "iconOverlays": [
         {
-          "if": "plant~.vine.",
+          "if": "plant~.*vine.*",
           "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/klimplant.svg",
           "badge": true
         },
