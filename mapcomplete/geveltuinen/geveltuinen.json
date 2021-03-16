@@ -48,7 +48,7 @@
           "badge": true
         },
         {
-          "if": "plant~.groundcover.",
+          "if": "plant~.*groundcover.*",
           "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/bodembedekker.svg",
           "badge": true
         },
@@ -63,7 +63,7 @@
           "badge": true
         },
 		{
-          "if": "plant~.shrub.",
+          "if": "plant~.*shrub.*",
           "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/struik.svg",
           "badge": true
         }		
