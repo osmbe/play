@@ -14,20 +14,20 @@
     "en"
   ],
   "maintainer": "joost schouppe",
-  "icon": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/caravan.svg",
+  "icon": "https://raw.githubusercontent.com/pietervdvn/MapComplete/master/assets/themes/campersites/caravan.svg",
   "version": "0",
   "startLat": 43.14,
   "startLon": 3.14,
   "startZoom": 14,
   "widenFactor": 0.05,
-  "socialImage": "https://upload.wikimedia.org/wikipedia/commons/9/93/Bar%C3%9Fel_Wohnmobilstellplatz.jpg",
+  "socialImage": "https://raw.githubusercontent.com/pietervdvn/MapComplete/master/assets/themes/campersites/Bar%C3%9Fel_Wohnmobilstellplatz.jpg",
   "layers": [
     {
       "id": "caravansites",
       "name": {
         "en": "Camper sites"
       },
-      "minzoom": 12,
+      "minzoom": 10,
       "overpassTags": {
         "and": [
           "tourism=caravan_site",
@@ -85,7 +85,7 @@
             {
               "if": {
                 "and": [
-                  "fee=no"
+                  "fee=no&charge="
                 ]
               },
               "then": {
@@ -101,7 +101,6 @@
           "question": {
             "en": "How much does this place charge?"
           },
-          "mappings": [],
           "freeform": {
             "key": "charge"
           },
@@ -250,7 +249,7 @@
         },	
 		{
           "render": {
-            "en": "Official website: {website}"
+            "en": "Official website: <a href='{website}'>{website}</a>"
           },
           "freeform": {
             "type": "url",
@@ -309,11 +308,12 @@
             "type": "text"
           }
         },
+        "questions",
 		"reviews"
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
-        "render": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/caravan.svg",
+        "render": "circle:white;https://raw.githubusercontent.com/pietervdvn/MapComplete/master/assets/themes/campersites/caravan.svg",
         "mappings": [
           {
             "if": {
@@ -321,9 +321,7 @@
                 "fee=no"
               ]
             },
-            "then": {
-              "en": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/caravan_green.svg"
-            }
+            "then": "circle:white;https://raw.githubusercontent.com/pietervdvn/MapComplete/master/assets/themes/campersites/caravan_green.svg"
           }
         ]
       },
@@ -356,7 +354,7 @@
       "name": {
         "en": "Sanitary dump stations"
       },
-      "minzoom": 12,
+      "minzoom": 10,
       "overpassTags": {
         "and": [
           "amenity=sanitary_dump_station",
@@ -571,13 +569,13 @@
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
-        "render": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/sanitary_dump_station.svg"
+        "render": "circle:white;https://raw.githubusercontent.com/pietervdvn/MapComplete/master/assets/themes/campersites/sanitary_dump_station.svg"
       },
       "width": {
         "render": "8"
       },
       "iconSize": {
-        "render": "40,40,center"
+        "render": "32,32,center"
       },
       "color": {
         "render": "#00f"
