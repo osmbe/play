@@ -44,27 +44,27 @@
       "iconOverlays": [
         {
           "if": "plant~.*vine.*",
-          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/klimplant.svg",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/klimplant.svg",
           "badge": true
         },
         {
           "if": "plant~.*groundcover.*",
-          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/bodembedekker.svg",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/bodembedekker.svg",
           "badge": true
         },
         {
           "if": "edible=true",
-          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/eetbaar.svg",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/eetbaar.svg",
           "badge": true
         },
         {
           "if": "rain_barel=yes",
-          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/C_regenton.svg",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/C_regenton.svg",
           "badge": true
         },
 		{
           "if": "plant~.*shrub.*",
-          "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/struik.svg",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/struik.svg",
           "badge": true
         }		
       ],
