@@ -270,7 +270,7 @@
         "render": "8"
       },
       "iconSize": {
-        "render": "40,40,center"
+        "render": "50,50,center"
       },
       "color": {
         "render": "#00f"
