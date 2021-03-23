@@ -71,7 +71,7 @@
           "if": "plant~.*flower.*",
           "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/bloei.svg",
           "badge": true
-        	
+        }	
       ],
       "tagRenderings": [
         "images",
