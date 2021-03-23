@@ -59,14 +59,19 @@
         },
         {
           "if": "rain_barel=yes",
-          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/C_regenton.svg",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/gevelton.svg",
           "badge": true
         },
 		{
           "if": "plant~.*shrub.*",
           "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/struik.svg",
           "badge": true
-        }		
+        },
+        {
+          "if": "plant~.*flower.*",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/geveltuinen/bloei.svg",
+          "badge": true
+        	
       ],
       "tagRenderings": [
         "images",
