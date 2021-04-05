@@ -1,0 +1,250 @@
+{
+  "id": "urbanfossils",
+  "title": {
+    "en": "Urban Fossil Map"
+  },
+  "shortDescription": {
+    "en": "A map of urban fossils"
+  },
+  "description": {
+    "en": "Urban fossils are everywhere. Here we collect the coolest ones!"
+  },
+  "language": [
+    "en"
+  ],
+  "maintainer": "",
+  "icon": "https://github.com/osmbe/play/raw/master/mapcomplete/urban_fossils/fossil.png",
+  "version": "0",
+  "startLat": 0,
+  "startLon": 0,
+  "startZoom": 1,
+  "widenFactor": 0.05,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "fossils",
+      "name": {
+        "en": "Urban fossils"
+      },
+      "minzoom": 12,
+      "overpassTags": {
+        "and": [
+          "natural=fossil"
+        ]
+      },
+      "title": {
+        "render": {
+          "en": "Urban fossil"
+        }
+      },
+      "description": {
+        "en": "Urban fossil"
+      },
+      "tagRenderings": [
+	    "images",
+        {
+          "render": {
+            "en": "Species: {taxon}"
+          },
+          "question": {
+            "en": "What species is the fossil? You can follow \"taxon\" logic and just fill in as much detail as you know."
+          },
+          "freeform": {
+            "key": "taxon"
+          }
+        },
+        {
+          "render": {
+            "en": "Location: {location}"
+          },
+          "question": {
+            "en": "What kind of location is this fossil in?"
+          },
+          "freeform": {
+            "key": "location"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "location=building"
+                ]
+              },
+              "then": {
+                "en": "This fossil is part of the construction material of a building"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "location=pavement"
+                ]
+              },
+              "then": {
+                "en": "This fossil is part of the road or the floor"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "location=fixed_rock"
+                ]
+              },
+              "then": {
+                "en": "This fossil is found in the wild, it's still fixed in the original rock"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "location=artefact"
+                ]
+              },
+              "then": {
+                "en": "The fossil has been extruded from the rock and is now a separate artefact. Only add these if they are in a fixed location!"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "en": ""
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "indoor=no"
+                ]
+              },
+              "then": {
+                "en": "This fossil is located outdoors"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "indoor=yes"
+                ]
+              },
+              "then": {
+                "en": "This fossil is located indoors"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "indoor="
+                ]
+              },
+              "then": {
+                "en": "This fossil is located outdoors"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "question": {
+            "en": "Is this fossil indoors or outdoors?"
+          },
+          "freeform": {
+            "key": "x"
+          }
+        },
+        {
+          "render": {
+            "en": ""
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "access=yes"
+                ]
+              },
+              "then": {
+                "en": "This fossil is always publicly accessible"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "access=no"
+                ]
+              },
+              "then": {
+                "en": "This fossil is not publicly accessible"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "access=customers"
+                ]
+              },
+              "then": {
+                "en": "This fossil is accessible if you visit the surrounding place (shop, public building, ...)"
+              }
+            }
+          ],
+          "question": {
+            "en": "Is the fossil accessible?"
+          },
+          "freeform": {
+            "key": "x"
+          }
+        },
+        {
+          "render": {
+            "en": "How to find  he fossil: {fossil:location}"
+          },
+          "question": {
+            "en": "Are there any details needed to find the fossil? (leave plank if no)"
+          },
+          "freeform": {
+            "key": "fossil:location",
+            "type": "text"
+          }
+        },
+        {
+          "render": {
+            "en": "Description:"
+          },
+          "question": {
+            "en": "Describe the fossil and its context (don't repeat what is already answered above)"
+          },
+          "freeform": {
+            "key": "description",
+            "type": "text"
+          }
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://github.com/osmbe/play/raw/master/mapcomplete/urban_fossils/fossil.png"
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [
+        {
+          "tags": [
+            "natural=fossil"
+          ],
+          "title": {
+            "en": "Urban fossil"
+          },
+          "description": {
+            "en": "Urban fossil"
+          }
+        }
+      ]
+    }
+  ],
+  "roamingRenderings": []
+}
