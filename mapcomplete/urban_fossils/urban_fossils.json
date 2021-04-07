@@ -145,9 +145,6 @@
           ],
           "question": {
             "en": "Is this fossil indoors or outdoors?"
-          },
-          "freeform": {
-            "key": "x"
           }
         },
         {
@@ -188,9 +185,6 @@
           ],
           "question": {
             "en": "Is the fossil accessible?"
-          },
-          "freeform": {
-            "key": "x"
           }
         },
         {
