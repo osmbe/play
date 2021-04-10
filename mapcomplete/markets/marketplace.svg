@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="210mm" height="297mm" id="svg2" sodipodi:version="0.32" inkscape:version="0.46" sodipodi:docname="marketplace icon.svg" inkscape:output_extension="org.inkscape.output.svg.inkscape">
-  <defs id="defs4">
-    <inkscape:perspective sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 526.18109 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_z="744.09448 : 526.18109 : 1" inkscape:persp3d-origin="372.04724 : 350.78739 : 1" id="perspective10"/>
-  </defs>
-  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="1.0074671" inkscape:cx="252.56874" inkscape:cy="515.84834" inkscape:document-units="px" inkscape:current-layer="layer3" showgrid="true" inkscape:snap-global="false" inkscape:window-width="1035" inkscape:window-height="700" inkscape:window-x="0" inkscape:window-y="22">
-    <inkscape:grid type="xygrid" id="grid2383"/>
-  </sodipodi:namedview>
-  <metadata id="metadata7">
-    <rdf:RDF>
-      <cc:Work rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g inkscape:label="Calque 1" inkscape:groupmode="layer" id="layer1">
-    <rect style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="rect2385" width="540.78949" height="540.78949" x="121.05264" y="290.52008"/>
-  </g>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="svg2" sodipodi:version="0.32" inkscape:version="0.46" sodipodi:docname="marketplace icon.svg" inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <g inkscape:groupmode="layer" id="layer2" sodipodi:insensitive="true">
     <path style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M 580.26315,668.75209 C 584.21052,651.64683 598.70719,509.05606 598.70719,509.05606 C 598.70719,509.05606 600.71535,497.21395 588.87325,495.89816 C 577.03114,494.58237 308.30987,575.07679 289.88882,572.44521 C 271.46776,569.81363 204.50183,529.25542 197.92288,525.30805 C 191.34394,521.36068 179.50183,516.09752 182.13341,530.57121 C 184.76499,545.04489 202.21644,722.122 202.21644,722.122 C 205.06064,747.71983 261.40138,773.94729 276.91623,772.7914 C 294.02461,771.51679 566.78207,701.99301 566.78207,701.99301 C 566.78207,701.99301 578.94737,691.12051 580.26315,668.75209 z" id="path3168" sodipodi:nodetypes="ccsssscscc"/>
     <path style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 590.81246,515.63501 C 590.81246,515.63501 598.70719,491.95079 593.44403,488.00343 C 588.18088,484.05606 503.85543,441.23543 503.85543,441.23543 C 503.85543,441.23543 497.27648,439.91964 482.8028,443.86701 C 468.32912,447.81438 193.30612,513.48893 193.30612,513.48893 C 193.30612,513.48893 185.41139,520.06788 186.72718,531.90999 C 188.04297,543.75209 207.89474,553.67797 207.89474,553.67797" id="path3170" sodipodi:nodetypes="cscscsc"/>
