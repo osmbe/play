@@ -1,0 +1,333 @@
+{
+  "id": "markets",
+  "title": {
+    "en": "Marketplace"
+  },
+  "shortDescription": {
+    "en": "A map of markets: when and what"
+  },
+  "description": {
+    "en": "A map of markets"
+  },
+  "language": [
+    "en"
+  ],
+  "maintainer": "",
+  "icon": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/marketplace.svg",
+  "version": "0",
+  "startLat": 50.8346,
+  "startLon": 4.364,
+  "startZoom": 13,
+  "widenFactor": 0.05,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "market",
+      "name": {
+        "en": "Markets"
+      },
+      "calculatedTags": [
+        "_is_open_on_mo=(feat.properties.opening_hours?.match(/mo/i) ?? []).length > 0 ? '1' : '0'",
+        "_is_open_on_tu=(feat.properties.opening_hours?.match(/tu/i) ?? []).length > 0 ? '1' : '0'",
+        "_is_open_on_we=(feat.properties.opening_hours?.match(/we/i) ?? []).length > 0 ? '1' : '0'",
+        "_is_open_on_th=(feat.properties.opening_hours?.match(/th/i) ?? []).length > 0 ? '1' : '0'",
+        "_is_open_on_fr=(feat.properties.opening_hours?.match(/fr/i) ?? []).length > 0 ? '1' : '0'",
+        "_is_open_on_sa=(feat.properties.opening_hours?.match(/sa/i) ?? []).length > 0 ? '1' : '0'",
+        "_is_open_on_su=(feat.properties.opening_hours?.match(/su/i) ?? []).length > 0 ? '1' : '0'",
+        "_open_days_sum=Number(feat.properties._is_open_on_mo) + Number(feat.properties._is_open_on_tu) + Number(feat.properties._is_open_on_we) + Number(feat.properties._is_open_on_th) + Number(feat.properties._is_open_on_fr) + Number(feat.properties._is_open_on_sa) + Number(feat.properties._is_open_on_su)"
+      ],
+      "minzoom": 12,
+      "overpassTags": {
+        "and": [
+          "amenity=marketplace"
+        ]
+      },
+      "title": {
+        "render": {
+          "en": "Name MARKET TYPE {_open_days_sum} & {_is_open_on_mo}"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "_open_days_sum=0",
+                "_is_open_on_mo=0"
+              ]
+            },
+            "then": {
+              "en": "Monday Market"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "_open_days_sum=7"
+              ]
+            },
+            "then": {
+              "en": "Daily market"
+            }
+          }
+        ],
+        "condition": {
+          "and": []
+        }
+      },
+      "description": {
+        "en": "All markets"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "en": "Open on {_open_days_sum} days of the week"
+          },
+          "question": {
+            "en": "When does this market take place?"
+          },
+          "freeform": {
+            "type": "opening_hours",
+            "key": "opening_hours"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "_open_days_sum=7"
+                ]
+              },
+              "then": {
+                "en": "This is a daily market"
+              },
+              "hideInAnswer": true
+            },
+            {
+              "if": {
+                "and": [
+                  "_open_days_sum=0"
+                ]
+              },
+              "then": {
+                "en": "No information available"
+              },
+              "hideInAnswer": true
+            }
+          ]
+        },
+        {
+          "render": {
+            "en": "{sells}"
+          },
+          "question": {
+            "en": "Which groups of products are sold in this market?"
+          },
+          "freeform": {
+            "key": "sells"
+          }
+        },
+        {
+          "question": {
+            "en": "Does this market sell organic  (\"bio\") products?"
+          },
+          "freeform": {
+            "key": "organic"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "organic=only"
+                ]
+              },
+              "then": {
+                "en": "Only organic products are sold"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "organic=yes"
+                ]
+              },
+              "then": {
+                "en": "Organic products are sold"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "organic=no"
+                ]
+              },
+              "then": {
+                "en": "No organic products are sold here"
+              }
+            }
+          ],
+          "render": {
+            "en": ""
+          }
+        },
+        {
+          "render": {
+            "en": "x"
+          },
+          "question": {
+            "en": "Does this market sell local products?"
+          },
+          "freeform": {
+            "key": "origin",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "origin=local"
+                ]
+              },
+              "then": {
+                "en": "This market focuses on local products"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "origin=regional"
+                ]
+              },
+              "then": {
+                "en": "This market focuses on local products"
+              },
+              "hideInAnswer": true
+            },
+            {
+              "if": {
+                "and": [
+                  "origin="
+                ]
+              },
+              "then": {
+                "en": "This market does not focus on local products"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "en": ""
+          },
+          "question": {
+            "en": "Is this an outdoor market?"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "building~*",
+                  "indoor=yes",
+                  "location=indoor"
+                ]
+              },
+              "then": {
+                "en": "This is an indoor market"
+              },
+              "hideInAnswer": true
+            },
+            {
+              "if": {
+                "and": [
+                  "building=",
+                  "location!~indoor",
+                  "indoor!~yes"
+                ]
+              },
+              "then": {
+                "en": "This is an outdoor market"
+              },
+              "hideInAnswer": true
+            },
+            {
+              "if": {
+                "and": [
+                  "indoor=yes"
+                ]
+              },
+              "then": {
+                "en": "This is an indoor market"
+              }
+            }
+          ],
+          "freeform": {
+            "key": "indoor"
+          }
+        },
+        {
+          "render": {
+            "en": "description"
+          },
+          "question": {
+            "en": "Additional description of this market (don't repeat information already available above)"
+          },
+          "freeform": {
+            "key": "description",
+            "type": "text"
+          }
+        },
+        {
+          "render": {
+            "en": ""
+          },
+          "question": {
+            "en": "Is there an issue with how this market is shown here?"
+          },
+          "freeform": {
+            "key": "fixme",
+            "addExtraTags": [
+              "fixme:mapcomplete=yes"
+            ]
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "fixme:mapcomplete=yes"
+                ]
+              },
+              "then": {
+                "en": "A MapComplete user reported an issue with this market"
+              },
+              "hideInAnswer": true
+            },
+            {
+              "if": {
+                "and": [
+                  "fixme=",
+                  "fixme:mapcomplete="
+                ]
+              },
+              "then": {
+                "en": "There are no map issues with this market"
+              },
+              "hideInAnswer": true
+            }
+          ]
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/marketplace.svg"
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": []
+    }
+  ],
+  "roamingRenderings": []
+}
