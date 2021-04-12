@@ -7,7 +7,7 @@
     "en": "A map of markets: when and what"
   },
   "description": {
-    "en": "A map of markets"
+    "en": "A map of <a href='https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmarketplace' target=_blank><u>markets</u></a>. "
   },
   "language": [
     "en"
@@ -115,7 +115,7 @@
         },
         {
           "render": {
-            "en": "{sells}"
+            "en": "This market sells: {sells}"
           },
           "question": {
             "en": "Which groups of products are sold in this market?"
@@ -222,7 +222,7 @@
           "mappings": [
             {
               "if": {
-                "and": [
+                "or": [
                   "building~*",
                   "indoor=yes",
                   "location=indoor"
