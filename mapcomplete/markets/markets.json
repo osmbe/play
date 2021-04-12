@@ -7,7 +7,7 @@
     "en": "A map of markets: when and what"
   },
   "description": {
-    "en": "A map of <a href='https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmarketplace' target=_blank><u>markets</u></a>. "
+    "en": "A map of <a href='https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmarketplace' target=_blank>markets</a>. "
   },
   "language": [
     "en"
@@ -315,8 +315,9 @@
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
-        "render": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/marketplace.svg"
+        "render": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/marketplace.svg"
       },
+      "wayHandling": 2
       "width": {
         "render": "8"
       },
