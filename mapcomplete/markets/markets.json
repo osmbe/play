@@ -34,7 +34,8 @@
         "_is_open_on_fr=(feat.properties.opening_hours?.match(/fr/i) ?? []).length > 0 ? '1' : '0'",
         "_is_open_on_sa=(feat.properties.opening_hours?.match(/sa/i) ?? []).length > 0 ? '1' : '0'",
         "_is_open_on_su=(feat.properties.opening_hours?.match(/su/i) ?? []).length > 0 ? '1' : '0'",
-        "_open_days_sum=Number(feat.properties._is_open_on_mo) + Number(feat.properties._is_open_on_tu) + Number(feat.properties._is_open_on_we) + Number(feat.properties._is_open_on_th) + Number(feat.properties._is_open_on_fr) + Number(feat.properties._is_open_on_sa) + Number(feat.properties._is_open_on_su)"
+        "_open_days_sum=Number(feat.properties._is_open_on_mo) + Number(feat.properties._is_open_on_tu) + Number(feat.properties._is_open_on_we) + Number(feat.properties._is_open_on_th) + Number(feat.properties._is_open_on_fr) + Number(feat.properties._is_open_on_sa) + Number(feat.properties._is_open_on_su)",
+		"_today_of_the_week=getDay(Date.now())"
       ],
       "minzoom": 12,
       "overpassTags": {
@@ -50,22 +51,12 @@
           {
             "if": {
               "and": [
-                "_open_days_sum=0",
-                "_is_open_on_mo=0"
+                "_open_days_sum=1",
+                "_is_open_on_mo=1"
               ]
             },
             "then": {
               "en": "Monday Market"
-            }
-          },
-          {
-            "if": {
-              "and": [
-                "_open_days_sum=7"
-              ]
-            },
-            "then": {
-              "en": "Daily market"
             }
           }
         ]
@@ -86,14 +77,25 @@
             "key": "opening_hours"
           },
           "mappings": [
-            {
+          {
+            "if": {
+              "and": [
+                "_open_days_sum=1",
+                "_is_open_on_mo=1"
+              ]
+            },
+            "then": {
+              "en": "Monday Market (TODO: add all days once this actually works)"
+            }
+          },
+		  {
               "if": {
                 "and": [
-                  "_open_days_sum=7"
+                  "_open_days_sum>1"
                 ]
               },
               "then": {
-                "en": "This is a daily market"
+                "en": "{opening_hours()}"
               },
               "hideInAnswer": true
             },
@@ -392,7 +394,7 @@
                 ]
               },
               "then": {
-                "en": "There are no map issues with this market"
+                "en": "<small>There are no known map issues with this market</small>"
               },
               "hideInAnswer": true
             }
@@ -400,15 +402,40 @@
         }
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
-      "icon": {
-        "render": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/marketplace.svg"
+     "icon": {
+        "render": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/marketplace.svg",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "sells=grocery"
+              ]
+            },
+            "then": {
+              "en": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/noun_grocery_3478945.svg"
+            }
+          }
+        ]
       },
       "wayHandling": 2,
       "width": {
         "render": "8"
       },
       "iconSize": {
-        "render": "40,40,center"
+        "render": "40,40,center",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "today_of_the_week=4",
+                "is_open_on_mo=1"
+              ]
+            },
+            "then": {
+              "en": "60,60,center"
+            }
+          }
+        ]
       },
       "color": {
         "render": "#00f"
