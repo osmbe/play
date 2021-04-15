@@ -112,6 +112,104 @@
         }
       ],
       "tagRenderings": [
+	  {
+          "question": {
+			"en": "Which groups of products are sold in this market? Don't try and be exhaustive, just pick the main category."
+          },
+          "mappings": [
+            {
+              "if": "sells=grocery",
+              "then": {
+				"en": "General food is sold"
+              }
+            },
+			{
+              "if": "sells=fish",
+              "then": {
+				"en": "Fresh fish is sold"
+              }
+            },
+			{
+              "if": "sells=greengrocer",
+              "then": {
+				"en": "Fruit and vegetables are sold"
+              }
+            },
+			{
+              "if": "sells=meat",
+              "then": {
+				"en": "Meat is sold"
+              }
+            },
+			{
+              "if": "sells=fast_food",
+              "then": {
+				"en": "Ready to eat meals are sold"
+              }
+            },
+			{
+              "if": "sells=clothes",
+              "then": {
+				"en": "Clothes are sold"
+              }
+            },
+            {
+              "if": "sells=antiques",
+              "then": {
+				"en": "Antiques are sold"
+              }
+            },
+            {
+              "if": "sells=second_hand",
+              "then": {
+				"en": "Second hand stuff is sold"
+              }
+            },
+			{
+              "if": "sells=books",
+              "then": {
+				"en": "Books are sold"
+              }
+            },
+			{
+              "if": "sells=handicrafts",
+              "then": {
+				"en": "Handicrafts are sold"
+              }
+            },
+			{
+              "if": "sells=art",
+              "then": {
+				"en": "Art is sold here"
+              }
+            },
+            {
+              "if": "sells=flower",
+              "then": {
+				"en": "Flowers are sold"
+              }
+            },
+			{
+              "if": "sells=livestock",
+              "then": {
+				"en": "Live farm animals are sold"
+              }
+            },
+			{
+              "if": "sells=pets",
+              "then": {
+				"en": "Pets are sold"
+              }
+            },
+            {
+              "if": "sells=electronics",
+              "then": {
+				"en": "Electronics are sold here"
+              }
+            }
+          ],
+          "multiAnswer": true
+        },
         {
           "render": {
             "en": "Open on {_open_days_sum} days of the week"
@@ -302,107 +400,6 @@
             "key": "indoor"
           }
         },
-		
-		        {
-          "question": {
-			"en": "Which groups of products are sold in this market? Don't try and be exhaustive, just pick the main category."
-          },
-          "mappings": [
-            {
-              "if": "sells=grocery",
-              "then": {
-				"en": "General food is sold"
-              }
-            },
-			{
-              "if": "sells=fish",
-              "then": {
-				"en": "Fresh fish is sold"
-              }
-            },
-			{
-              "if": "sells=greengrocer",
-              "then": {
-				"en": "Fruit and vegetables are sold"
-              }
-            },
-			{
-              "if": "sells=meat",
-              "then": {
-				"en": "Meat is sold"
-              }
-            },
-			{
-              "if": "sells=fast_food",
-              "then": {
-				"en": "Ready to eat meals are sold"
-              }
-            },
-			{
-              "if": "sells=clothes",
-              "then": {
-				"en": "Clothes are sold"
-              }
-            },
-            {
-              "if": "sells=antiques",
-              "then": {
-				"en": "Antiques are sold"
-              }
-            },
-            {
-              "if": "sells=second_hand",
-              "then": {
-				"en": "Second hand stuff is sold"
-              }
-            },
-			{
-              "if": "sells=books",
-              "then": {
-				"en": "Books are sold"
-              }
-            },
-			{
-              "if": "sells=handicrafts",
-              "then": {
-				"en": "Handicrafts are sold"
-              }
-            },
-			{
-              "if": "sells=art",
-              "then": {
-				"en": "Art is sold here"
-              }
-            },
-            {
-              "if": "sells=flower",
-              "then": {
-				"en": "Flowers are sold"
-              }
-            },
-			{
-              "if": "sells=livestock",
-              "then": {
-				"en": "Live farm animals are sold"
-              }
-            },
-			{
-              "if": "sells=pets",
-              "then": {
-				"en": "Pets are sold"
-              }
-            },
-            {
-              "if": "sells=electronics",
-              "then": {
-				"en": "Electronics are sold here"
-              }
-            }
-          ],
-          "multiAnswer": true
-        },
-		
-		
         {
           "render": {
             "en": "description"
