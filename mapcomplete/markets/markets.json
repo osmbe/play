@@ -112,6 +112,7 @@
         }
       ],
       "tagRenderings": [
+	  "images",
 	  {
           "question": {
 			"en": "Which groups of products are sold in this market? Don't try and be exhaustive, just pick the main category."
@@ -450,7 +451,8 @@
               "hideInAnswer": true
             }
           ]
-        }
+        },
+		"reviews"
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
      "icon": {
@@ -490,7 +492,7 @@
 		  {
             "if": {
               "or": [
-                "sells~.*flower.*"
+                "sells=flower"
               ]
             },
             "then": {
