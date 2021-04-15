@@ -64,6 +64,53 @@
       "description": {
         "en": "All markets"
       },
+	  "iconOverlays": [
+        {
+          "if": "_is_open_on_mo=1",
+          "then": "circle:white;Mo",
+          "badge": true
+        },
+		{
+          "if": "_is_open_on_tu=1",
+          "then": "circle:white;Tu",
+          "badge": true
+        },
+		{
+          "if": "_is_open_on_we=1",
+          "then": "circle:white;We",
+          "badge": true
+        },
+		{
+          "if": "_is_open_on_th=1",
+          "then": "circle:white;Th",
+          "badge": true
+        },
+		{
+          "if": "_is_open_on_fr=1",
+          "then": "circle:white;Fr",
+          "badge": true
+        },
+		{
+          "if": "_is_open_on_sa=1",
+          "then": "circle:white;Sa",
+          "badge": true
+        },
+		{
+          "if": "_is_open_on_su=1",
+          "then": "circle:white;Su",
+          "badge": true
+        },
+		{
+          "if": "_is_open_on_mo=1",
+          "then": "circle:white;Mo",
+          "badge": true
+        },
+		{
+          "if": "_is_open_on_mo=1",
+          "then": "circle:white;Mo",
+          "badge": true
+        },
+      ],
       "tagRenderings": [
         {
           "render": {
@@ -409,16 +456,47 @@
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
      "icon": {
-        "render": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/marketplace.svg",
+        "render": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/noun_marketstall_1261692.svg",
         "mappings": [
           {
             "if": {
               "and": [
-                "sells~.*grocery.*"
+                "sells=grocery"
               ]
             },
             "then": {
-              "en": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/noun_grocery_3478945.svg"
+              "en": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/marketplace.svg"
+            }
+          },
+		  {
+            "if": {
+              "and": [
+                "sells~.*second_hand.*"
+              ]
+            },
+            "then": {
+              "en": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/noun_Recycle_1547060.svg"
+            }
+          },
+		  {
+            "if": {
+              "or": [
+                "sells~.*art.*",
+				"sells~.*handicrafts.*"
+              ]
+            },
+            "then": {
+              "en": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/noun_painting_3394393.svg"
+            }
+          },
+		  {
+            "if": {
+              "or": [
+                "sells~.*flower.*"
+              ]
+            },
+            "then": {
+              "en": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/noun_Flower_1584400.svg"
             }
           }
         ]
