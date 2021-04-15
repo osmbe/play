@@ -77,47 +77,37 @@
 	  "iconOverlays": [
         {
           "if": "_is_open_on_mo=1",
-          "then": "circle:white;Mo",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/mo.svg",
           "badge": true
         },
 		{
           "if": "_is_open_on_tu=1",
-          "then": "circle:white;Tu",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/tu.svg",
           "badge": true
         },
 		{
           "if": "_is_open_on_we=1",
-          "then": "circle:white;We",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/we.svg",
           "badge": true
         },
 		{
           "if": "_is_open_on_th=1",
-          "then": "circle:white;Th",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/th.svg",
           "badge": true
         },
 		{
           "if": "_is_open_on_fr=1",
-          "then": "circle:white;Fr",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/fr.svg",
           "badge": true
         },
 		{
           "if": "_is_open_on_sa=1",
-          "then": "circle:white;Sa",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/sa.svg",
           "badge": true
         },
 		{
           "if": "_is_open_on_su=1",
-          "then": "circle:white;Su",
-          "badge": true
-        },
-		{
-          "if": "_is_open_on_mo=1",
-          "then": "circle:white;Mo",
-          "badge": true
-        },
-		{
-          "if": "_is_open_on_mo=1",
-          "then": "circle:white;Mo",
+          "then": "circle:white;https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/markets/su.svg",
           "badge": true
         }
       ],
