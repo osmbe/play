@@ -90,8 +90,14 @@
           },
 		  {
               "if": {
-                "and": [
-                  "_open_days_sum>1"
+                "or": [
+                  "_open_days_sum=0",
+				  "_open_days_sum=2",
+				  "_open_days_sum=3",
+				  "_open_days_sum=4",
+				  "_open_days_sum=5",
+				  "_open_days_sum=6",
+				  "_open_days_sum=7"
                 ]
               },
               "then": {
@@ -408,7 +414,7 @@
           {
             "if": {
               "and": [
-                "sells=grocery"
+                "sells~.*grocery.*"
               ]
             },
             "then": {
@@ -427,8 +433,8 @@
           {
             "if": {
               "and": [
-                "today_of_the_week=4",
-                "is_open_on_mo=1"
+                "_today_of_the_week=4",
+                "_is_open_on_th=1"
               ]
             },
             "then": {
