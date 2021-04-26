@@ -1,0 +1,194 @@
+{
+  "id": "container",
+  "title": {
+    "nl": "Containers"
+  },
+  "shortDescription": {
+    "nl": "korte beschrijving thema"
+  },
+  "description": {
+    "nl": "lange beschrijving thema"
+  },
+  "language": [
+    "nl"
+  ],
+  "maintainer": "",
+  "icon": "./assets/svg/bug.svg",
+  "version": "0",
+  "startLat": 51.1349,
+  "startLon": 4.4523,
+  "startZoom": 15,
+  "widenFactor": 0.05,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "container",
+      "name": {
+        "nl": "Afvalcontainers"
+      },
+      "minzoom": 14,
+      "overpassTags": {
+        "and": [
+          "amenity=recycling",
+          "recycling_type=container"
+        ]
+      },
+      "title": {
+        "render": {
+          "nl": "Afvalcontainer"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "recycling:glass_bottles=yes"
+              ]
+            },
+            "then": {
+              "nl": "Glasbol"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "recycling:clothes=yes"
+              ]
+            },
+            "then": {
+              "nl": "Kledingcontainer"
+            }
+          },
+          {
+            "if": {
+              "or": [
+                "recycling:cardboard=yes",
+                "recycling:paper=yes"
+              ]
+            },
+            "then": {
+              "nl": "Papiercontainer"
+            }
+          }
+        ]
+      },
+      "description": {
+        "nl": "Laag met allerlei containers"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "nl": ""
+          },
+          "question": {
+            "nl": "Wat voor afval kan je hier deponeren?"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "recycling:glass_bottles=yes"
+                ]
+              },
+              "then": {
+                "nl": "Dit is een glascontainer"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "recycling:clothes=yes"
+                ]
+              },
+              "then": {
+                "nl": "Dit is een kledingcontainer"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "recycling:cardboard=yes",
+                  "recycling:paper=yes"
+                ]
+              },
+              "then": {
+                "nl": "Dit is een papier- & kartoncontainer"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "recycling:cardboard=yes",
+                  "recycling:paper="
+                ]
+              },
+              "then": {
+                "nl": "Dit is een papier- & kartoncontainer"
+              },
+              "hideInAnswer": true
+            },
+            {
+              "if": {
+                "and": [
+                  "recycling:cardboard=",
+                  "recycling:paper=yes"
+                ]
+              },
+              "then": {
+                "nl": "Dit is een papier- & kartoncontainer"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "freeform": {
+            "key": "x"
+          }
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "./assets/svg/bug.svg",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "recycling:glass_bottles=yes",
+                "recycling_type=container",
+                "amenity=recycling"
+              ]
+            },
+            "then": {
+              "nl": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/containers/noun_Glassrecycling_bin_501475.svg"
+            }
+          }
+        ]
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [
+        {
+          "tags": [
+            "amenity=recycling",
+            "recycling_type=container",
+            "recycling:glass_bottles=yes",
+            "recycling:glass_bottles:colour=green;white",
+            "recycling:glass_bottles:count=1"
+          ],
+          "title": {
+            "nl": "Glasbol met groen en wit glas"
+          },
+          "description": {
+            "nl": "Glasbol met groen en wit glas in één enkele container"
+          }
+        }
+      ]
+    }
+  ],
+  "roamingRenderings": []
+}
