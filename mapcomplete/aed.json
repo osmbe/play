@@ -125,12 +125,6 @@
             "nl": "Toegankelijkheid is {access}",
             "de": "Zugang ist {access}"
           },
-          "condition": {
-            "or": [
-              "indoor=yes",
-              "access~*"
-            ]
-          },
           "freeform": {
             "key": "access",
             "addExtraTags": [
