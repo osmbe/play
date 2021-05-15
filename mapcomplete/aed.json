@@ -168,7 +168,7 @@
                 "ca": "Només accessible a clients",
                 "es": "Sólo accesible a clientes",
                 "fr": "Réservé aux clients du lieu",
-                "nl": "Enkel toegankeleijk voor klanten",
+                "nl": "Enkel toegankelijk voor klanten",
                 "de": "Nur für Kunden zugänglich"
               }
             },
@@ -182,9 +182,50 @@
                 "nl": "Niet toegankelijk voor het publiek (bv. enkel voor personneel, de eigenaar, ...)",
                 "de": "Nicht für die Öffentlichkeit zugänglich (z.B. nur für das Personal, die Eigentümer, ...)"
               }
-            }
+			},
+            {
+              "if": "access=no",
+              "then": {
+                "en": "Not accessible, possibly only for professional use",
+				"nl": "Niet toegankelijk, mogelijk enkel voor professionals"
+				}
+			}			
           ]
         },
+		{
+		  "render": {
+            "en": "There is no info about the type of device",
+			"nl": "Er is geen info over het soort toestel"
+          }, 
+          "question": {
+            "en": "Is this a a regular automatic defibrillator or a manual defibrillator for professionals only?",
+			"nl": "Is dit een gewone automatische defibrillator of een manueel toestel enkel voor professionals?"
+          },
+          "freeform": {
+            "key": "defibrillator"
+          },
+          "condition": {
+            "and": [
+              "access=no"
+            ]
+          },
+		  "mappings": [
+            {
+              "if": "defibrillator=manual",
+              "then": {
+                "en": "This is a manual defibrillator for professionals",
+                "nl": "Dit is een manueel toestel enkel voor professionals"
+              }
+            },
+            {
+              "if": "defibrillator=automatic",
+              "then": {
+                "en": "This is a normal automatic defibrillator",
+                "nl": "Dit is een gewone automatische defibrillator"
+              }
+            }
+			]
+        },		
         {
           "question": {
             "en": "On which floor is this defibrillator located?",
