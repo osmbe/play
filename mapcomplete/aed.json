@@ -388,7 +388,7 @@
           },
           "freeform": {
             "key": "description",
-            "type": "description"
+            "type": "text"
           }
         },
 		{
@@ -425,7 +425,7 @@
           },
           "freeform": {
             "key": "fixme",
-            "type": "fixme"
+            "type": "text"
           }
         }
       ]
