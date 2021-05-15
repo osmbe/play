@@ -55,7 +55,21 @@
           "de": "Defibrillator"
         }
       },
-      "icon": "./assets/themes/aed/aed.svg",
+	  "icon": {
+        "render": "./assets/themes/aed/aed_checked.svg",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "survey:date~*"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/aed_checked.svg"
+            }
+          }
+		 ]
+        },		
       "color": "#0000ff",
       "presets": [
         {
@@ -250,8 +264,8 @@
         },
         {
           "render": {
-            "nl": "<i>Meer informatie over de locatie (local language):</i><br/>{defibrillator:location}",
-            "en": "<i>Extra information about the location (in de plaatselijke taal):</i><br/>{defibrillator:location}"
+            "nl": "<i>Meer informatie over de locatie (lokale taal):</i><br/>{defibrillator:location}",
+            "en": "<i>Extra information about the location (in the local languagel):</i><br/>{defibrillator:location}"
           },
           "question": {
             "en": "Please give some explanation on where the defibrillator can be found (in the local language)",
