@@ -292,7 +292,7 @@
           },
           "then": {
             "nl": "Deze defibrillator is vlot bereikbaar met een rolstoel",
-			"en": "this defibrillator is easily reachable with a wheelchair"
+			"en": "This defibrillator is easily reachable with a wheelchair"
           }
         },
         {
@@ -420,8 +420,8 @@
             "nl": "Extra informatie voor OpenStreetMap experts: {fixme}"
           },
           "question": {
-            "en": "Is there something wrong with how this is mapped that you weren't able to fix here?",
-            "nl": "Is er iets mis met de informatie over deze defibrillator dat je hier niet opgelost kreeg?"
+            "en": "Is there something wrong with how this is mapped, that you weren't able to fix here? (leave a note to OpenStreetMap experts)",
+            "nl": "Is er iets mis met de informatie over deze defibrillator dat je hier niet opgelost kreeg? (laat hier een berichtje achter voor OpenStreetMap experts)"
           },
           "freeform": {
             "key": "fixme",
