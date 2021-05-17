@@ -148,34 +148,42 @@
           "mappings": [
             {
               "if": "authentication:membership_card=yes",
+			  "ifnot": "authentication:membership_card=no",
               "then": "Authentication by a membership card"
             },
             {
               "if": "authentication:app=yes",
+			  "ifnot": "authentication:app=no",
               "then": "Authentication by an app"
             },
             {
               "if": "authentication:phone_call=yes",
+			  "ifnot": "authentication:phone_call=no",
               "then": "Authentication via phone call is available"
             },
             {
               "if": "authentication:short_message=yes",
+			  "ifnot": "authentication:short_message=no",
               "then": "Authentication via phone call is available"
             },
             {
               "if": "authentication:nfc=yes",
+			  "ifnot": "authentication:nfc=no",
               "then": "Authentication via NFC is available"
             },
             {
               "if": "authentication:money_card=yes",
+			  "ifnot": "authentication:money_card=no",
               "then": "Authentication via Money Card is available"
             },
             {
               "if": "authentication:debig=yes",
+			  "ifnot": "authentication:debig=no",
               "then": "Authentication via debit card is available"
             },
             {
               "if": "authentication:none=yes",
+			  "ifnot": "authentication:none=no",
               "then": "No authentication is needed"
             }
           ]
