@@ -114,10 +114,11 @@
           "then": "Anyone can use this charging station (payment might be needed)"
         },
 		{
-          "if": [
+          "if": { "or": [
 			"access=permissive",
 			"access=public"
-		  ],
+						]
+				},
           "then": "Anyone can use this charging station (payment might be needed)",
 		  "hideInAnswer": true
         },
@@ -133,6 +134,7 @@
     },
         {
           "#": "capacity",
+		  "question": "How many vehicles can be charged here?",
           "render": "{capacity} vehicles can be charged here",
           "freeform": {
             "key": "capacity",
@@ -141,6 +143,7 @@
         },
         {
           "#": "Authentication",
+		  "question": "What kind of authentication is available at the charging station?",
           "multiAnswer": true,
           "mappings": [
             {
@@ -179,6 +182,7 @@
         },
         {
           "#": "Auth phone",
+		  "question": "What's the phone number for authentication call or SMS?",
           "render": "Authenticate by calling or SMS'ing to <a href='tel:{authentication:phone_call:number}'>{authentication:phone_call:number}</a>",
           "freeform": {
             "key": "authentication:phone_call:number",
