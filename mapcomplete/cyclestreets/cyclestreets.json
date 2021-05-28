@@ -8,7 +8,7 @@
     "nl": "Een kaart met alle gekende fietsstraten"
   },
   "description": {
-    "nl": "Een fietsstraat is een straat waar <ul><li><b>automobilisten geen fietsers mogen inhalen</b></li><li>Er een maximumsnelheid van <b>30km/u</b> geldt</li><li>Fietsers gemotoriseerde voortuigen links mogen inhalen</li><li>Fietsers nog steeds voorrang aan rechts moeten verlenen - ook aan auto's en voetgangers op het zebrapad</li></ul><br/><br/>Op deze open kaart kan je alle gekende fietsstraten zien en kan je ontbrekende fietsstraten aanduiden.<br/> Een schoolstraat is een straat waar voertuigen tijdens de schooluren niet door mogen. Er gelden ook nog enkele andere beperkingen. De uren dat de straat toegankelijk zijn, hangen af van plaats tot plaats.<br/> Om de kaart aan te passen, moet je je aanmelden met OpenStreetMap en helemaal inzoomen tot straatniveau."
+    "nl": "Een <b>fietsstraat</b> is een straat waar <ul><li><b>automobilisten geen fietsers mogen inhalen</b></li><li>Er een maximumsnelheid van <b>30km/u</b> geldt</li><li>Fietsers gemotoriseerde voortuigen links mogen inhalen</li><li>Fietsers nog steeds voorrang aan rechts moeten verlenen - ook aan auto's en voetgangers op het zebrapad</li></ul><br/><br/> Een <b>schoolstraat</b> is een straat waar voertuigen tijdens de schooluren niet door mogen. Er gelden ook nog enkele andere beperkingen. De uren dat de straat toegankelijk zijn, hangen af van plaats tot plaats.<br/> <br/>Op deze open kaart kan je alle gekende fietsstraten zien en kan je ontbrekende fietsstraten aanduiden. Om de kaart aan te passen, moet je je aanmelden met OpenStreetMap en helemaal inzoomen tot straatniveau."
   },
   "icon": "./assets/themes/cyclestreets/F111.svg",
   "language": [
@@ -98,7 +98,8 @@
             "and": [
               "schoolstreet=yes",
               "designation=BE:schoolstreet",
-			  "bicycle=yes"
+			  "bicycle=yes",
+			  "speed_pedelec=yes"
             ]
           },
           "then": {
@@ -132,7 +133,8 @@
             "and": [
               "schoolstreet=",
               "designation=",
-			  "bicycle="
+			  "bicycle=",
+			  "speed_pedelec="
             ]
           },
           "then": {
@@ -146,7 +148,7 @@
         "nl": "Wanneer is deze straat afgesloten?"
       },
       "render": {
-        "nl": "Deze straat wordt afgesloten op: {fixme:schoolstreet}"
+        "nl": "Deze straat wordt afgesloten op: {opening_hours_table(fixme:schoolstreet)}"
       },
       "condition": { 
 	       "or": [
