@@ -1,0 +1,313 @@
+{
+  "id": "fietsstraten",
+  "version": "2020-08-30",
+  "title": {
+    "nl": "Fietsstraten & Schoolstraten"
+  },
+  "shortDescription": {
+    "nl": "Een kaart met alle gekende fietsstraten"
+  },
+  "description": {
+    "nl": "Een fietsstraat is een straat waar <ul><li><b>automobilisten geen fietsers mogen inhalen</b></li><li>Er een maximumsnelheid van <b>30km/u</b> geldt</li><li>Fietsers gemotoriseerde voortuigen links mogen inhalen</li><li>Fietsers nog steeds voorrang aan rechts moeten verlenen - ook aan auto's en voetgangers op het zebrapad</li></ul><br/><br/>Op deze open kaart kan je alle gekende fietsstraten zien en kan je ontbrekende fietsstraten aanduiden.<br/> Een schoolstraat is een straat waar voertuigen tijdens de schooluren niet door mogen. Er gelden ook nog enkele andere beperkingen. De uren dat de straat toegankelijk zijn, hangen af van plaats tot plaats.<br/> Om de kaart aan te passen, moet je je aanmelden met OpenStreetMap en helemaal inzoomen tot straatniveau."
+  },
+  "icon": "./assets/themes/cyclestreets/F111.svg",
+  "language": [
+    "nl"
+  ],
+  "startLat": 51.2095,
+  "startZoom": 14,
+  "startLon": 3.2228,
+  "maintainer": "MapComplete, joost schouppe",
+  "widenfactor": 0.05,
+  "roamingRenderings": [
+    {
+      "question": {
+        "nl": "Is deze straat een fietsstraat?"
+      },
+      "mappings": [
+        {
+          "if": {
+            "and": [
+              "cyclestreet=yes",
+              "maxspeed=30",
+              "overtaking:motor_vehicle=no",
+              "proposed:cyclestreet="
+            ]
+          },
+          "then": {
+            "nl": "Deze straat is een fietsstraat (en dus zone 30)"
+          }
+        },
+        {
+          "if": {
+            "and": [
+              "cyclestreet=yes",
+              "proposed:cyclestreet="
+            ]
+          },
+          "then": {
+            "nl": "Deze straat is een fietsstraat"
+          },
+          "hideInAnswer": true
+        },
+        {
+          "if": {
+            "and": [
+              "cyclestreet=",
+              "proposed:cyclestreet=yes"
+            ]
+          },
+          "then": {
+            "nl": "Deze straat wordt binnenkort een fietsstraat"
+          }
+        },
+        {
+          "if": {
+            "and": [
+              "cyclestreet=",
+              "proposed:cyclestreet=",
+              "overtaking:motor_vehicle="
+            ]
+          },
+          "then": {
+            "nl": "Deze straat is geen fietsstraat"
+          }
+        }
+      ]
+    },
+    {
+      "question": {
+        "nl": "Wanneer wordt deze straat een fietsstraat?"
+      },
+      "render": {
+        "nl": "Deze straat wordt fietsstraat op {cyclestreet:start_date}"
+      },
+      "condition": "proposed:cyclestreet=yes",
+      "freeform": {
+        "type": "date",
+        "key": "cyclestreet:start_date"
+      }
+    },
+    {
+      "question": {
+        "nl": "Is deze straat een schoolstraat?"
+      },
+      "mappings": [
+        {
+          "if": {
+            "and": [
+              "schoolstreet=yes",
+              "designation=BE:schoolstreet",
+			  "bicycle=yes"
+            ]
+          },
+          "then": {
+            "nl": "Dit is een schoolstraat (in België, met onderbord 'schoolstraat')"
+          }
+        },
+		{
+          "if": {
+            "and": [
+              "schoolstreet=yes"
+            ]
+          },
+          "then": {
+            "nl": "Dit is een schoolstraat (niet in België, of zonder onderbord 'schoolstraat')"
+          }
+        },
+        {
+          "if": {
+            "or": [
+              "schoolstreet=yes",
+              "designation=BE:schoolstreet"
+            ]
+          },
+          "then": {
+            "nl": "Deze straat is een schoolstraat"
+          },
+          "hideInAnswer": true
+        },
+        {
+          "if": {
+            "and": [
+              "schoolstreet=",
+              "designation=",
+			  "bicycle="
+            ]
+          },
+          "then": {
+            "nl": "Deze straat is geen schoolstraat"
+          }
+        }
+      ]
+    },
+    {
+      "question": {
+        "nl": "Wanneer is deze straat afgesloten?"
+      },
+      "render": {
+        "nl": "Deze straat wordt afgesloten op [render de openingsuren BINNEN de vehicle:conditional tag"
+      },
+      "condition": { 
+	       "or": [
+              "schoolstreet=yes",
+              "designation=BE:schoolstreet"
+            ]
+			},
+      "freeform": {
+        "key": "maxspeed:conditional"
+      }
+    }
+  ],
+  "layers": [
+    {
+      "id": "fietsstraat",
+      "name": {
+        "nl": "Fietsstraten"
+      },
+      "minzoom": 7,
+      "source": {
+        "osmTags": {
+          "and": [
+            "cyclestreet=yes"
+          ]
+        }
+      },
+      "isShown": {
+        "render": "yes",
+        "mappings": [
+          {
+            "if": "id!~way/.*",
+            "then": "no"
+          }
+        ]
+      },
+      "description": {
+        "nl": "Een fietsstraat is een straat waar gemotoriseerd verkeer een fietser niet mag inhalen."
+      },
+      "title": "{name}",
+      "icon": "./assets/themes/cyclestreets/F111.svg",
+      "color": "#0000ff",
+      "width": "10",
+      "tagRenderings": [
+        "images"
+      ]
+    },
+    {
+      "id": "toekomstige_fietsstraat",
+      "name": {
+        "nl": "Toekomstige fietsstraat"
+      },
+      "description": {
+        "nl": "Deze straat wordt binnenkort een fietsstraat"
+      },
+      "minzoom": 9,
+      "wayHandling": 0,
+      "source": {
+        "osmTags": "proposed:cyclestreet=yes"
+      },
+      "title": {
+        "render": {
+          "nl": "Toekomstige fietsstraat"
+        },
+        "mappings": [
+          {
+            "then": {
+              "nl": "{name} wordt fietsstraat"
+            },
+            "if": "name~*"
+          }
+        ]
+      },
+      "icon": "./assets/themes/cyclestreets/F113.svg",
+      "color": "#09f9dd",
+      "width": "5",
+      "tagRenderings": [
+        "images"
+      ]
+    },
+	   {
+      "id": "schoolstraat",
+      "name": {
+        "nl": "Schoolstraten"
+      },
+      "minzoom": 7,
+      "source": {
+        "osmTags": {
+          "or": [
+            "schoolstreet=yes",
+			"designation=BE:schoolstreet"		
+          ]
+        }
+      },
+      "isShown": {
+        "render": "yes",
+        "mappings": [
+          {
+            "if": "id!~way/.*",
+            "then": "no"
+          }
+        ]
+      },
+      "description": {
+        "nl": "Een schoolstraat is een straat waar voertuigen niet in mogen tijdens de schooluren."
+      },
+      "title": "{name}",
+      "icon": "./assets/themes/cyclestreets/F111.svg",
+      "color": "#ff2a00",
+      "width": "10",
+      "tagRenderings": [
+        "images"
+      ]
+    },
+    {
+      "id": "all_streets",
+      "name": {
+        "nl": "Alle straten"
+      },
+      "description": {
+        "nl": "Laag waar je een straat als fiets- of schoolstraat kan markeren"
+      },
+      "source": {
+        "osmTags": {
+          "or": [
+            "highway=residential",
+            "highway=tertiary",
+            "highway=unclassified"
+          ]
+        }
+      },
+      "minzoom": 18,
+      "wayHandling": 0,
+      "title": {
+        "render": {
+          "nl": "Straat"
+        },
+        "mappings": [
+          {
+            "if": "name~*",
+            "then": "{name}"
+          }
+        ]
+      },
+      "icon": "./assets/svg/pencil.svg",
+      "width": "5",
+      "color": {
+        "render": "#aaaaaa",
+        "mappings": [
+          {
+            "then": "#0000ff",
+            "if": "cyclestreet=yes"
+          },
+          {
+            "then": "#09f9dd",
+            "if": "proposed:cyclestreet=yes"
+          }
+        ]
+      },
+      "tagRenderings": [
+        "images"
+      ]
+    }
+  ]
+}
