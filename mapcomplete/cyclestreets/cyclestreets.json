@@ -35,7 +35,7 @@
             ]
           },
           "then": {
-            "nl": "Deze straat is een fietsstraat (en dus zone 30)"
+            "nl": "Deze straat is een <b>fietsstraat</b> (en dus zone 30)"
           }
         },
         {
@@ -46,7 +46,7 @@
             ]
           },
           "then": {
-            "nl": "Deze straat is een fietsstraat"
+            "nl": "Deze straat is een <b>fietsstraat</b>"
           },
           "hideInAnswer": true
         },
@@ -58,7 +58,7 @@
             ]
           },
           "then": {
-            "nl": "Deze straat wordt binnenkort een fietsstraat"
+            "nl": "Deze straat wordt binnenkort een <b>fietsstraat</b>"
           }
         },
         {
@@ -70,7 +70,7 @@
             ]
           },
           "then": {
-            "nl": "Deze straat is geen fietsstraat"
+            "nl": "Deze straat is geen <b>fietsstraat</b>"
           }
         }
       ]
@@ -102,7 +102,7 @@
             ]
           },
           "then": {
-            "nl": "Dit is een schoolstraat (in België, met onderbord 'schoolstraat')"
+            "nl": "Dit is een <b>schoolstraat</b> (in België, met onderbord 'schoolstraat')"
           }
         },
 		{
@@ -112,7 +112,7 @@
             ]
           },
           "then": {
-            "nl": "Dit is een schoolstraat (niet in België, of zonder onderbord 'schoolstraat')"
+            "nl": "Dit is een <b>schoolstraat</b> (niet in België, of zonder onderbord 'schoolstraat')"
           }
         },
         {
@@ -136,7 +136,7 @@
             ]
           },
           "then": {
-            "nl": "Deze straat is geen schoolstraat"
+            "nl": "Deze straat is geen <b>schoolstraat</b>"
           }
         }
       ]
@@ -146,7 +146,7 @@
         "nl": "Wanneer is deze straat afgesloten?"
       },
       "render": {
-        "nl": "Deze straat wordt afgesloten op [render de openingsuren BINNEN de vehicle:conditional tag"
+        "nl": "Deze straat wordt afgesloten op: {fixme:schoolstreet}"
       },
       "condition": { 
 	       "or": [
@@ -155,7 +155,8 @@
             ]
 			},
       "freeform": {
-        "key": "maxspeed:conditional"
+        "key": "fixme:schoolstreet",
+		"type": "opening_hours"
       }
     }
   ],
