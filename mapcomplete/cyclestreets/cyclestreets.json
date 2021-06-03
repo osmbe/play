@@ -177,12 +177,24 @@
       ],
       "title": "Fietsstraten in de Verkeersbordendatabank Vlaanderen",
       "icon": {
-        "render": "circle:red",
+        "render": "circle:blue",
         "mappings": [
           {
-            "if": "_has_closeby_feature=yes",
-            "then": "circle:green"
-          }
+            "if": { "and": ["_has_closeby_feature=no", "bordcode=F113"]
+            "then": "circle:#88afeb"
+          },
+		  {
+            "if": { "and": ["_has_closeby_feature=no", "bordcode=ZF113"]
+            "then": "circle:#88afeb"
+          },
+		  {
+            "if": { "and": ["_has_closeby_feature=no", "bordcode=ZF111"]
+            "then": "circle:#b369f0"
+          },
+		  {
+            "if": { "and": ["_has_closeby_feature=no", "bordcode=F111"]
+            "then": "circle:#b369f0"
+          },		  
         ]
       },
       "iconSize": "20,20,center",
