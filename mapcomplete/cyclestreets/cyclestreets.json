@@ -168,7 +168,7 @@
       "name": "Verkeersborden fietsstraten",
       "source": {
         "osmTags": "bordcode~*",
-        "geoJson": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/fietsstraten_verkeersborden.json"
+        "geoJson": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/fietsstraten_verkeersborden.geojson"
       },
       "calculatedTags": [
         "_closest_osm_fietsstraat=feat.closest('fietsstraat')?.properties?.id",
