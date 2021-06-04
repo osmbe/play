@@ -198,9 +198,9 @@
         ]
       },
       "iconSize": "20,20,center",
-      "tagRenderings": {
-        "render": "{bordcode}"
-      }
+      "tagRenderings": [
+          "all_tags"
+      ]
     },	
 	{
       "id": "fietsstraat",
