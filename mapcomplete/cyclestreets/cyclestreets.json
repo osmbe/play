@@ -199,7 +199,7 @@
       },
       "iconSize": "20,20,center",
       "tagRenderings": [
-        "all_tags"
+        "render": "{bordcode}"
       ]
     },	
 	{
