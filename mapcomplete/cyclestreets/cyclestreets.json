@@ -24,6 +24,63 @@
       "question": {
         "nl": "Is deze straat een fietsstraat?"
       },
+	  "condition": "_country=be",
+      "mappings": [
+        {
+          "if": {
+            "and": [
+              "cyclestreet=yes",
+              "maxspeed=30",
+              "overtaking:motor_vehicle=no",
+              "proposed:cyclestreet="
+            ]
+          },
+          "then": {
+            "nl": "Deze straat is een <b>fietsstraat</b> (en dus zone 30)"
+          }
+        },
+        {
+          "if": {
+            "and": [
+              "cyclestreet=yes",
+              "proposed:cyclestreet="
+            ]
+          },
+          "then": {
+            "nl": "Deze straat is een <b>fietsstraat</b>"
+          },
+          "hideInAnswer": true
+        },
+        {
+          "if": {
+            "and": [
+              "cyclestreet=",
+              "proposed:cyclestreet=yes"
+            ]
+          },
+          "then": {
+            "nl": "Deze straat wordt binnenkort een <b>fietsstraat</b>"
+          }
+        },
+        {
+          "if": {
+            "and": [
+              "cyclestreet=",
+              "proposed:cyclestreet=",
+              "overtaking:motor_vehicle="
+            ]
+          },
+          "then": {
+            "nl": "Deze straat is geen <b>fietsstraat</b>"
+          }
+        }
+      ]
+    },
+	{
+      "question": {
+        "nl": "Is deze straat een fietsstraat?"
+      },
+	  "condition": "_country!=be",
       "mappings": [
         {
           "if": {
@@ -148,7 +205,7 @@
         "nl": "Wanneer is deze straat afgesloten?"
       },
       "render": {
-        "nl": "Deze straat wordt afgesloten op: {opening_hours_table(fixme:schoolstreet)}"
+        "nl": "Deze straat wordt afgesloten op: {opening_hours_table(school_hours)}"
       },
       "condition": { 
 	       "or": [
@@ -157,7 +214,7 @@
             ]
 			},
       "freeform": {
-        "key": "fixme:schoolstreet",
+        "key": "school_hours",
 		"type": "opening_hours"
       }
     }
@@ -177,7 +234,7 @@
       ],
       "title": "Fietsstraten in de Verkeersbordendatabank Vlaanderen",
       "icon": {
-        "render": "circle:blue",
+        "render": "circle:#0000ffaa",
         "mappings": [
           {
             "if": { "and": ["_has_closeby_feature=no", "bordcode=F113"]},
