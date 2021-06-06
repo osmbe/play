@@ -86,13 +86,11 @@
           "if": {
             "and": [
               "cyclestreet=yes",
-              "maxspeed=30",
-              "overtaking:motor_vehicle=no",
               "proposed:cyclestreet="
             ]
           },
           "then": {
-            "nl": "Deze straat is een <b>fietsstraat</b> (en dus zone 30)"
+            "nl": "Deze straat is een <b>fietsstraat</b>"
           }
         },
         {
@@ -122,8 +120,7 @@
           "if": {
             "and": [
               "cyclestreet=",
-              "proposed:cyclestreet=",
-              "overtaking:motor_vehicle="
+              "proposed:cyclestreet="
             ]
           },
           "then": {
@@ -160,8 +157,9 @@
             ]
           },
           "then": {
-            "nl": "Dit is een <b>schoolstraat</b> (in België, met onderbord 'schoolstraat')"
-          }
+            "nl": "Dit is een <b>schoolstraat</b> met onderbord 'schoolstraat')"
+          },
+		  "condition": "_country=be"
         },
 		{
           "if": {
@@ -170,8 +168,20 @@
             ]
           },
           "then": {
-            "nl": "Dit is een <b>schoolstraat</b> (niet in België, of zonder onderbord 'schoolstraat')"
-          }
+            "nl": "Dit is een <b>schoolstraat</b>, aangeduid op een andere manier dan een officieel verbodsbord met onderbord 'schoolstraat'"
+          },
+		  "condition": "_country=be"
+        },
+		{
+          "if": {
+            "and": [
+              "schoolstreet=yes"
+            ]
+          },
+          "then": {
+            "nl": "Dit is een <b>schoolstraat</b>"
+          },
+		  "condition": "_country!=be"
         },
         {
           "if": {
