@@ -157,9 +157,9 @@
             ]
           },
           "then": {
-            "nl": "Dit is een <b>schoolstraat</b> met onderbord 'schoolstraat')"
+            "nl": "Dit is een <b>schoolstraat</b> met onderbord 'schoolstraat'"
           },
-		  "condition": "_country=be"
+		  "hideInAnswer": "_country!=be"
         },
 		{
           "if": {
@@ -170,7 +170,7 @@
           "then": {
             "nl": "Dit is een <b>schoolstraat</b>, aangeduid op een andere manier dan een officieel verbodsbord met onderbord 'schoolstraat'"
           },
-		  "condition": "_country=be"
+		  "hideInAnswer": "_country!=be"
         },
 		{
           "if": {
@@ -181,7 +181,7 @@
           "then": {
             "nl": "Dit is een <b>schoolstraat</b>"
           },
-		  "condition": "_country!=be"
+		  "hideInAnswer": "_country=be"
         },
         {
           "if": {
@@ -218,10 +218,16 @@
         "nl": "Deze straat wordt afgesloten op: {opening_hours_table(school_hours)}"
       },
       "condition": { 
-	       "or": [
-              "schoolstreet=yes",
-              "designation=BE:schoolstreet"
-            ]
+	       "and": [
+				"or": {
+				"schoolstreet=yes",
+				"designation=BE:schoolstreet"
+					},
+				"and": {
+				"vehicle:conditional=",
+				"motor_vehicle:conditional="
+				}
+				]				
 			},
       "freeform": {
         "key": "school_hours",
