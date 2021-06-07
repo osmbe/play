@@ -302,7 +302,10 @@
       },
       "title": "{name}",
       "icon": "./assets/themes/cyclestreets/F111.svg",
-      "color": "#0000ff",
+      "color": "#0000ffaa",
+	  "dashArray": {
+		"render":  "12 12 0 12"
+		},
       "width": "10",
       "tagRenderings": [
         "images"
@@ -335,7 +338,7 @@
         ]
       },
       "icon": "./assets/themes/cyclestreets/F113.svg",
-      "color": "#09f9dd",
+      "color": "#09f9ddaa",
       "width": "5",
       "tagRenderings": [
         "images"
@@ -369,7 +372,7 @@
       },
       "title": "{name}",
       "icon": "./assets/themes/cyclestreets/F111.svg",
-      "color": "#ff2a00",
+      "color": "#ff2a00aa",
       "width": "10",
       "tagRenderings": [
         "images"
