@@ -444,7 +444,7 @@
                   "bordcode=F111"
                 ]
               },
-              "then": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F111.svg'>"
+              "then": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F111.svg' style='width:90px;'>"
             },
 			{
               "if": {
@@ -453,7 +453,7 @@
                   "bordcode=F113"
                 ]
               },
-              "then": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F113.svg'>"
+              "then": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F113.svg' style='width:90px;'>"
             }		
           ]
         }		
