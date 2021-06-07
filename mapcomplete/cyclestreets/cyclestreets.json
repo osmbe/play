@@ -273,7 +273,9 @@
       },
       "iconSize": "20,20,center",
       "tagRenderings": [
-          "all_tags"
+        {
+          "render": "Mapillary hier: {_lat} {_lon}"
+        }
       ]
     },	
 	{
@@ -309,7 +311,7 @@
          "mappings": [
 			{
 			"if": "schoolstreet=yes",
-			"then": "12 0"
+			"then": "0 12"
 			}
 		 ]
 		 },		  
