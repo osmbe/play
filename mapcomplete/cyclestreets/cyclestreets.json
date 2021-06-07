@@ -20,9 +20,7 @@
   "startLon": 3.2228,
   "maintainer": "MapComplete, joost schouppe",
   "widenfactor": 0.05,
-  "roamingRenderings": 
-  { "if": { "and": [ "layer!=awv_fietsstraat" ] },
-	"then": [
+  "roamingRenderings": [
     {
       "question": {
         "nl": "Is deze straat een fietsstraat?"
@@ -237,8 +235,7 @@
 		"type": "opening_hours"
       }
     }
-	]
-  },
+  ],
   "layers": [   
 	{
       "id": "fietsstraat",
