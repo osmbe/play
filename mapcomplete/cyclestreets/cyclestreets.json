@@ -237,47 +237,6 @@
     }
   ],
   "layers": [   
-	 {
-      "id": "awv_fietsstraat",
-      "name": "Verkeersborden fietsstraten",
-      "source": {
-        "osmTags": "bordcode~*",
-        "geoJson": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/fietsstraten_verkeersborden.geojson"
-      },
-      "calculatedTags": [
-        "_closest_osm_fietsstraat=feat.closest('fietsstraat')?.properties?.id",
-        "_closest_osm_fietsstraat_distance=feat.distanceTo(feat.properties._closest_osm_fietsstraat) * 1000",
-        "_has_closeby_feature=Number(feat.properties._closest_osm_fietsstraat_distance) < 25 ? 'yes' : 'no'"
-      ],
-      "title": "Fietsstraten in de Verkeersbordendatabank Vlaanderen",
-      "icon": {
-        "render": "circle:#0000ffaa",
-        "mappings": [
-          {
-            "if": { "and": ["_has_closeby_feature=no", "bordcode=F113"]},
-            "then": "circle:#88afeb"
-          },
-		  {
-            "if": { "and": ["_has_closeby_feature=no", "bordcode=ZF113"]},
-            "then": "circle:#88afeb"
-          },
-		  {
-            "if": { "and": ["_has_closeby_feature=no", "bordcode=ZF111"]},
-            "then": "circle:#b369f0"
-          },
-		  {
-            "if": { "and": ["_has_closeby_feature=no", "bordcode=F111"]},
-            "then": "circle:#b369f0"
-          }	  
-        ]
-      },
-      "iconSize": "20,20,center",
-      "tagRenderings": [
-        {
-          "render": "Mapillary hier: {_lat} {_lon}"
-        }
-      ]
-    },	
 	{
       "id": "fietsstraat",
       "name": {
@@ -434,6 +393,70 @@
       },
       "tagRenderings": [
         "images"
+      ]
+    },
+		 {
+      "id": "awv_fietsstraat",
+      "name": "Verkeersborden fietsstraten",
+      "source": {
+        "osmTags": "bordcode~*",
+        "geoJson": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/fietsstraten_verkeersborden.geojson"
+      },
+      "calculatedTags": [
+        "_closest_osm_fietsstraat=feat.closest('fietsstraat')?.properties?.id",
+        "_closest_osm_fietsstraat_distance=feat.distanceTo(feat.properties._closest_osm_fietsstraat) * 1000",
+        "_has_closeby_feature=Number(feat.properties._closest_osm_fietsstraat_distance) < 25 ? 'yes' : 'no'"
+      ],
+      "title": "Fietsstraten in de Verkeersbordendatabank Vlaanderen",
+      "icon": {
+        "render": "circle:#0000ffaa",
+        "mappings": [
+          {
+            "if": { "and": ["_has_closeby_feature=no", "bordcode=F113"]},
+            "then": "circle:#88afeb"
+          },
+		  {
+            "if": { "and": ["_has_closeby_feature=no", "bordcode=ZF113"]},
+            "then": "circle:#88afeb"
+          },
+		  {
+            "if": { "and": ["_has_closeby_feature=no", "bordcode=ZF111"]},
+            "then": "circle:#b369f0"
+          },
+		  {
+            "if": { "and": ["_has_closeby_feature=no", "bordcode=F111"]},
+            "then": "circle:#b369f0"
+          }	  
+        ]
+      },
+      "iconSize": "20,20,center",
+      "tagRenderings": [
+        {
+          "render": "<a href='https://www.mapillary.com/app/?lat={_lat}&lng={_lon}&z=18' target='_blank'>Foto's van deze straat</a>"
+        },
+		{
+          "render": "",
+          "mappings": [
+            {
+              "if": {
+                "or": [
+                  "bordcode=ZF111",
+                  "bordcode=F111"
+                ]
+              },
+              "then": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F111.svg'>"
+            },
+			{
+              "if": {
+                "or": [
+                  "bordcode=ZF113",
+                  "bordcode=F113"
+                ]
+              },
+              "then": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F113.svg'>"
+            }		
+          ]
+        }		
       ]
     }
   ]
