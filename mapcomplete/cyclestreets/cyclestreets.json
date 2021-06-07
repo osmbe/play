@@ -20,7 +20,9 @@
   "startLon": 3.2228,
   "maintainer": "MapComplete, joost schouppe",
   "widenfactor": 0.05,
-  "roamingRenderings": [
+  "roamingRenderings": 
+  { "if": { "and": [ "layer!=awv_fietsstraat" ] },
+	"then": [
     {
       "question": {
         "nl": "Is deze straat een fietsstraat?"
@@ -235,7 +237,8 @@
 		"type": "opening_hours"
       }
     }
-  ],
+	]
+  },
   "layers": [   
 	{
       "id": "fietsstraat",
@@ -405,7 +408,7 @@
       "calculatedTags": [
         "_closest_osm_fietsstraat=feat.closest('fietsstraat')?.properties?.id",
         "_closest_osm_fietsstraat_distance=feat.distanceTo(feat.properties._closest_osm_fietsstraat) * 1000",
-        "_has_closeby_feature=Number(feat.properties._closest_osm_fietsstraat_distance) < 25 ? 'yes' : 'no'"
+        "_has_closeby_feature=Number(feat.properties._closest_osm_fietsstraat_distance) < 75 ? 'yes' : 'no'"
       ],
       "title": "Fietsstraten in de Verkeersbordendatabank Vlaanderen",
       "icon": {
