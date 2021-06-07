@@ -8,7 +8,8 @@
     "nl": "Een kaart met alle gekende fietsstraten"
   },
   "description": {
-    "nl": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F111.png' style='display: inline; margin: 0 5px;'> Een <b>fietsstraat</b> is een straat waar <ul><li><b>automobilisten geen fietsers mogen inhalen</b></li><li>Er een maximumsnelheid van <b>30km/u</b> geldt</li><li>Fietsers gemotoriseerde voortuigen links mogen inhalen</li><li>Fietsers nog steeds voorrang aan rechts moeten verlenen - ook aan auto's en voetgangers op het zebrapad</li></ul><br/><br/> <img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/C3-GIIIschoolstreet.png'  style='display: inline; margin: 0 5px;'> Een <b>schoolstraat</b> is een straat waar voertuigen tijdens de schooluren niet door mogen. Er gelden ook nog enkele andere beperkingen. De uren dat de straat toegankelijk zijn, hangen af van plaats tot plaats.<br/> <br/>Op deze open kaart kan je alle gekende fietsstraten zien en kan je ontbrekende fietsstraten aanduiden. Om de kaart aan te passen, moet je je aanmelden met OpenStreetMap en helemaal inzoomen tot straatniveau."
+	"nl": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F111.svg' width='90' height='140' style='width:90px;'><br/> Een <b>fietsstraat</b> is een straat waar <ul><li><b>automobilisten geen fietsers mogen inhalen</b></li><li>Er een maximumsnelheid van <b>30km/u</b> geldt</li><li>Fietsers gemotoriseerde voortuigen links mogen inhalen</li><li>Fietsers nog steeds voorrang aan rechts moeten verlenen - ook aan auto's en voetgangers op het zebrapad</li></ul><br/><br/> <img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/C3-GIIIschoolstreet.svg' width='90' height='130' style='width:90px;'><br/> Een <b>schoolstraat</b> is een straat waar voertuigen tijdens de schooluren niet door mogen. Er gelden ook nog enkele andere beperkingen. De uren dat de straat toegankelijk zijn, hangen af van plaats tot plaats.<br/> <br/>Op deze open kaart kan je alle gekende fietsstraten zien en kan je ontbrekende fietsstraten aanduiden. Om de kaart aan te passen, moet je je aanmelden met OpenStreetMap en helemaal inzoomen tot straatniveau."
+
   },
   "icon": "./assets/themes/cyclestreets/F111.svg",
   "language": [
@@ -236,7 +237,7 @@
     }
   ],
   "layers": [   
-	    {
+	 {
       "id": "awv_fietsstraat",
       "name": "Verkeersborden fietsstraten",
       "source": {
