@@ -219,13 +219,13 @@
       },
       "condition": { 
 	       "and": [
-				"or": {
-				"schoolstreet=yes",
-				"designation=BE:schoolstreet"
-					},
-				"and": {
 				"vehicle:conditional=",
-				"motor_vehicle:conditional="
+				"motor_vehicle:conditional=",
+				{ 
+					"or": [
+						"schoolstreet=yes",
+						"designation=BE:schoolstreet"
+					]
 				}
 				]				
 			},
