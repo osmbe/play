@@ -344,7 +344,7 @@
         "nl": "Een schoolstraat is een straat waar voertuigen niet in mogen tijdens de schooluren."
       },
       "title": "{name}",
-      "icon": "./assets/themes/cyclestreets/F111.svg",
+      "icon": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/C3-GIIIschoolstreet.svg",
       "color": "#ff2a00aa",
       "width": "10",
       "tagRenderings": [
@@ -408,29 +408,24 @@
         "osmTags": "bordcode~*",
         "geoJson": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/fietsstraten_verkeersborden.geojson"
       },
-      "calculatedTags": [
-        "_closest_osm_fietsstraat=feat.closest('fietsstraat')?.properties?.id",
-        "_closest_osm_fietsstraat_distance=feat.distanceTo(feat.properties._closest_osm_fietsstraat) * 1000",
-        "_has_closeby_feature=Number(feat.properties._closest_osm_fietsstraat_distance) < 75 ? 'yes' : 'no'"
-      ],
       "title": "Fietsstraten in de Verkeersbordendatabank Vlaanderen",
       "icon": {
         "render": "circle:#0000ffaa",
         "mappings": [
           {
-            "if": { "and": ["_has_closeby_feature=no", "bordcode=F113"]},
+            "if": "bordcode=F113",
             "then": "circle:#88afeb"
           },
 		  {
-            "if": { "and": ["_has_closeby_feature=no", "bordcode=ZF113"]},
+            "if": "bordcode=ZF113",
             "then": "circle:#88afeb"
           },
 		  {
-            "if": { "and": ["_has_closeby_feature=no", "bordcode=ZF111"]},
+            "if": "bordcode=ZF111",
             "then": "circle:#b369f0"
           },
 		  {
-            "if": { "and": ["_has_closeby_feature=no", "bordcode=F111"]},
+            "if": "bordcode=F111",
             "then": "circle:#b369f0"
           }	  
         ]
