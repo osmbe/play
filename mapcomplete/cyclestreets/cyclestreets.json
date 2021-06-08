@@ -25,7 +25,12 @@
       "question": {
         "nl": "Is deze straat een fietsstraat?"
       },
-	  "condition": "_country=be",
+	  "condition": { 
+		"and": [
+			"_country=be",
+			"layer!=awv_fietsstraat"
+			]
+	  },
       "mappings": [
         {
           "if": {
