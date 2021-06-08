@@ -247,7 +247,7 @@
       "name": {
         "nl": "Fietsstraten"
       },
-      "minzoom": 7,
+      "minzoom": 9,
       "source": {
         "osmTags": {
           "and": [
@@ -292,7 +292,7 @@
       "description": {
         "nl": "Deze straat wordt binnenkort een fietsstraat"
       },
-      "minzoom": 9,
+      "minzoom": 11,
       "wayHandling": 0,
       "source": {
         "osmTags": "proposed:cyclestreet=yes"
@@ -403,6 +403,7 @@
 		 {
       "id": "awv_fietsstraat",
       "name": "Verkeersborden fietsstraten",
+	  "minzoom": 11,
       "source": {
         "osmTags": "bordcode~*",
         "geoJson": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/fietsstraten_verkeersborden.geojson"
