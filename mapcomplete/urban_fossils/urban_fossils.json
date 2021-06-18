@@ -107,9 +107,6 @@
           ]
         },
         {
-          "render": {
-            "en": ""
-          },
           "mappings": [
             {
               "if": {
@@ -148,9 +145,6 @@
           }
         },
         {
-          "render": {
-            "en": ""
-          },
           "mappings": [
             {
               "if": {
@@ -201,7 +195,7 @@
         },
         {
           "render": {
-            "en": "Description:"
+            "en": "Description: {description}"
           },
           "question": {
             "en": "Describe the fossil and its context (don't repeat what is already answered above)"
