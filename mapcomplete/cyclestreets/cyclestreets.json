@@ -400,34 +400,36 @@
         "images"
       ]
     },
-		 {
+	{
       "id": "awv_fietsstraat",
       "name": "Verkeersborden fietsstraten",
 	  "minzoom": 11,
       "source": {
-        "osmTags": "bordcode~*",
+        "osmTags": "code~*",
         "geoJson": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/fietsstraten_verkeersborden.geojson"
       },
       "title": "Fietsstraten in de Verkeersbordendatabank Vlaanderen",
       "icon": {
         "render": "circle:#0000ffaa",
         "mappings": [
-          {
-            "if": "bordcode=F113",
-            "then": "circle:#88afeb"
-          },
-		  {
-            "if": "bordcode=ZF113",
-            "then": "circle:#88afeb"
-          },
-		  {
-            "if": "bordcode=ZF111",
-            "then": "circle:#b369f0"
-          },
-		  {
-            "if": "bordcode=F111",
-            "then": "circle:#b369f0"
-          }	  
+            {
+              "if": {
+                "or": [
+                  "code=ZF111",
+                  "code=F111"
+                ]
+              },
+              "then": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F111.svg' style='width:90px;'>"
+            },
+			{
+              "if": {
+                "or": [
+                  "code=ZF113",
+                  "code=F113"
+                ]
+              },
+              "then": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F113.svg' style='width:90px;'>"
+            }	 
         ]
       },
       "iconSize": "20,20,center",
@@ -441,8 +443,8 @@
             {
               "if": {
                 "or": [
-                  "bordcode=ZF111",
-                  "bordcode=F111"
+                  "code=ZF111",
+                  "code=F111"
                 ]
               },
               "then": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F111.svg' style='width:90px;'>"
@@ -450,13 +452,35 @@
 			{
               "if": {
                 "or": [
-                  "bordcode=ZF113",
-                  "bordcode=F113"
+                  "code=ZF113",
+                  "code=F113"
                 ]
               },
               "then": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F113.svg' style='width:90px;'>"
             }		
           ]
+        }		
+      ]
+    },
+	{
+      "id": "awv_schoolstraat",
+      "name": "Verkeersborden schoolstraten",
+	  "minzoom": 11,
+      "source": {
+        "osmTags": "parameters~*",
+        "geoJson": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/fietsstraten_verkeersborden.geojson"
+      },
+      "title": "Schoolstraten in de Verkeersbordendatabank Vlaanderen",
+      "icon": {
+        "render": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/C3-GIIIschoolstreet.svg' style='width:90px;'>"
+      },
+      "iconSize": "20,20,center",
+      "tagRenderings": [
+        {
+          "render": "<a href='https://www.mapillary.com/app/?lat={_lat}&lng={_lon}&z=18' target='_blank'>Foto's van deze straat</a>"
+        },
+		{
+          "render": "Meer info over deze schoolstraat: {parameters}"
         }		
       ]
     }
