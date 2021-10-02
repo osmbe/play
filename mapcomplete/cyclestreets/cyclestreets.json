@@ -419,7 +419,7 @@
                   "code=F111"
                 ]
               },
-              "then": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F111.svg' style='width:90px;'>"
+              "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F111.svg"
             },
 			{
               "if": {
@@ -428,7 +428,7 @@
                   "code=F113"
                 ]
               },
-              "then": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F113.svg' style='width:90px;'>"
+              "then": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F113.svg"
             }	 
         ]
       },
@@ -468,11 +468,11 @@
 	  "minzoom": 11,
       "source": {
         "osmTags": "parameters~*",
-        "geoJson": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/fietsstraten_verkeersborden.geojson"
+        "geoJson": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/schoolstraten_verkeersborden.geojson"
       },
       "title": "Schoolstraten in de Verkeersbordendatabank Vlaanderen",
       "icon": {
-        "render": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/C3-GIIIschoolstreet.svg' style='width:90px;'>"
+        "render": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/C3-GIIIschoolstreet.svg"
       },
       "iconSize": "20,20,center",
       "tagRenderings": [
