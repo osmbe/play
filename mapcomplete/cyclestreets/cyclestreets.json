@@ -228,12 +228,11 @@
         "nl": "Wanneer is deze straat afgesloten?"
       },
       "render": {
-        "nl": "Deze straat wordt afgesloten op: {opening_hours_table(school_hours)}"
+        "nl": "Deze straat wordt afgesloten op: {opening_hours_table(motor_vehicle,no @ &LPARENS, &RPARENS )"
       },
       "condition": { 
 	       "and": [
 				"vehicle:conditional=",
-				"motor_vehicle:conditional=",
 				{ 
 					"or": [
 						"schoolstreet=yes",
@@ -243,8 +242,14 @@
 				]				
 			},
       "freeform": {
-        "key": "school_hours",
-		"type": "opening_hours"
+        "key": "motor_vehicle:conditional",
+		"type": "opening_hours",
+		"helperArgs": [
+			{
+				"prefix":"no @ (",
+				"postfix":")"
+			}
+			]
       }
     }
   ],
