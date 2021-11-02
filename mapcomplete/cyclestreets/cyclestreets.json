@@ -21,7 +21,7 @@
   "maintainer": "MapComplete, joost schouppe",
   "widenfactor": 0.05,
   "overrideAll": {
-    "+tagRenderings": [
+    "tagRenderings": [
     {
       "question": {
         "nl": "Is deze straat een fietsstraat?"
@@ -229,7 +229,7 @@
         "nl": "Wanneer is deze straat afgesloten?"
       },
       "render": {
-        "nl": "Deze straat wordt afgesloten op: {opening_hours_table(motor_vehicle:conditional,no @ &LPARENS, &RPARENS )"
+        "nl": "Deze straat wordt afgesloten op: {opening_hours_table('motor_vehicle:conditional',no @ &LPARENS, &RPARENS )"
       },
       "condition": { 
 	       "and": [
