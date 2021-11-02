@@ -228,7 +228,7 @@
         "nl": "Wanneer is deze straat afgesloten?"
       },
       "render": {
-        "nl": "Deze straat wordt afgesloten op: {opening_hours_table(motor_vehicle,no @ &LPARENS, &RPARENS )"
+        "nl": "Deze straat wordt afgesloten op: {opening_hours_table(motor_vehicle:conditional,no @ &LPARENS, &RPARENS )"
       },
       "condition": { 
 	       "and": [
