@@ -248,7 +248,7 @@
 		"helperArgs": [
 			{
 				"prefix":"no @ (",
-				"postfix":")"
+				"postfix":"; SH off)"
 			}
 			]
       }
