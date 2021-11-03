@@ -8,8 +8,7 @@
     "nl": "Een kaart met alle gekende fietsstraten"
   },
   "description": {
-	"nl": "<img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F111.svg' width='90' height='140' style='width:90px;'><br/> Een <b>fietsstraat</b> is een straat waar <ul><li><b>automobilisten geen fietsers mogen inhalen</b></li><li>Er een maximumsnelheid van <b>30km/u</b> geldt</li><li>Fietsers gemotoriseerde voortuigen links mogen inhalen</li><li>Fietsers nog steeds voorrang aan rechts moeten verlenen - ook aan auto's en voetgangers op het zebrapad</li></ul><br/><br/> <img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/C3-GIIIschoolstreet.svg' width='90' height='130' style='width:90px;'><br/> Een <b>schoolstraat</b> is een straat waar voertuigen tijdens de schooluren niet door mogen. Er gelden ook nog enkele andere beperkingen. De uren dat de straat toegankelijk zijn, hangen af van plaats tot plaats.<br/> <br/>Op deze open kaart kan je alle gekende fietsstraten & schoolstraten zien en kan je de ontbrekende straten aanduiden. Om de kaart aan te passen, moet je je aanmelden met OpenStreetMap en helemaal inzoomen tot straatniveau."
-
+	"nl": "Op deze open kaart kan je alle gekende fietsstraten & schoolstraten zien en kan je de ontbrekende straten aanduiden. <br/> <br/> <img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F111.svg' width='90' height='140' style='width:90px;'><br/> Een <b>fietsstraat</b> is een straat waar <ul><li><b>automobilisten geen fietsers mogen inhalen</b></li><li>Er een maximumsnelheid van <b>30km/u</b> geldt</li><li>Fietsers gemotoriseerde voortuigen links mogen inhalen</li><li>Fietsers nog steeds voorrang aan rechts moeten verlenen - ook aan auto's en voetgangers op het zebrapad</li></ul><br/><br/> <img src='https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/C3-GIIIschoolstreet.svg' width='90' height='130' style='width:90px;'><br/> Een <b>schoolstraat</b> is een straat waar voertuigen tijdens de schooluren niet door mogen. Er gelden ook nog enkele andere beperkingen. De uren dat de straat toegankelijk zijn, hangen af van plaats tot plaats.<br/> <br/> Om de kaart aan te passen, moet je je aanmelden met OpenStreetMap en helemaal inzoomen tot straatniveau. Je ziet ook de verkeersborden zoals die gekend zijn de Verkeersbordendatabank Vlaanderen. Opgelet: vertrouw niet blind op deze databank - fouten en ontbrekende gegevens zijn zeker mogelijk."
   },
   "icon": "./assets/themes/cyclestreets/F111.svg",
   "language": [
@@ -424,7 +423,7 @@
       },
       "title": "Fietsstraten in de Verkeersbordendatabank Vlaanderen",
       "icon": {
-        "render": "circle:#0000ffaa",
+        "render": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/F111.svg",
         "mappings": [
             {
               "if": {
@@ -494,7 +493,7 @@
           "render": "<a href='https://www.mapillary.com/app/?lat={_lat}&lng={_lon}&z=18' target='_blank'>Foto's van deze straat</a>"
         },
 		{
-          "render": "Meer info over deze schoolstraat: {parameters}"
+          "render": "Omschrijving op het verkeersbord: {parameters}"
         }		
       ]
     }
