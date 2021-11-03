@@ -446,7 +446,7 @@
             }	 
         ]
       },
-      "iconSize": "20,20,center",
+      "iconSize": "25,29,center",
       "tagRenderings": [
         {
           "render": "<a href='https://www.mapillary.com/app/?lat={_lat}&lng={_lon}&z=18' target='_blank'>Foto's van deze straat</a>"
@@ -488,7 +488,7 @@
       "icon": {
         "render": "https://raw.githubusercontent.com/osmbe/play/master/mapcomplete/cyclestreets/C3-GIIIschoolstreet.svg"
       },
-      "iconSize": "20,20,center",
+      "iconSize": "25,29,center",
       "tagRenderings": [
         {
           "render": "<a href='https://www.mapillary.com/app/?lat={_lat}&lng={_lon}&z=18' target='_blank'>Foto's van deze straat</a>"
