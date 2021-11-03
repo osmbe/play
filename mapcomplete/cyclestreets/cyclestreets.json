@@ -247,7 +247,7 @@
 		"helperArgs": [
 			{
 				"prefix":"no @ (",
-				"postfix":"; SH off)"
+				"postfix":"SH off; PH off); yes @ permit"
 			}
 			]
       }
