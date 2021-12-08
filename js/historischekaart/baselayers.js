@@ -63,9 +63,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "0",
-        transparent: false
-      },
-      {
+        transparent: false,
         attribution: "SPW"
       }
     ),
@@ -92,7 +90,8 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "Masse",
-        transparent: true
+        transparent: true,
+		attribution: "Tiles provided by Digitaal Vlaanderen"
       }
     ),
     "Frickx (1745, VL)": L.tileLayer.wms(
@@ -100,9 +99,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "Frickx",
-        transparent: true
-      },
-      {
+        transparent: true,
         attribution: "Tiles provided by Digitaal Vlaanderen"
       }
     ),
@@ -111,9 +108,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "Villaret",
-        transparent: true
-      },
-      {
+        transparent: true,
         attribution: "Tiles provided by Digitaal Vlaanderen"
       }
     ),
@@ -128,9 +123,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "0",
-        transparent: true
-      },
-      {
+        transparent: true,
         attribution: "SPW"
       }
     ),
@@ -139,9 +132,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "0",
-        transparent: true
-      },
-      {
+        transparent: true,
         attribution: "SPW"
       }
     ),
@@ -150,9 +141,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "abw",
-        transparent: true
-      },
-      {
+        transparent: true,
         attribution: "Tiles provided by Digitaal Vlaanderen"
       }
     ),
@@ -161,9 +150,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "3,4",
-        transparent: true
-      },
-      {
+        transparent: true,
         attribution: "SPW"
       }
     ),
@@ -178,9 +165,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "0",
-        transparent: true
-      },
-      {
+        transparent: true,
         attribution: "SPW"
       }
     ),
@@ -195,9 +180,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "0",
-        transparent: true
-      },
-      {
+        transparent: true,
         attribution: "SPW"
       }
     ),
@@ -258,9 +241,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "top25map",
-        transparent: false
-      },
-      {
+        transparent: false,
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
     )
