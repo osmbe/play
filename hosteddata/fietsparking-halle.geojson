@@ -1,0 +1,2217 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2022-03-23T12:56:11Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/429516309",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "building",
+        "building": "roof",
+        "capacity": ">100",
+        "covered": "yes",
+        "email": "fietspunt.halle@groepintro.be",
+        "fee": "yes",
+        "name": "Fietspunt Halle",
+        "operator": "Groep Intro",
+        "phone": "+32 2 360 25 55",
+        "supervised": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.2421505,
+              50.7346063
+            ],
+            [
+              4.2423227,
+              50.7346191
+            ],
+            [
+              4.2426664,
+              50.7348966
+            ],
+            [
+              4.2426443,
+              50.7350075
+            ],
+            [
+              4.2424077,
+              50.7348152
+            ],
+            [
+              4.2423932,
+              50.7348221
+            ],
+            [
+              4.242285,
+              50.7347341
+            ],
+            [
+              4.2422992,
+              50.7347272
+            ],
+            [
+              4.2421505,
+              50.7346063
+            ]
+          ]
+        ]
+      },
+      "id": "way/429516309"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/697685362",
+        "access": "private",
+        "amenity": "bicycle_parking",
+        "building": "roof",
+        "source:geometry:date": "2016-05-09",
+        "source:geometry:ref": "Gbg/5565726"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.2390053,
+              50.7352381
+            ],
+            [
+              4.2389737,
+              50.7353334
+            ],
+            [
+              4.2389276,
+              50.7353279
+            ],
+            [
+              4.2389574,
+              50.735232
+            ],
+            [
+              4.2390053,
+              50.7352381
+            ]
+          ]
+        ]
+      },
+      "id": "way/697685362"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/697685363",
+        "access": "private",
+        "amenity": "bicycle_parking",
+        "building": "roof",
+        "source:geometry:date": "2016-05-09",
+        "source:geometry:ref": "Gbg/5564597"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.2389574,
+              50.735232
+            ],
+            [
+              4.239005,
+              50.7350874
+            ],
+            [
+              4.2391471,
+              50.7349768
+            ],
+            [
+              4.2391927,
+              50.7350013
+            ],
+            [
+              4.2390638,
+              50.7350972
+            ],
+            [
+              4.2390519,
+              50.7350955
+            ],
+            [
+              4.2390053,
+              50.7352381
+            ],
+            [
+              4.2389574,
+              50.735232
+            ]
+          ]
+        ]
+      },
+      "id": "way/697685363"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/722944838",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "building",
+        "building": "yes",
+        "source:geometry:date": "2012-10-31",
+        "source:geometry:ref": "Gbg/3543522"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.2292266,
+              50.7434743
+            ],
+            [
+              4.229311,
+              50.7434703
+            ],
+            [
+              4.2293279,
+              50.743831
+            ],
+            [
+              4.2292427,
+              50.7438313
+            ],
+            [
+              4.2292384,
+              50.7437616
+            ],
+            [
+              4.2292266,
+              50.7434743
+            ]
+          ]
+        ]
+      },
+      "id": "way/722944838"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1765642148",
+        "amenity": "bicycle_parking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2504606,
+          50.7212225
+        ]
+      },
+      "id": "node/1765642148"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4073160569",
+        "amenity": "bicycle_parking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2639007,
+          50.7473495
+        ]
+      },
+      "id": "node/4073160569"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4099904202",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "5",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Fietsenstalling_Gemeenteplein_Buizingen_Halle.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2492034,
+          50.741098
+        ]
+      },
+      "id": "node/4099904202"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4099904230",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "14",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Fietsenstalling_Gemeenteplein_Buizingen_Halle.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.248404,
+          50.7410215
+        ]
+      },
+      "id": "node/4099904230"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4099904244",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "12",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Fietsenstalling_Park_van_Buizingen.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2460109,
+          50.7385332
+        ]
+      },
+      "id": "node/4099904244"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4099909390",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "2",
+        "covered": "no",
+        "operator": "Bij Nathalie"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2495922,
+          50.7413084
+        ]
+      },
+      "id": "node/4099909390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4232053524",
+        "amenity": "bicycle_parking",
+        "capacity": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2648054,
+          50.7430275
+        ]
+      },
+      "id": "node/4232053524"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4232053525",
+        "amenity": "bicycle_parking",
+        "capacity": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2647482,
+          50.7429987
+        ]
+      },
+      "id": "node/4232053525"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4266180989",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "12",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Possozplein_2.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2380653,
+          50.7356794
+        ]
+      },
+      "id": "node/4266180989"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4286657239",
+        "amenity": "bicycle_parking",
+        "covered": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2400841,
+          50.7335547
+        ]
+      },
+      "id": "node/4286657239"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4286657240",
+        "amenity": "bicycle_parking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2405425,
+          50.7337159
+        ]
+      },
+      "id": "node/4286657240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4286657246",
+        "amenity": "bicycle_parking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2404898,
+          50.7335411
+        ]
+      },
+      "id": "node/4286657246"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4286678017",
+        "amenity": "bicycle_parking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2405904,
+          50.7339131
+        ]
+      },
+      "id": "node/4286678017"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4286678018",
+        "amenity": "bicycle_parking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2407554,
+          50.7338316
+        ]
+      },
+      "id": "node/4286678018"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4300440900",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "6",
+        "covered": "no",
+        "image": "https://i.imgur.com/lPBPruN.jpg",
+        "operator": "Stad Halle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2359975,
+          50.7360865
+        ]
+      },
+      "id": "node/4300440900"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4355900311",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "14",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/46/Fietsenstalling_kasteelpark_lembeek.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2252338,
+          50.713424
+        ]
+      },
+      "id": "node/4355900311"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4357198146",
+        "amenity": "bicycle_parking",
+        "capacity": "5",
+        "covered": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.223519,
+          50.7134409
+        ]
+      },
+      "id": "node/4357198146"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4357198164",
+        "amenity": "bicycle_parking",
+        "covered": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2216393,
+          50.7148634
+        ]
+      },
+      "id": "node/4357198164"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4810912855",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "12",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Jc_de_kazerne.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2403817,
+          50.7361824
+        ]
+      },
+      "id": "node/4810912855"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4945641298",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "4",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Bergensesteenweg_thv_kringwinkel.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2326357,
+          50.7330979
+        ]
+      },
+      "id": "node/4945641298"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4945666269",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "covered": "yes",
+        "operator": "Delhaize"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2356908,
+          50.7317991
+        ]
+      },
+      "id": "node/4945666269"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5019939481",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "25",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Fietsenstallingen_sportoase_halle.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2430586,
+          50.7383473
+        ]
+      },
+      "id": "node/5019939481"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5086187414",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "10",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/23/Oudstrijdersplein.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2335626,
+          50.7345382
+        ]
+      },
+      "id": "node/5086187414"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5086187420",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "5",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Oudstrijdersplein_2.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2328535,
+          50.7346111
+        ]
+      },
+      "id": "node/5086187420"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5086191522",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "4",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Oudstrijdersplein_3.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2329831,
+          50.7348727
+        ]
+      },
+      "id": "node/5086191522"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5086271765",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "5",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/94/Volpestraat_thv_paterskerk.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2340334,
+          50.7355016
+        ]
+      },
+      "id": "node/5086271765"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5186604178",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "3",
+        "covered": "no",
+        "operator": "Gamma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2307445,
+          50.7333308
+        ]
+      },
+      "id": "node/5186604178"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5186673628",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "12",
+        "covered": "yes",
+        "operator": "Bio-Planet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2321413,
+          50.7318613
+        ]
+      },
+      "id": "node/5186673628"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5186687089",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "10",
+        "covered": "yes",
+        "operator": "Dreamland"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2322792,
+          50.7316361
+        ]
+      },
+      "id": "node/5186687089"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5190922180",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "6",
+        "covered": "no",
+        "operator": "C&A"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2301692,
+          50.7335514
+        ]
+      },
+      "id": "node/5190922180"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5190922181",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "6",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Fietsenstaling_achter_stadhuis_halle.jpg",
+        "operator": "Stad Halle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2318099,
+          50.7344625
+        ]
+      },
+      "id": "node/5190922181"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5197710650",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "19",
+        "covered": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.238938,
+          50.7376063
+        ]
+      },
+      "id": "node/5197710650"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5197710651",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "22",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Fietsenstalling_de_bres_1.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2390443,
+          50.7375702
+        ]
+      },
+      "id": "node/5197710651"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5197710661",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "24",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Fietsenstalling_de_bres_2.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2389939,
+          50.7377113
+        ]
+      },
+      "id": "node/5197710661"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5197710680",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "10",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Stedelijke_academie_servais.jpg",
+        "operator": "Stad Halle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2379294,
+          50.7365835
+        ]
+      },
+      "id": "node/5197710680"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5214860289",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "15",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Park_halle.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2369805,
+          50.7330065
+        ]
+      },
+      "id": "node/5214860289"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5215947550",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "5",
+        "covered": "yes",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Bib_Halle.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2364597,
+          50.7328417
+        ]
+      },
+      "id": "node/5215947550"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5215953372",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "12",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Vuurkruisenstraat.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2361198,
+          50.7341351
+        ]
+      },
+      "id": "node/5215953372"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5215953459",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "4",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Fietsenstalling_molenborre.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2358111,
+          50.7336055
+        ]
+      },
+      "id": "node/5215953459"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5215959211",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "5",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Molenborre.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.235277,
+          50.7337226
+        ]
+      },
+      "id": "node/5215959211"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5215959217",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "5",
+        "covered": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2351422,
+          50.7343172
+        ]
+      },
+      "id": "node/5215959217"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5215963770",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "5",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Fs_maandagmarkt.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2368099,
+          50.7355284
+        ]
+      },
+      "id": "node/5215963770"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5215974969",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "3",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/df/Volpestraat_fs_1.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2350762,
+          50.7358757
+        ]
+      },
+      "id": "node/5215974969"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5216664682",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "12",
+        "covered": "yes",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Slachthuisstraat_2.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2334019,
+          50.7352914
+        ]
+      },
+      "id": "node/5216664682"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5216667468",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "12",
+        "covered": "yes",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Slachthuisstraat_1.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2334464,
+          50.7354184
+        ]
+      },
+      "id": "node/5216667468"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5216683813",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "12",
+        "covered": "yes",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/51/Sportcentrum_de_bres.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2390516,
+          50.7380074
+        ]
+      },
+      "id": "node/5216683813"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5219403457",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "10",
+        "covered": "yes",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Bib_Halle.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2364256,
+          50.7328185
+        ]
+      },
+      "id": "node/5219403457"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5219453692",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "4",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Sint_katharinavest_halle.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2346053,
+          50.736828
+        ]
+      },
+      "id": "node/5219453692"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5219453693",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "4",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Bergensesteenweg_93.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2316198,
+          50.731985
+        ]
+      },
+      "id": "node/5219453693"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5219615237",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "3",
+        "covered": "yes",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Dynastiepein.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2410829,
+          50.7297833
+        ]
+      },
+      "id": "node/5219615237"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5226034737",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "11",
+        "covered": "yes",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Fietsenstalling_t_pagadderke.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2437036,
+          50.7294058
+        ]
+      },
+      "id": "node/5226034737"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5226034738",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "20",
+        "covered": "yes",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Fietsenstalling_sint_maria_ziekenhuis_halle.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2264078,
+          50.7367745
+        ]
+      },
+      "id": "node/5226034738"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5226795242",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "7",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Fietsenstallingen_sporthal_van_het_Technisch_Atheneum_van_Halle.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2446379,
+          50.7343537
+        ]
+      },
+      "id": "node/5226795242"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5226809753",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "14",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Fietsenstallingen_station_halle_thv_fietspunt.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2428382,
+          50.7350848
+        ]
+      },
+      "id": "node/5226809753"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5226813296",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": ">100",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Fietsenstallingen_station_halle_achterkant.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2418274,
+          50.7353466
+        ]
+      },
+      "id": "node/5226813296"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5226831722",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "6",
+        "covered": "yes",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Fietsenstalling_Stedelijke_Academie_voor_Beeldende_Kunsten_De_Meiboom_Halle.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2365092,
+          50.7380783
+        ]
+      },
+      "id": "node/5226831722"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5226831723",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "3",
+        "covered": "yes",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Fietsenstalling_Stedelijke_Academie_voor_Beeldende_Kunsten_De_Meiboom_Halle.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2364851,
+          50.7380019
+        ]
+      },
+      "id": "node/5226831723"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5226831724",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "7",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Fietsenstalling_OCMW_Sociaal_Huis_Halle.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2358637,
+          50.7396219
+        ]
+      },
+      "id": "node/5226831724"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5238235235",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "8",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/Fietsenstalling_speelplein_joepie.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2390882,
+          50.7240919
+        ]
+      },
+      "id": "node/5238235235"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5238246245",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "4",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Fietsenstalling_halleweg_sportzaal_populaire.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2432925,
+          50.7289866
+        ]
+      },
+      "id": "node/5238246245"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5238246246",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "12",
+        "covered": "no",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Fietsenstalling_biezewiede_scouts_sint_rochus.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2420893,
+          50.7279178
+        ]
+      },
+      "id": "node/5238246246"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5619008148",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "8",
+        "covered": "no",
+        "image": "https://i.imgur.com/pT1tGYA.jpg",
+        "operator": "Stad Halle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2358798,
+          50.7363008
+        ]
+      },
+      "id": "node/5619008148"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5688554903",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.256017,
+          50.7163962
+        ]
+      },
+      "id": "node/5688554903"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5688554914",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2566206,
+          50.7187224
+        ]
+      },
+      "id": "node/5688554914"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5688565085",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "20",
+        "covered": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2580885,
+          50.7507044
+        ]
+      },
+      "id": "node/5688565085"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5688565086",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "5",
+        "covered": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2581563,
+          50.7507626
+        ]
+      },
+      "id": "node/5688565086"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6323670325",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "3",
+        "covered": "no",
+        "fee": "no",
+        "operator": "Streekproducten Centrum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2320194,
+          50.7333873
+        ]
+      },
+      "id": "node/6323670325"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6323670326",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2321328,
+          50.7333397
+        ]
+      },
+      "id": "node/6323670326"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6434071733",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "covered": "yes",
+        "fee": "no",
+        "operator": "Delhaize"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2354023,
+          50.7321088
+        ]
+      },
+      "id": "node/6434071733"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6723288669",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "operator": "'t Gazetje"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2523614,
+          50.7197864
+        ]
+      },
+      "id": "node/6723288669"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6760136485",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "6",
+        "covered": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2396672,
+          50.738678
+        ]
+      },
+      "id": "node/6760136485"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7781000357",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "10",
+        "covered": "yes",
+        "image": "https://i.imgur.com/zmNLQie.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2209923,
+          50.7147216
+        ]
+      },
+      "id": "node/7781000357"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7791507442",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.220164,
+          50.7480784
+        ]
+      },
+      "id": "node/7791507442"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7791788270",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2212855,
+          50.7477688
+        ]
+      },
+      "id": "node/7791788270"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7791788271",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2206976,
+          50.7478007
+        ]
+      },
+      "id": "node/7791788271"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7791788273",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2204836,
+          50.7477287
+        ]
+      },
+      "id": "node/7791788273"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7798077426",
+        "amenity": "bicycle_parking",
+        "capacity": "3",
+        "operator": "Carrefour"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2407712,
+          50.7294691
+        ]
+      },
+      "id": "node/7798077426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7839431992",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "4",
+        "image": "https://i.imgur.com/ZwDHcCw.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2380503,
+          50.7366736
+        ]
+      },
+      "id": "node/7839431992"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7839873791",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wooden_bar",
+        "covered": "no",
+        "image": "https://i.imgur.com/cJ4vHLy.jpg",
+        "mapillary": "BQnXxvSLweRw8m5lLNDCDQ",
+        "material": "wood",
+        "operator": "ANB"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2829442,
+          50.7023665
+        ]
+      },
+      "id": "node/7839873791"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8006587079",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2373189,
+          50.7292417
+        ]
+      },
+      "id": "node/8006587079"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8081375675",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "19",
+        "covered": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2208582,
+          50.7195539
+        ]
+      },
+      "id": "node/8081375675"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8081375678",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "8",
+        "covered": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2203028,
+          50.7198343
+        ]
+      },
+      "id": "node/8081375678"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8111330281",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "covered": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2266518,
+          50.7284811
+        ]
+      },
+      "id": "node/8111330281"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8111330282",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2274927,
+          50.7290057
+        ]
+      },
+      "id": "node/8111330282"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8647916131",
+        "access": "yes",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wooden_bar",
+        "capacity": "12",
+        "capacity:cargo_bike": "4",
+        "cargo_bike": "yes",
+        "covered": "no",
+        "image": "https://i.imgur.com/ED7gY8H.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2675099,
+          50.7129995
+        ]
+      },
+      "id": "node/8647916131"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8659148148",
+        "access": "yes",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wooden_bar",
+        "capacity": "10",
+        "capacity:cargo_bike": "10",
+        "cargo_bike": "yes",
+        "covered": "no",
+        "operator": "ANB"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2673597,
+          50.6998045
+        ]
+      },
+      "id": "node/8659148148"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8659157170",
+        "access": "yes",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wooden_bar",
+        "capacity": "6",
+        "capacity:cargo_bike": "3",
+        "cargo_bike": "yes",
+        "covered": "no",
+        "image": "https://i.imgur.com/as0XUOW.jpg",
+        "material": "wood",
+        "operator": "ANB"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2952554,
+          50.7102367
+        ]
+      },
+      "id": "node/8659157170"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8820557414",
+        "access": "yes",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wooden_bar",
+        "cargo_bike": "yes",
+        "covered": "no",
+        "image": "https://i.imgur.com/QW7Qr7M.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2837828,
+          50.7132916
+        ]
+      },
+      "id": "node/8820557414"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8993379506",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "16",
+        "capacity:cargo_bike": "10",
+        "cargo_bike": "yes",
+        "covered": "no",
+        "image": "https://i.imgur.com/kR5NGGr.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2332688,
+          50.737685
+        ]
+      },
+      "id": "node/8993379506"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8993379727",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "10",
+        "covered": "yes",
+        "image": "https://i.imgur.com/v7kkgZV.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2332017,
+          50.7376383
+        ]
+      },
+      "id": "node/8993379727"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9044859791",
+        "access": "yes",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "4",
+        "covered": "no",
+        "image": "https://i.imgur.com/Ts83iLG.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2678505,
+          50.74381
+        ]
+      },
+      "id": "node/9044859791"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9174606642",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "20",
+        "covered": "no",
+        "image": "https://i.imgur.com/xag8dgx.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2539012,
+          50.7255232
+        ]
+      },
+      "id": "node/9174606642"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9188028226",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "covered": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2392313,
+          50.7322621
+        ]
+      },
+      "id": "node/9188028226"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9190105378",
+        "access": "yes",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "5",
+        "capacity:cargo_bike": "2",
+        "cargo_bike": "yes",
+        "covered": "no",
+        "image": "https://i.imgur.com/cElRG7g.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2426755,
+          50.7406058
+        ]
+      },
+      "id": "node/9190105378"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9190164507",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "6",
+        "covered": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2560441,
+          50.7355206
+        ]
+      },
+      "id": "node/9190164507"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9207458590",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "3",
+        "covered": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2416398,
+          50.7423853
+        ]
+      },
+      "id": "node/9207458590"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9210522874",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "16",
+        "covered": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2311544,
+          50.7306946
+        ]
+      },
+      "id": "node/9210522874"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9212568736",
+        "access": "yes",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "4",
+        "capacity:cargo_bike": "2",
+        "cargo_bike": "yes",
+        "covered": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2426287,
+          50.7401915
+        ]
+      },
+      "id": "node/9212568736"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9212573096",
+        "access": "yes",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "4",
+        "capacity:cargo_bike": "2",
+        "cargo_bike": "yes",
+        "covered": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.242573,
+          50.7396755
+        ]
+      },
+      "id": "node/9212573096"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9232388143",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "8",
+        "capacity:cargo_bike": "4",
+        "cargo_bike": "designated",
+        "covered": "yes",
+        "image": "https://i.imgur.com/uixsURl.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2334872,
+          50.7377122
+        ]
+      },
+      "id": "node/9232388143"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9243039151",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "4",
+        "mapillary": "298854571794832"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2349739,
+          50.7341569
+        ]
+      },
+      "id": "node/9243039151"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9243848483",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "rack",
+        "capacity": "10",
+        "covered": "no",
+        "image": "https://i.imgur.com/LACexaZ.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2539655,
+          50.7260375
+        ]
+      },
+      "id": "node/9243848483"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9248213539",
+        "access": "customers",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "5",
+        "covered": "no",
+        "image": "https://i.imgur.com/biOtMZ7.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.1993715,
+          50.7445529
+        ]
+      },
+      "id": "node/9248213539"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9453480008",
+        "access": "yes",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "21",
+        "covered": "yes",
+        "image": "https://i.imgur.com/u7MDoX9.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2316612,
+          50.7323588
+        ]
+      },
+      "id": "node/9453480008"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9453486342",
+        "access": "yes",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "capacity": "20",
+        "covered": "yes",
+        "image": "https://i.imgur.com/kmGRMtw.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2350956,
+          50.7339743
+        ]
+      },
+      "id": "node/9453486342"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9453495208",
+        "access": "yes",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "stands",
+        "covered": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2387421,
+          50.736384
+        ]
+      },
+      "id": "node/9453495208"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9482890595",
+        "access": "yes",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2344225,
+          50.7377153
+        ]
+      },
+      "id": "node/9482890595"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9497918904",
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "wall_loops",
+        "capacity": "3",
+        "operator": "Stad Halle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2348146,
+          50.7385383
+        ]
+      },
+      "id": "node/9497918904"
+    }
+  ]
+}
