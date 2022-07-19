@@ -6,14 +6,6 @@ function getBaselayers() {
       maxZoom: 18
       }
     ),
-    "OSM in 2016/2017": L.tileLayer(
-      "https://europa.eu/webtools/maps/tiles/osm-ec/{z}/{x}/{y}.png",
-      {
-        attribution:
-          '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://ec.europa.eu/transport/infrastructure/tentec/tentec-portal/map/maps.html">EC-GISCO</a>',
-        maxZoom: 18
-      }
-    ),
     "OSM Belgium": L.tileLayer(
       "https://tile.osm.be/osmbe/{z}/{x}/{y}.png",
       {
