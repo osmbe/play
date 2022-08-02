@@ -228,7 +228,7 @@ function getBaselayers() {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
     ),
-    "NGI Basemap 2000": L.tileLayer.wms(
+    "Most recent NGI Basemap": L.tileLayer.wms(
       "https://wms.ngi.be/inspire/topomaps/service?",
       {
         format: "image/png",
