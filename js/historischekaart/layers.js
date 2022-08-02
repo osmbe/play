@@ -32,7 +32,18 @@ function getLayers() {
         accessToken:
           "pk.eyJ1Ijoiam9vc3RzY2hvdXBwZSIsImEiOiJjaWh2djF1c2owMmJrdDNtMWV2c2Rld3QwIn0.9zXJJWZ4rOcspyFIdEC3Rw",
         attribution:
-          'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+          'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles © <a href="http://mapbox.com">Mapbox</a>',
+        maxZoom: 18,
+        minZoom: 11
+      }
+    ),
+    "OSM road surfaces": L.tileLayer(
+      "https://api.mapbox.com/styles/v1/joostschouppe/cjhyp1dts2q5m2sqtxx04iwks/tiles/256/{z}/{x}/{y}?access_token={accessToken}",
+      {
+        accessToken:
+          "pk.eyJ1Ijoiam9vc3RzY2hvdXBwZSIsImEiOiJjaWh2djF1c2owMmJrdDNtMWV2c2Rld3QwIn0.9zXJJWZ4rOcspyFIdEC3Rw",
+        attribution:
+          'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles © <a href="http://mapbox.com">Mapbox</a>',
         maxZoom: 18,
         minZoom: 11
       }
