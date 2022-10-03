@@ -38,6 +38,22 @@ function getBaselayers() {
         maxZoom: 18
       }
     ),
+     "OpenStreetMamp in 2012": L.tileLayer(
+      "https://2012.osmz.ru/12/{z}/{x}/{y}.png",
+      {
+        attribution:
+          '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles provided by  of <a href="https://osmz.ru/">osmz.ru</a>',
+        maxZoom: 19
+      }
+    ),
+      "OpenStreetMamp in 2009": L.tileLayer(
+      "https://2012.osmz.ru/09/{z}/{x}/{y}.png",
+      {
+        attribution:
+          '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles provided by  of <a href="https://osmz.ru/">osmz.ru</a>',
+        maxZoom: 19
+      }
+    ),
     "Luchtfoto (VL)": L.tileLayer(
       "http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=omwrgbmrvl&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
