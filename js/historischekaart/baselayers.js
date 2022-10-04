@@ -38,7 +38,7 @@ function getBaselayers() {
         maxZoom: 18
       }
     ),
-     "OpenStreetMamp in 2012": L.tileLayer(
+     "OpenStreetMap in 2012": L.tileLayer(
       "https://2012.osmz.ru/12/{z}/{x}/{y}.png",
       {
         attribution:
@@ -46,7 +46,7 @@ function getBaselayers() {
         maxZoom: 19
       }
     ),
-      "OpenStreetMamp in 2009": L.tileLayer(
+      "OpenStreetMap in 2009": L.tileLayer(
       "https://2012.osmz.ru/09/{z}/{x}/{y}.png",
       {
         attribution:
