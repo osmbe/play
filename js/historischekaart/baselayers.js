@@ -38,22 +38,6 @@ function getBaselayers() {
         maxZoom: 18
       }
     ),
-     "OpenStreetMap in 2012": L.tileLayer(
-      "https://2012.osmz.ru/12/{z}/{x}/{y}.png",
-      {
-        attribution:
-          '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles provided by  of <a href="https://osmz.ru/">osmz.ru</a>',
-        maxZoom: 19
-      }
-    ),
-      "OpenStreetMap in 2009": L.tileLayer(
-      "https://2012.osmz.ru/09/{z}/{x}/{y}.png",
-      {
-        attribution:
-          '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles provided by  of <a href="https://osmz.ru/">osmz.ru</a>',
-        maxZoom: 19
-      }
-    ),
     "Luchtfoto (VL)": L.tileLayer(
       "http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=omwrgbmrvl&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
@@ -87,7 +71,19 @@ function getBaselayers() {
         attribution: "DHM SVF © Digitaal Vlaanderen"
       }
     ),
-    "NGI ortho 1995": L.tileLayer(
+    "NGI ortho 1947-1954": L.tileLayer(
+      "https://www.ngi.be/tiles/arcgis/rest/services/ortho__default__3857__1947-1954/MapServer/tile/{z}/{y}/{x}",
+      {
+        attribution: '<a href="http://www.ngi.be/">NGI</a>'
+      }
+    ),
+      "NGI ortho 1969-1979": L.tileLayer(
+      "https://www.ngi.be/tiles/arcgis/rest/services/ortho__default__3857__1969-1979/MapServer/tile/{z}/{y}/{x}",
+      {
+        attribution: '<a href="http://www.ngi.be/">NGI</a>'
+      }
+    ),
+      "NGI ortho 1995": L.tileLayer(
       "http://www.ngi.be/tiles/arcgis/rest/services/ortho__default__3857__1995/MapServer/tile/{z}/{y}/{x}",
       {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
