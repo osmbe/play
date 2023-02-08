@@ -207,10 +207,11 @@ function getBaselayers() {
       }
     ),
     "Ministerie Openbare Werken (1950-1970, VL)": L.tileLayer.wms(
-      "https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?",
+      "https://geoserver.gis.cloud.mow.vlaanderen.be/geoserver/wms?",
       {
-        format: "image/png",
-        layers: "moww",
+        attribution: '<a href="https://www.vlaanderen.be/datavindplaats/catalogus/topografische-kaarten-ministerie-van-openbare-werken-en-wederopbouw-opname-1950-1970">MOWW</a>',
+	format: "image/png",
+        layers: "ato:topokaarten",
         transparent: true
       }
     ),
