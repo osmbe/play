@@ -39,7 +39,7 @@ function getBaselayers() {
       }
     ),
     "Luchtfoto (VL)": L.tileLayer(
-      "https://geo.api.vlaanderen.be/OFW/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ofw&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={zoom}&tileRow={y}&tileCol={x}",
+      "https://geo.api.vlaanderen.be/OFW/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ofw&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Luchtfoto © Digitaal Vlaanderen"
       }
