@@ -39,13 +39,13 @@ function getBaselayers() {
       }
     ),
     "Luchtfoto (VL)": L.tileLayer(
-      "http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=omwrgbmrvl&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+      "https://geo.api.vlaanderen.be/OFW/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=omwrgbmrvl&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={zoom}&tileRow={y}&tileCol={x}",
       {
         attribution: "Luchtfoto © Digitaal Vlaanderen"
       }
     ),
     "Basiskaart GRB (VL)": L.tileLayer(
-      "http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=grb_bsk&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+      "https://geo.api.vlaanderen.be/GRB/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=grb_bsk&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "GRB © Digitaal Vlaanderen"
       }
@@ -60,13 +60,13 @@ function getBaselayers() {
       }
     ),
     "AIV Hillshade (strong, VL)": L.tileLayer(
-      "https://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_SVF_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+      "https://geo.api.vlaanderen.be/GRB/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_SVF_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "DHM SVF © Digitaal Vlaanderen"
       }
     ),
     "AIV Hillshade (soft, VL)": L.tileLayer(
-      "https://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_HILL_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+      "https://geo.api.vlaanderen.be/GRB/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_HILL_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "DHM SVF © Digitaal Vlaanderen"
       }
@@ -90,7 +90,7 @@ function getBaselayers() {
       }
     ),
     "Masse, enkel Westhoek (1729)": L.tileLayer.wms(
-      "https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?",
+      "https://geo.api.vlaanderen.be/histcart/wms?",
       {
         format: "image/png",
         layers: "Masse",
@@ -99,7 +99,7 @@ function getBaselayers() {
       }
     ),
     "Frickx (1745, VL)": L.tileLayer.wms(
-      "https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?",
+      "https://geo.api.vlaanderen.be/histcart/wms?",
       {
         format: "image/png",
         layers: "Frickx",
@@ -108,7 +108,7 @@ function getBaselayers() {
       }
     ),
     "Villaret (1745, VL)": L.tileLayer.wms(
-      "https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?",
+      "https://geo.api.vlaanderen.be/histcart/wms?",
       {
         format: "image/png",
         layers: "Villaret",
@@ -117,7 +117,7 @@ function getBaselayers() {
       }
     ),
     "Ferraris (1777, VL)": L.tileLayer(
-      "http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ferraris&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+      "https://geo.api.vlaanderen.be/histcart/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ferraris&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Tiles provided by Digitaal Vlaanderen"
       }
@@ -141,7 +141,7 @@ function getBaselayers() {
       }
     ),
     "Atlas der Buurtwegen (1840, VL)": L.tileLayer.wms(
-      "https://geoservices.informatievlaanderen.be/raadpleegdiensten/histcart/wms?",
+      "https://geo.api.vlaanderen.be/histcart/wms?",
       {
         format: "image/png",
         layers: "abw",
@@ -159,7 +159,7 @@ function getBaselayers() {
       }
     ),
     "Vandermaelen (1846-1854, VL)": L.tileLayer(
-      "http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=vandermaelen&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+      "https://geo.api.vlaanderen.be/histcart/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=vandermaelen&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Tiles provided by Digitaal Vlaanderen"
       }
@@ -174,7 +174,7 @@ function getBaselayers() {
       }
     ),
     "Popp (1842-1854, VL)": L.tileLayer(
-      "http://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=popp&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+       "https://geo.api.vlaanderen.be/histcart/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=popp&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Tiles provided by Digitaal Vlaanderen"
       }
