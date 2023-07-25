@@ -90,7 +90,7 @@ function getBaselayers() {
       }
     ),
     "Masse, enkel Westhoek (1729)": L.tileLayer.wms(
-      "https://geo.api.vlaanderen.be/histcart/wms?",
+      "https://geo.api.vlaanderen.be/histcart/wms?", // Doesn't seem to be available in WMTS
       {
         format: "image/png",
         layers: "Masse",
@@ -105,7 +105,7 @@ function getBaselayers() {
       }
     ),
     "Villaret (1745, VL)": L.tileLayer.wms(
-      "https://geo.api.vlaanderen.be/histcart/wms?",
+      "https://geo.api.vlaanderen.be/histcart/wms?", // Doesn't seem to be available in WMTS
       {
         format: "image/png",
         layers: "Villaret",
