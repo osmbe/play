@@ -117,7 +117,7 @@ function getBaselayers() {
       }
     ),
     "Ferraris (1777, VL)": L.tileLayer(
-      "https://geo.api.vlaanderen.be/histcart/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ferraris&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+      "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ferraris&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Tiles provided by Digitaal Vlaanderen"
       }
@@ -159,7 +159,7 @@ function getBaselayers() {
       }
     ),
     "Vandermaelen (1846-1854, VL)": L.tileLayer(
-      "https://geo.api.vlaanderen.be/histcart/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=vandermaelen&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+      "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=vandermaelen&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Tiles provided by Digitaal Vlaanderen"
       }
@@ -174,7 +174,7 @@ function getBaselayers() {
       }
     ),
     "Popp (1842-1854, VL)": L.tileLayer(
-       "https://geo.api.vlaanderen.be/histcart/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=popp&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+       "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=popp&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Tiles provided by Digitaal Vlaanderen"
       }
