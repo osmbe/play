@@ -99,7 +99,7 @@ function getBaselayers() {
       }
     ),
     "Frickx (1712, VL)": L.tileLayer(
-      "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=frickx&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",,
+      "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=frickx&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Tiles provided by Digitaal Vlaanderen"
       }
