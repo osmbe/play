@@ -1,40 +1,35 @@
 function getBaselayers() {
   return {
     "OSM.org": L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution:
-        '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+      attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
       maxZoom: 18
       }
     ),
     "OSM Belgium": L.tileLayer(
       "https://tile.osm.be/osmbe/{z}/{x}/{y}.png",
       {
-        attribution:
-          '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
+        attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
         maxZoom: 18
       }
     ),
     "OSM Belgium (FR)": L.tileLayer(
       "https://tile.osm.be/osmbe-fr/{z}/{x}/{y}.png",
       {
-        attribution:
-          '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
+        attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
         maxZoom: 18
       }
     ),
     "OSM Belgium (NL)": L.tileLayer(
       "https://tile.osm.be/osmbe-nl/{z}/{x}/{y}.png",
       {
-        attribution:
-          '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
+        attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
         maxZoom: 18
       }
     ),
     "OSM Belgium (Archive - 23/03/2019)": L.tileLayer(
       "https://tile.osm.be/archive/20190323/{z}/{x}/{y}.png",
       {
-        attribution:
-          '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
+        attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
         maxZoom: 18
       }
     ),
@@ -94,8 +89,8 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "Masse",
-        transparent: true,
-	attribution: "Tiles provided by Digitaal Vlaanderen"
+        transparent: false,
+        attribution: "Tiles provided by Digitaal Vlaanderen"
       }
     ),
     "Frickx (1712, VL)": L.tileLayer(
@@ -109,7 +104,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "Villaret",
-        transparent: true,
+        transparent: false,
         attribution: "Tiles provided by Digitaal Vlaanderen"
       }
     ),
@@ -124,7 +119,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "0",
-        transparent: true,
+        transparent: false,
         attribution: "SPW"
       }
     ),
@@ -133,7 +128,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "0",
-        transparent: true,
+        transparent: false,
         attribution: "SPW"
       }
     ),
@@ -142,7 +137,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "abw",
-        transparent: true,
+        transparent: false,
         attribution: "Tiles provided by Digitaal Vlaanderen"
       }
     ),
@@ -151,7 +146,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "3,4",
-        transparent: true,
+        transparent: false,
         attribution: "SPW"
       }
     ),
@@ -166,7 +161,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "0",
-        transparent: true,
+        transparent: false,
         attribution: "SPW"
       }
     ),
@@ -181,7 +176,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "0",
-        transparent: true,
+        transparent: false,
         attribution: "SPW"
       }
     ),
@@ -207,9 +202,9 @@ function getBaselayers() {
       "https://geoserver.gis.cloud.mow.vlaanderen.be/geoserver/wms?",
       {
         attribution: '<a href="https://www.vlaanderen.be/datavindplaats/catalogus/topografische-kaarten-ministerie-van-openbare-werken-en-wederopbouw-opname-1950-1970">MOWW</a>',
-	format: "image/png",
+        format: "image/png",
         layers: "ato:topokaarten",
-        transparent: true
+        transparent: false
       }
     ),
     "Plans du Ministère des Travaux publics (1950-1973, WAL)": L.tileLayer.wms(
@@ -217,7 +212,7 @@ function getBaselayers() {
       {
         format: "image/png",
         layers: "0,1",
-        transparent: true
+        transparent: false
       }
     ),
     "NGI Basemap 1969": L.tileLayer(
