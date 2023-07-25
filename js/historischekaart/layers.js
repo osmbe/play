@@ -87,7 +87,7 @@ function getLayers() {
       {
         format: "image/png",
         layers: "AUTOSWEG,WEGGESCH,WEGEEN,ROT,SPECSIT,VERKPLEIN,OPAFOGKR,OPAFGGKR,PLLWEG,VENTWEG,INUITP,INUITD,VOETGANGERSZONE,WANDFIETS,TRAMWEG,DIENSTWEG,AARDEWEG,VEER,TYPENTG,LABELS",
-        transparent: false,
+        transparent: true,
         attribution: "© Digitaal Vlaanderen"
       }
     )
