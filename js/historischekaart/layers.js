@@ -1,7 +1,7 @@
 function getLayers() {
   return {
     "AIV Hillshade (soft, VL)": L.tileLayer(
-      "https://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_HILL_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+      "https://geo.api.vlaanderen.be/DHMV/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_HILL_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "DHM SVF © AIV",
         opacity: 0.3,
@@ -18,7 +18,7 @@ function getLayers() {
       }
     ),
 	"Ferraris forest cover (VL)": L.tileLayer.wms(
-      "https://geoservices.informatievlaanderen.be/raadpleegdiensten/INBO/wms?",
+      "https://geo.api.vlaanderen.be/INBO/wms?",
       {
         format: "image/png",
         layers: "B1775",
@@ -82,15 +82,14 @@ function getLayers() {
         transparent: true
       }
     ),
-    "Wegenregister (VL)": L.uGeoJSONLayer({
-      endpoint: "https://data.grbosm.site/wr?",
-      usebbox: true,
-      method: "GET",
-      maxRequests: 3,
-      minzoom: 15,
-      parameters: {
-        bbsrid: "4326"
+    "Wegenregister (VL)": L.tileLayer.wms(
+      "https://geo.api.vlaanderen.be/Wegenregister/wms?",
+      {
+        format: "image/png",
+        layers: "AUTOSWEG,WEGGESCH,WEGEEN,ROT,SPECSIT,VERKPLEIN,OPAFOGKR,OPAFGGKR,PLLWEG,VENTWEG,INUITP,INUITD,VOETGANGERSZONE,WANDFIETS,TRAMWEG,DIENSTWEG,AARDEWEG,VEER,TYPENTG,LABELS",
+        transparent: false,
+        attribution: "© Digitaal Vlaanderen"
       }
-    })
+    )
   };
 }
