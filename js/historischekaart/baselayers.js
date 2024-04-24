@@ -27,7 +27,7 @@ function getBaselayers() {
       }
     ),
     "OSM Belgium Archive - March 2019": L.tileLayer(
-      "https://tile.osm.be/archive/20190323/{z}/{x}/{y}.png",
+      "https://tile.osm.be/archive/201903/{z}/{x}/{y}.png",
       {
         attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
         maxZoom: 18
