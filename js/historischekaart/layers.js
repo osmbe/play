@@ -95,7 +95,7 @@ function getLayers() {
       "https://wms.ngi.be/inspire/mapindex/service?",
       {
         format: "image/png",
-        layers: "MapIndex",
+        layers: "mapindex",
         transparent: true,
         attribution: "© NGI/IGN"
       }
