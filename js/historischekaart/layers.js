@@ -90,6 +90,15 @@ function getLayers() {
         transparent: true,
         attribution: "© Digitaal Vlaanderen"
       }
-    )
+    ),
+    "NGI Mapindex": L.tileLayer.wms(
+      "https://wms.ngi.be/inspire/mapindex/service?",
+      {
+        format: "image/png",
+        layers: "MapIndex",
+        transparent: true,
+        attribution: "© NGI/IGN"
+      }
+    ),    
   };
 }
