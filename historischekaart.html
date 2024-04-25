@@ -23,6 +23,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <!-- overrule default style to set maxwidth of the layer control -->
+    <style>
+        .leaflet-control-layers-expanded {
+           max-width: 80%;
+        }
+    </style>
 </head>
 
 <body>
