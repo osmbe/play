@@ -47,13 +47,13 @@ function getBaselayers() {
         maxZoom: 18
       }
     ),   
-    "Luchtfoto (VL)": L.tileLayer(
+    "Most recent aerial imagery (VL)": L.tileLayer(
       "https://geo.api.vlaanderen.be/OFW/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ofw&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Luchtfoto © Digitaal Vlaanderen"
       }
     ),
-    "Basiskaart GRB (VL)": L.tileLayer(
+    "GRB basemap (VL)": L.tileLayer(
       "https://geo.api.vlaanderen.be/GRB/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=grb_bsk&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "GRB © Digitaal Vlaanderen"
@@ -98,7 +98,7 @@ function getBaselayers() {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
     ),
-    "Masse, enkel Westhoek (1729)": L.tileLayer.wms(
+    "Masse, Westhoek only (1729)": L.tileLayer.wms(
       "https://geo.api.vlaanderen.be/histcart/wms?", // Doesn't seem to be available in WMTS
       {
         format: "image/png",
