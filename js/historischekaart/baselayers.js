@@ -81,19 +81,19 @@ function getBaselayers() {
       }
     ),
     "NGI ortho 1947-1954": L.tileLayer(
-      "https://www.ngi.be/tiles/arcgis/rest/services/ortho__default__3857__1947-1954/MapServer/tile/{z}/{y}/{x}",
+      "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1947-1954/MapServer/tile/{z}/{y}/{x}",
       {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
     ),
       "NGI ortho 1969-1979": L.tileLayer(
-      "https://www.ngi.be/tiles/arcgis/rest/services/ortho__default__3857__1969-1979/MapServer/tile/{z}/{y}/{x}",
+      "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1969-1979/MapServer/tile/{z}/{y}/{x}",
       {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
     ),
       "NGI ortho 1995": L.tileLayer(
-      "http://www.ngi.be/tiles/arcgis/rest/services/ortho__default__3857__1995/MapServer/tile/{z}/{y}/{x}",
+      "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1995/MapServer/tile/{z}/{y}/{x}",
       {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
@@ -195,19 +195,19 @@ function getBaselayers() {
       }
     ),
     "NGI Basemap 1873": L.tileLayer(
-      "http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__140/MapServer/tile/{z}/{y}/{x}",
+      "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__140/MapServer/tile/{z}/{y}/{x}",
       {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
     ),
     "NGI Basemap 1904": L.tileLayer(
-      "http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__450/MapServer/tile/{z}/{y}/{x}",
+      "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__450/MapServer/tile/{z}/{y}/{x}",
       {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
     ),
     "NGI Basemap 1939": L.tileLayer(
-      "http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__800/MapServer/tile/{z}/{y}/{x}",
+      "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__800/MapServer/tile/{z}/{y}/{x}",
       {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
@@ -230,19 +230,19 @@ function getBaselayers() {
       }
     ),
     "NGI Basemap 1969": L.tileLayer(
-      "http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1100/MapServer/tile/{z}/{y}/{x}",
+      "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__1100/MapServer/tile/{z}/{y}/{x}",
       {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
     ),
     "NGI Basemap 1981": L.tileLayer(
-      "http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1220/MapServer/tile/{z}/{y}/{x}",
+      "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__1220/MapServer/tile/{z}/{y}/{x}",
       {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
     ),
     "NGI Basemap 1989": L.tileLayer(
-      "http://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1300/MapServer/tile/{z}/{y}/{x}",
+      "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__1300/MapServer/tile/{z}/{y}/{x}",
       {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
