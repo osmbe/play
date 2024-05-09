@@ -156,7 +156,7 @@ function getBaselayers() {
       }
     ),
     "Atlas des voiries vicinales (1841, WAL)": L.tileLayer.wms(
-      "http://geoservices.wallonie.be/arcgis/services/PLAN_REGLEMENT/ATLAS_VV_MODIF/MapServer/WmsServer?",
+      "https://geoservices.wallonie.be/arcgis/services/PLAN_REGLEMENT/ATLAS_VV_MODIF/MapServer/WMSServer?",
       {
         format: "image/png",
         layers: "3,4",

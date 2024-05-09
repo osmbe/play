@@ -1,20 +1,22 @@
 function getLayers() {
   return {
-    "AIV Hillshade (soft, VL)": L.tileLayer(
+    "DV Hillshade (soft, VL, 2013-2015)": L.tileLayer(
       "https://geo.api.vlaanderen.be/DHMV/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_HILL_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "DHM SVF © AIV",
         opacity: 0.3,
-        transparent: true
+        transparent: false,
+        attribution: "Digitaal Vlaanderen"
       }
     ),
-    "SPW Hillshade (WAL)": L.tileLayer.wms(
-      "https://geoservices.wallonie.be/arcgis/services/RELIEF/WALLONIE_MNT_2013_2014_HILLSHADE/MapServer/WMSServer?",
+    "SPW Hillshade (WAL, 2021-2022)": L.tileLayer.wms(
+      "https://geoservices.wallonie.be/arcgis/services/RELIEF/WALLONIE_MNT_2021_2022_HILLSHADE/MapServer/WMSServer?",
       {
         format: "image/png",
         layers: "0",
-        transparent: true,
-        opacity: 0.3
+        transparent: false,
+        opacity: 0.3,
+        attribution: "SPW"
       }
     ),
 	"Ferraris forest cover (VL)": L.tileLayer.wms(
@@ -99,6 +101,26 @@ function getLayers() {
         transparent: true,
         attribution: "© NGI/IGN"
       }
-    ),    
+    ),
+    "SPW Réseau hydrographique wallon (RHW) - Série (WAL)": L.tileLayer.wms(
+      "https://geoservices.wallonie.be/arcgis/services/EAU/RHW_SIMPLE/MapServer/WMSServer?",
+      {
+        format: "image/png",
+        layers: "0",
+        transparent: false,
+        opacity: 0.3,
+        attribution: "SPW"
+      }
+    ),
+    "Administrative units and Land register plan": L.tileLayer.wms(
+      "https://ccff02.minfin.fgov.be/geoservices/arcgis/services/WMS/Cadastral_Layers/MapServer/WMSServer?",
+      {
+        format: "image/png",
+        layers: "0",
+        transparent: false,
+        opacity: 0.3,
+		attribution: "FPS Finance"
+      }
+    ),   
   };
 }
